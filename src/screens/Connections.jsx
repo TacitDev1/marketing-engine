@@ -86,7 +86,7 @@ export default function Connections({ active = true }) {
         </h1>
         <p className="mt-2 max-w-2xl text-[15px] leading-relaxed text-muted">
           Plug in your live marketing data. Every connection is read-only - the
-          agent can look, never change anything. Keys live in the .env file {place.onHere}
+          agent can look, never change anything. Keys live in the .env file {place.onHere}{" "}
           and are never sent anywhere else. Add a key, restart, and it turns green.
         </p>
       </header>

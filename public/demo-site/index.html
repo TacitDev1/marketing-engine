@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="robots" content="noindex" />
+<title>Larkwell Consulting (demo site)</title>
+<!--
+  A stand-in for the company website in the static demo: the Website screen's
+  live preview shows this page instead of the Astro dev server. Larkwell is an
+  invented company. Routes are hash paths (#/news/...), so one file serves all.
+-->
+<style>
+  @font-face { font-family: "Inter Tight"; font-weight: 400; src: url("../fonts/inter-tight-latin-400-normal.woff2") format("woff2"); }
+  @font-face { font-family: "Inter Tight"; font-weight: 600; src: url("../fonts/inter-tight-latin-600-normal.woff2") format("woff2"); }
+  :root { --green: #14532d; --lime: #a3e635; --ink: #0b1210; --paper: #f6f7f2; --muted: #4b5a52; --line: #dfe4da; }
+  * { box-sizing: border-box; }
+  body { margin: 0; font-family: "Inter Tight", system-ui, sans-serif; color: var(--ink); background: var(--paper); line-height: 1.55; }
+  a { color: inherit; }
+  header { display: flex; align-items: center; gap: 28px; padding: 18px 48px; background: #fff; border-bottom: 1px solid var(--line); }
+  .brand { display: flex; align-items: center; gap: 10px; font-weight: 600; font-size: 21px; letter-spacing: -0.02em; text-decoration: none; }
+  .brand img { width: 38px; }
+  nav { display: flex; gap: 22px; margin-left: auto; font-size: 15px; }
+  nav a { text-decoration: none; color: var(--muted); }
+  nav a.on, nav a:hover { color: var(--green); }
+  .cta { background: var(--green); color: #fff; padding: 9px 16px; border-radius: 8px; text-decoration: none; font-size: 14px; font-weight: 600; }
+  .hero { background: var(--green); color: var(--paper); padding: 72px 48px 64px; }
+  .hero small { color: var(--lime); font-weight: 600; letter-spacing: .08em; text-transform: uppercase; font-size: 12px; }
+  .hero h1 { margin: 12px 0 14px; font-size: 44px; line-height: 1.1; letter-spacing: -0.03em; max-width: 760px; font-weight: 600; }
+  .hero p { max-width: 620px; font-size: 18px; opacity: .9; margin: 0; }
+  main { padding: 48px; max-width: 1080px; }
+  h2 { font-size: 24px; letter-spacing: -0.02em; margin: 0 0 18px; }
+  .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(230px, 1fr)); gap: 16px; margin-bottom: 44px; }
+  .card { background: #fff; border: 1px solid var(--line); border-radius: 12px; padding: 18px 20px; text-decoration: none; display: block; }
+  .card b { display: block; margin-bottom: 6px; }
+  .card span { color: var(--muted); font-size: 14px; }
+  .card em { display: block; font-style: normal; color: var(--green); font-size: 12px; font-weight: 600; margin-bottom: 6px; }
+  article { max-width: 700px; font-size: 17px; }
+  article .meta { color: var(--muted); font-size: 14px; }
+  footer { padding: 28px 48px; color: var(--muted); font-size: 13px; border-top: 1px solid var(--line); }
+</style>
+</head>
+<body>
+<header>
+  <a class="brand" href="#/"><img src="../brand/mark.svg" alt="" />larkwell</a>
+  <nav id="nav"></nav>
+  <a class="cta" href="#/contact">Talk to us</a>
+</header>
+<div id="page"></div>
+<footer>Larkwell Consulting is an invented company. This page stands in for the company website in the Marketing Engine demo.</footer>
+<script>
+  const SERVICES = {
+    "plant-maintenance": ["SAP Plant Maintenance", "Work orders, maintenance plans and field apps for operators running SAP PM."],
+    billing: ["SAP IS-U billing", "Billing exceptions, meter to cash, and the move of billing to S/4HANA."],
+    s4hana: ["S/4HANA migration", "Brownfield conversions for utilities and waste operators."],
+    basis: ["SAP Basis", "Patch windows, system copies and monitoring for estates that cannot go down."],
+  };
+  const INDUSTRIES = {
+    "waste-management": ["Waste management", "Fleets, depots and bin lifts on SAP PM."],
+    utilities: ["Utilities", "Water and energy retailers on SAP IS-U and S/4HANA Utilities."],
+  };
+  const LOCATIONS = { "united-kingdom": ["United Kingdom", "Our main office."], netherlands: ["Netherlands", "A small team for Benelux operators."] };
+  const NEWS = {
+    "sap-pm-work-orders-closed-at-the-asset": ["Closing SAP PM work orders at the asset", "SAP PM", "Most operators who run SAP PM already have the data model they need. The problem is where the work order gets closed: on a clipboard in the van, and in SAP on Friday afternoon."],
+    "master-data-first": ["Master data first: the cutover nobody plans", "Data migration", "Most cutover plans describe the weekend in detail and the three months before it in one line: cleanse master data. That line is where migrations go wrong."],
+    "billing-exceptions-have-causes": ["Billing exceptions have causes", "SAP IS-U", "Adding people to the exception queue clears the backlog for a month and hides why it grew. Group a month of exceptions by cause and fix the top two where the bad data enters."],
+    "three-screens-not-thirty": ["Three screens, not thirty: SAP PM on the depot tablet", "Fiori", "Crews do three things with SAP: see today's jobs, close a job, and raise a defect. A small offline app gives them exactly that."],
+    "brackenfield-depot-tablets": ["Brackenfield Waste closes work orders at the bin lorry", "Success story", "Brackenfield Waste ran SAP PM, but work orders were closed on paper and keyed in at the end of the week. The rollout went one depot at a time."],
+    "osterby-billing-review": ["Osterby Utilities: a billing review before S/4HANA", "Success story", "Before moving billing, Osterby Utilities wanted to know which exceptions would follow them. A four-week review sorted them by cause."],
+    "patch-day-routine": ["A patch-day routine a small Basis team can keep", "SAP Basis", "A critical note for a component you do not run is not urgent for you. Rate the notes against your own landscape first."],
+  };
+  const MENU = [["#/", "Home"], ["#/services", "Services"], ["#/industries/waste-management", "Industries"], ["#/news", "News"], ["#/about", "About"]];
+  const cards = (map, base) => Object.entries(map).map(([slug, [t, d]]) => `<a class="card" href="#/${base}/${slug}"><b>${t}</b><span>${d}</span></a>`).join("");
+  const newsCards = (n) => Object.entries(NEWS).slice(0, n).map(([slug, [t, tag, d]]) => `<a class="card" href="#/news/${slug}"><em>${tag}</em><b>${t}</b><span>${d.split(". ")[0]}.</span></a>`).join("");
+  const hero = (kicker, title, text) => `<section class="hero"><small>${kicker}</small><h1>${title}</h1><p>${text}</p></section>`;
+
+  function render() {
+    const path = (location.hash.replace(/^#/, "") || "/").replace(/\/+$/, "") || "/";
+    const [, section, slug] = path.split("/");
+    let html;
+    if (path === "/") {
+      html = hero("SAP for utilities and waste", "SAP that works at the depot, not just in the office.", "Larkwell is an SAP consultancy for water, energy and waste operators: plant maintenance, billing and the move to S/4HANA.") +
+        `<main><h2>What we do</h2><div class="grid">${cards(SERVICES, "services")}</div><h2>Latest</h2><div class="grid">${newsCards(3)}</div></main>`;
+    } else if (section === "news" && NEWS[slug]) {
+      const [t, tag, d] = NEWS[slug];
+      html = hero(tag, t, "") + `<main><article><p class="meta">Larkwell · ${tag}</p><p>${d}</p><p>This demo page shows the opening of the post only.</p></article></main>`;
+    } else if (section === "news") {
+      html = hero("News", "Notes from the SAP work we do", "Field apps, billing, migrations and Basis.") + `<main><div class="grid">${newsCards(7)}</div></main>`;
+    } else if (section === "services" && SERVICES[slug]) {
+      html = hero("Service", SERVICES[slug][0], SERVICES[slug][1]) + `<main><h2>Related reading</h2><div class="grid">${newsCards(3)}</div></main>`;
+    } else if (section === "services") {
+      html = hero("Services", "Four things we are good at", "Small teams who have done the job before.") + `<main><div class="grid">${cards(SERVICES, "services")}</div></main>`;
+    } else if (section === "industries" && INDUSTRIES[slug]) {
+      html = hero("Industry", INDUSTRIES[slug][0], INDUSTRIES[slug][1]) + `<main><h2>Industries</h2><div class="grid">${cards(INDUSTRIES, "industries")}</div></main>`;
+    } else if (section === "locations" && LOCATIONS[slug]) {
+      html = hero("Location", LOCATIONS[slug][0], LOCATIONS[slug][1]) + `<main><div class="grid">${cards(LOCATIONS, "locations")}</div></main>`;
+    } else if (section === "contact") {
+      html = hero("Contact", "Talk to someone who has done it before", "Write to hello@larkwell.example. We answer within one working day.") + "<main></main>";
+    } else if (section === "about") {
+      html = hero("About", "A small SAP consultancy for operators", "Offices in the United Kingdom and the Netherlands, clients in three countries.") + `<main><h2>Where we work</h2><div class="grid">${cards(LOCATIONS, "locations")}</div></main>`;
+    } else {
+      html = hero("404", "This page is not in the demo", "Try the home page.") + "<main></main>";
+    }
+    document.getElementById("page").innerHTML = html;
+    document.getElementById("nav").innerHTML = MENU.map(([h, l]) => `<a href="${h}" class="${("#" + path).startsWith(h) && (h !== "#/" || path === "/") ? "on" : ""}">${l}</a>`).join("");
+    window.scrollTo(0, 0);
+  }
+  addEventListener("hashchange", render);
+  render();
+</script>
+</body>
+</html>

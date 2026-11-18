@@ -7,6 +7,16 @@
 @source not "../wiki";
 @source not "../knowledge";
 
+/* Fonts are self-hosted (public/fonts, SIL Open Font License, see the OFL-*.txt
+   files there), so no page load asks a third-party font service for anything. */
+@font-face { font-family: "Inter Tight"; font-style: normal; font-weight: 300; font-display: swap; src: url("/fonts/inter-tight-latin-300-normal.woff2") format("woff2"); }
+@font-face { font-family: "Inter Tight"; font-style: normal; font-weight: 400; font-display: swap; src: url("/fonts/inter-tight-latin-400-normal.woff2") format("woff2"); }
+@font-face { font-family: "Inter Tight"; font-style: italic; font-weight: 400; font-display: swap; src: url("/fonts/inter-tight-latin-400-italic.woff2") format("woff2"); }
+@font-face { font-family: "Inter Tight"; font-style: normal; font-weight: 500; font-display: swap; src: url("/fonts/inter-tight-latin-500-normal.woff2") format("woff2"); }
+@font-face { font-family: "Inter Tight"; font-style: normal; font-weight: 600; font-display: swap; src: url("/fonts/inter-tight-latin-600-normal.woff2") format("woff2"); }
+@font-face { font-family: "JetBrains Mono"; font-style: normal; font-weight: 400; font-display: swap; src: url("/fonts/jetbrains-mono-latin-400-normal.woff2") format("woff2"); }
+@font-face { font-family: "JetBrains Mono"; font-style: normal; font-weight: 500; font-display: swap; src: url("/fonts/jetbrains-mono-latin-500-normal.woff2") format("woff2"); }
+
 /* ============================================================
    Marketing Engine — design foundation (Wave 1)
    Premium SaaS-dashboard system, ported from the approved

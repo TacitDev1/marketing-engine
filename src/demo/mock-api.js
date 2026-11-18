@@ -27,6 +27,8 @@ const PICTURES = import.meta.glob("./images/*.svg", { eager: true, query: "?url"
 const pictureUrl = (file) => PICTURES[`./images/${file}`] || "";
 
 const db = JSON.parse(shiftDates(JSON.stringify(snapshot.get)));
+const posted = JSON.parse(shiftDates(JSON.stringify(snapshot.post || {})));
+if (db["/api/website/audit"]) db["/api/website/audit"].chromeAvailable = true;
 for (const img of db["/api/images"]?.images || []) img.url = pictureUrl(img.file);
 
 const DEMO_NOTE = "This is a static demo with sample data. No models are running, so this needs the real app.";
@@ -107,8 +109,96 @@ function slotByKey(key) {
 }
 const summarise = (d) => (d ? { id: d.id, kind: d.kind, status: d.status, title: d.payload.title, hook: d.payload.hook, score: d.payload.editor?.score ?? null } : null);
 
+// ---------- sample outputs for the screens that draft on request ----------
+// No model runs in the demo. "Generate" hands back one of the sample drafts,
+// the closest match to what was asked for, and says so on the card.
+export const SAMPLES = snapshot.samples || { linkedin: [], blogs: [] };
+const SAMPLE_NOTE = "Demo: a sample draft from the Library. No model ran.";
+let turn = 0;
+function closest(list, score) {
+  if (!list.length) return null;
+  const ranked = list.map((x, i) => [score(x), (i - turn + list.length) % list.length, x]).sort((a, b) => b[0] - a[0] || a[1] - b[1]);
+  turn++;
+  return ranked[0][2];
+}
+function sampleDraft(body = {}) {
+  const d = closest(SAMPLES.linkedin, (x) => (x.serviceId === body.serviceId ? 2 : 0) + (x.type === body.type ? 1 : 0));
+  return d && [200, { ...d, warnings: [SAMPLE_NOTE] }];
+}
+function sampleBlog(body = {}) {
+  const kw = String(body.keyword || "").toLowerCase();
+  const b = closest(SAMPLES.blogs, (x) => (x.keyword === kw ? 4 : 0) + (x.serviceId === body.serviceId ? 2 : 0));
+  return b && [200, { ...b, warnings: [SAMPLE_NOTE] }];
+}
+// An SEO brief written from the keyword alone (generateSeoBrief's shape).
+function sampleBrief({ keyword = "" } = {}) {
+  const k = String(keyword).trim();
+  const cap = k.replace(/\b(sap|s\/4hana|is-u|pm|abap|basis)\b/gi, (m) => m.toUpperCase()).replace(/^\w/, (c) => c.toUpperCase());
+  // The first variant that fits the length a search result shows, never cut mid-word.
+  const fit = (max, ...options) => options.find((o) => o.length <= max) || options[options.length - 1].slice(0, max);
+  const titleTag = fit(60, `${cap}: a practical guide | Larkwell`, `${cap} | Larkwell`, cap);
+  const metaDescription = fit(
+    160,
+    `What ${k} involves for utilities and waste operators, the mistakes we see most, and a plan you can start this quarter.`,
+    `What ${k} involves for utilities and waste operators, and a plan you can start this quarter.`,
+    `What ${k} involves, and a plan you can start this quarter.`
+  );
+  return {
+    keyword: k,
+    titleTag,
+    metaDescription,
+    slug: k.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/(^-|-$)/g, ""),
+    h1: `${cap}, step by step`,
+    intent: "Informational: a buyer working out what the job involves before talking to a partner",
+    subtopics: [`What ${k} covers`, "Where projects go wrong", "A plan for the first 90 days", "What it costs in people and time", "How to tell if a partner has done it before"],
+    relatedKeywords: (db["/api/keywords"]?.keywords || []).filter((x) => x.keyword !== k).slice(0, 5).map((x) => x.keyword),
+    checks: { titleLen: titleTag.length, metaLen: metaDescription.length, titleHasKeyword: titleTag.toLowerCase().includes(k.toLowerCase()) },
+  };
+}
+
+// The Website screen's live preview: a small static page standing in for the
+// Astro dev server. Hash routes, so every site path works from one file.
+function previewStatus() {
+  const url = new URL(`${import.meta.env.BASE_URL}demo-site/index.html#`, window.location.origin).href;
+  return {
+    running: true, portBusyByOther: false, managed: true, starting: false, port: 4322, url, publicUrl: url,
+    startedAt: new Date(Date.now() - 25 * 60000).toISOString(), siteRoot: "~/company-website", siteAvailable: true,
+    log: ["astro  v5.4.1 ready in 912 ms", "┃ Local    http://localhost:4322/"],
+  };
+}
+
+function feedbackList() {
+  return db["/api/feedback"].feedback;
+}
+
 // [method, regex, handler(match, body, url)] -> [status, json]
 const ROUTES = [
+  ["POST", /^\/api\/generate$/, (_m, body) => sampleDraft(body || {}) || [503, { error: "demo", message: DEMO_NOTE }]],
+  ["POST", /^\/api\/blog\/generate$/, (_m, body) => sampleBlog(body || {}) || [503, { error: "demo", message: DEMO_NOTE }]],
+  ["POST", /^\/api\/seo\/brief$/, (_m, body) => [200, sampleBrief(body || {})]],
+  ["POST", /^\/api\/knowledge\/search$/, () => [200, posted["/api/knowledge/search"] || { results: [] }]],
+  ["GET", /^\/api\/website\/preview\/status$/, () => [200, previewStatus()]],
+  ["PUT", /^\/api\/settings$/, (_m, body) => [200, Object.assign(db["/api/settings"], body || {})]],
+  ["POST", /^\/api\/feedback$/, (_m, body) => {
+    const text = String(body?.text || "").trim();
+    if (!text) return [400, { error: "text required" }];
+    const rec = { id: `fb-demo-${Date.now()}`, text, author: String(body?.author || ""), status: "open", createdAt: nowISO() };
+    feedbackList().unshift(rec);
+    return [200, rec];
+  }],
+  ["POST", /^\/api\/feedback\/([^/]+)\/replies$/, (m, body) => {
+    const f = feedbackList().find((x) => x.id === m[1]);
+    if (!f) return [404, { error: "not_found" }];
+    if (!String(body?.text || "").trim()) return [400, { error: "text required" }];
+    f.replies = [...(f.replies || []), { id: `fbr-demo-${Date.now()}`, text: body.text, author: body.author || "", createdAt: nowISO() }];
+    return [200, f];
+  }],
+  ["PATCH", /^\/api\/feedback\/([^/]+)$/, (m, body) => {
+    const f = feedbackList().find((x) => x.id === m[1]);
+    if (!f) return [404, { error: "not_found" }];
+    if (["open", "done", "dismissed"].includes(body?.status)) f.status = body.status;
+    return [200, f];
+  }],
   ["GET", /^\/api\/approvals\/inbox$/, () => [200, inbox()]],
   ["GET", /^\/api\/publishing$/, () => [200, publishing()]],
   ["GET", /^\/api\/schedule\/candidates$/, (_m, _b, url) => [200, db[`/api/schedule/candidates?kind=${url.searchParams.get("kind") === "blog" ? "blog" : "linkedin"}`] || { candidates: [] }]],
@@ -200,6 +290,9 @@ async function answer(method, url, init) {
 }
 
 export function installMockApi() {
+  // Screens that start with a sample on show read these (src/lib/demo.js).
+  const note = (x) => ({ ...x, warnings: [SAMPLE_NOTE] });
+  window.__DEMO_SAMPLES__ = { linkedin: SAMPLES.linkedin.map(note), blogs: SAMPLES.blogs.map(note) };
   const realFetch = window.fetch.bind(window);
   window.fetch = async (input, init = {}) => {
     const raw = typeof input === "string" ? input : input?.url || String(input);

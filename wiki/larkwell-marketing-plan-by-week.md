@@ -1,7 +1,7 @@
 ---
 title: "Larkwell marketing plan by week"
 type: campaign
-updated: 2026-11-18T09:37:26.324Z
+updated: 2026-11-18T12:42:02.429Z
 summary: "The Strategist's plan for the week of 2026-11-16: Field service for operators: own the SAP side of crews, work orders and tablets."
 sources: ["Marketing Engine app records"]
 ---

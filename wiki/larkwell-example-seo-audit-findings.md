@@ -1,7 +1,7 @@
 ---
 title: "larkwell.example SEO audit findings"
 type: campaign
-updated: 2026-11-18T09:37:26.324Z
+updated: 2026-11-18T12:42:02.429Z
 summary: "SEO audit of 2026-11-17: Service pages are sound; two titles are cut off in search and FAQ markup is missing."
 sources: ["Marketing Engine app records"]
 ---

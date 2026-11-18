@@ -1,7 +1,7 @@
 ---
 title: "Larkwell published content"
 type: campaign
-updated: 2026-11-18T09:37:26.324Z
+updated: 2026-11-18T12:42:02.429Z
 summary: "1 blog published on larkwell.example through the app; the newest is \"Master data first: the cutover nobody plans\" (2026-11-11)."
 sources: ["Marketing Engine app records"]
 ---

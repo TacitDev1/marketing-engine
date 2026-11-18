@@ -20,6 +20,7 @@ import { requestDraft, draftToText } from "../lib/generators.js";
 import { Button, Card, Pill, Eyebrow, Badge } from "../components/ui.jsx";
 import JarvisBrief from "../components/JarvisBrief.jsx";
 import { prettySource } from "../lib/format.js";
+import { demoSamples } from "../lib/demo.js";
 
 const LINKEDIN_LIMIT = 3000;
 
@@ -38,7 +39,10 @@ export default function LinkedInPosts({ onMakeImage }) {
   const [productId, setProductId] = useState(""); // a product anchor replaces the service anchor
   const [tone, setTone] = useState("refined");
   const [hashtagStyle, setHashtagStyle] = useState("clean");
-  const [drafts, setDrafts] = useState([]);
+  // The static demo opens with two sample drafts on show.
+  const [drafts, setDrafts] = useState(() =>
+    demoSamples("linkedin").slice(0, 2).map((d, i) => ({ ...d, id: `sample-${i}`, source: "model", createdAt: new Date().toISOString() }))
+  );
   const [generating, setGenerating] = useState(false);
   // A SET, not a single id: two overlapping 30-120s regenerations used to share
   // one flag — starting B stopped A's spinner, and A finishing killed B's,

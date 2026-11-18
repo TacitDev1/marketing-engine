@@ -5,6 +5,10 @@
 // have exactly the shape the real server produces.
 //
 // Times are "days ago" relative to the moment the script runs.
+//
+// The screens that read outside services (analytics, models, usage, the
+// website repository) take their sample data from demo-fixtures-screens.mjs.
+export * from "./demo-fixtures-screens.mjs";
 
 export const BLOGS = [
   {

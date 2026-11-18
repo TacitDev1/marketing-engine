@@ -18,16 +18,19 @@ import { services } from "../lib/company.js";
 import { Button, Card, Pill, Eyebrow } from "../components/ui.jsx";
 import JarvisBrief from "../components/JarvisBrief.jsx";
 import Markdown from "../components/Markdown.jsx";
+import { demoSamples } from "../lib/demo.js";
 import { prettySource } from "../lib/format.js";
 
 export default function Blogs({ incoming, onMakeImage }) {
   const [keywords, setKeywords] = useState([]);
   const [filter, setFilter] = useState("");
-  const [selected, setSelected] = useState(null); // { keyword, volume, ... }
+  // The static demo opens with a sample article on show.
+  const sample = demoSamples("blogs")[0];
+  const [selected, setSelected] = useState(sample ? { keyword: sample.keyword } : null); // { keyword, volume, ... }
   const [serviceId, setServiceId] = useState("");
   const [nudge, setNudge] = useState("");
   const [generating, setGenerating] = useState(false);
-  const [blog, setBlog] = useState(null);
+  const [blog, setBlog] = useState(sample ? { ...sample, targetKeyword: sample.keyword } : null);
   const [error, setError] = useState(null);
 
   const [keywordsFailed, setKeywordsFailed] = useState(false);

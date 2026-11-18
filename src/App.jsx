@@ -16,7 +16,7 @@ import Usage from "./screens/Usage.jsx";
 import Feedback from "./screens/Feedback.jsx";
 import Competitors from "./screens/Competitors.jsx";
 import Schedule from "./screens/Schedule.jsx";
-import { DEMO, showScreen } from "./lib/demo.js";
+import { DEMO } from "./lib/demo.js";
 
 // The static demo's banner: the data is invented and nothing is running.
 function DemoBanner() {
@@ -70,7 +70,7 @@ const SCREEN_IDS = new Set([
 function initialSection() {
   try {
     const q = new URLSearchParams(window.location.search).get("screen");
-    if (q && SCREEN_IDS.has(q) && showScreen(q)) return q;
+    if (q && SCREEN_IDS.has(q)) return q;
   } catch {
     /* no URL access (tests) — fall through */
   }
@@ -88,7 +88,6 @@ export default function App() {
   const [posterDraft, setPosterDraft] = useState(null);
 
   function go(next) {
-    if (!showScreen(next)) return;
     setVisited((v) => (v.has(next) ? v : new Set(v).add(next)));
     setSection(next);
   }
@@ -150,7 +149,7 @@ export default function App() {
       <main className="scroll-quiet flex-1 overflow-y-auto">
         {DEMO && <DemoBanner />}
         {Object.entries(screens).map(([id, el]) =>
-          visited.has(id) && showScreen(id) ? (
+          visited.has(id) ? (
             <div key={id} className={section === id ? "contents" : "hidden"}>
               <ScreenBoundary name={id}>{el}</ScreenBoundary>
             </div>

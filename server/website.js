@@ -206,7 +206,6 @@ function humanize(seg) {
     .replace(/\bAws\b/g, "AWS")
     .replace(/\bHr\b/g, "HR")
     .replace(/\bFaq\b/g, "FAQ")
-    .replace(/\bEz\b/g, "EZ")
     .replace(/\bBtp\b/g, "BTP")
     .replace(/\bEcc\b/g, "ECC")
     .replace(/\bMps\b/g, "MPS");

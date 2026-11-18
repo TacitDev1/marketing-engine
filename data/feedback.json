@@ -1,0 +1,69 @@
+[
+  {
+    "id": "fb-1793950800000-81",
+    "text": "Could the app post to LinkedIn by itself on Fridays?",
+    "author": "Sipho",
+    "status": "dismissed",
+    "createdAt": "2026-11-06T07:40:00.000Z",
+    "replies": [
+      {
+        "id": "fbr-1793956500000-82",
+        "text": "No, on purpose: a person always copies a post across. The tool drafts, people publish.",
+        "author": "Tobias",
+        "createdAt": "2026-11-06T09:15:00.000Z"
+      }
+    ]
+  },
+  {
+    "id": "fb-1794210000000-83",
+    "text": "Fewer posts about AI, please. Our buyers want to hear about crews and billing runs.",
+    "author": "Lena",
+    "status": "done",
+    "createdAt": "2026-11-09T07:40:00.000Z",
+    "replies": [
+      {
+        "id": "fbr-1794302100000-84",
+        "text": "Added a playbook rule: at most one AI angle a week, and only with a named process behind it.",
+        "author": "Tobias",
+        "createdAt": "2026-11-10T09:15:00.000Z"
+      }
+    ]
+  },
+  {
+    "id": "fb-1794469200000-85",
+    "text": "The blog cards look too dark on the website. Can blogs use the light card style?",
+    "author": "Priya",
+    "status": "done",
+    "createdAt": "2026-11-12T07:40:00.000Z",
+    "replies": [
+      {
+        "id": "fbr-1794561300000-86",
+        "text": "Done. Blog pictures now default to the light style; LinkedIn keeps the green one.",
+        "author": "Tobias",
+        "createdAt": "2026-11-13T09:15:00.000Z"
+      }
+    ]
+  },
+  {
+    "id": "fb-1794814800000-87",
+    "text": "Anything that names Osterby Utilities needs their sign-off first. Please hold those posts until Anouk confirms.",
+    "author": "Jonas",
+    "status": "open",
+    "createdAt": "2026-11-16T07:40:00.000Z"
+  },
+  {
+    "id": "fb-1794901200000-88",
+    "text": "Can the Friday digest show which posts led to an enquiry? I'd like that next to the weekly numbers, not in a separate report.",
+    "author": "Mara",
+    "status": "open",
+    "createdAt": "2026-11-17T07:40:00.000Z",
+    "replies": [
+      {
+        "id": "fbr-1794993300000-89",
+        "text": "The Measurement agent already ties enquiries to landing pages. I've asked Jarvis to add one line per enquiry to the digest from this Friday.",
+        "author": "Tobias",
+        "createdAt": "2026-11-18T09:15:00.000Z"
+      }
+    ]
+  }
+]

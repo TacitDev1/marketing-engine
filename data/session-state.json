@@ -2,14 +2,14 @@
   "date": "2026-11-18",
   "phase": "done",
   "running": false,
-  "startedAt": "2026-11-18T09:19:46.324Z",
-  "finishedAt": "2026-11-18T09:36:36.324Z",
-  "lastCompletedAt": "2026-11-18T09:36:36.324Z",
+  "startedAt": "2026-11-18T13:04:00.000Z",
+  "finishedAt": "2026-11-18T12:41:12.429Z",
+  "lastCompletedAt": "2026-11-18T12:41:12.429Z",
   "completedDate": "2026-11-18",
   "picks": [],
   "produced": [
     {
-      "id": "d-1794993746324-11",
+      "id": "d-1795008000000-11",
       "kind": "linkedin",
       "title": "A short dump at seven in the morning, and the developer who wrote the code left last year.",
       "why": "Product anchor: Larkwell Copilot has no post this month.",
@@ -17,7 +17,7 @@
       "revisions": 1
     },
     {
-      "id": "d-1794993746324-12",
+      "id": "d-1795008000000-12",
       "kind": "linkedin",
       "title": "We said no to a project last month, and it was the right call.",
       "why": "Founder voice is under-used; the team approves these.",

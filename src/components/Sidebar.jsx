@@ -22,7 +22,7 @@ import {
 } from "@phosphor-icons/react";
 import { company } from "../lib/company.js";
 import { useDeployment } from "../lib/deployment.js";
-import { DEMO, showScreen } from "../lib/demo.js";
+import { DEMO } from "../lib/demo.js";
 
 // Grouped nav. The first group has no title (Jarvis, the hub); the rest sit
 // under small section labels so a long menu reads cleanly.
@@ -101,7 +101,7 @@ export default function Sidebar({ active, onNavigate }) {
   return (
     <aside className="flex h-full w-64 flex-col border-r border-line bg-surface text-ink">
       {/* Brand */}
-      <div className="flex items-center gap-3 px-5 py-5">
+      <div className="flex items-center gap-3 px-5 py-4">
         <div className="grid h-[34px] w-[34px] place-items-center rounded-[9px] bg-gradient-to-br from-brand to-brand-bright text-white shadow-[0_4px_14px_-2px_color-mix(in_srgb,var(--color-brand)_45%,transparent)]">
           <Sparkle weight="fill" size={18} />
         </div>
@@ -112,10 +112,8 @@ export default function Sidebar({ active, onNavigate }) {
       </div>
 
       {/* Nav */}
-      <nav className="scroll-quiet mt-1 flex-1 space-y-4 overflow-y-auto px-3">
-        {SECTIONS.map((s) => ({ ...s, items: s.items.filter((i) => showScreen(i.id)) }))
-          .filter((s) => s.items.length)
-          .map((section, si) => (
+      <nav className="scroll-quiet mt-1 flex-1 space-y-3 overflow-y-auto px-3">
+        {SECTIONS.map((section, si) => (
           <div key={section.title || si}>
             {section.title && (
               <p className="px-2.5 pb-1.5 text-[10px] font-semibold uppercase tracking-[0.12em] text-faint">

@@ -1,7 +1,7 @@
 ---
 title: "Larkwell marketing results by week"
 type: campaign
-updated: 2026-11-18T09:37:26.324Z
+updated: 2026-11-18T12:42:02.429Z
 summary: "Results for the week ending 2026-11-13: Search clicks steady; the master data blog brought the first enquiry from a waste operator."
 sources: ["Marketing Engine app records"]
 ---

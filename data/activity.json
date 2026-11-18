@@ -262,27 +262,27 @@
     }
   },
   {
-    "id": "a-1794994486324-68",
-    "ts": "2026-11-18T09:34:46.324Z",
-    "actor": "agent",
-    "event": "agent.ok",
-    "summary": "Editor agent finished after 9 min",
-    "ref": null
-  },
-  {
-    "id": "a-1794994596324-80",
-    "ts": "2026-11-18T09:36:36.324Z",
+    "id": "a-1795005672429-80",
+    "ts": "2026-11-18T12:41:12.429Z",
     "actor": "jarvis",
     "event": "session.brief",
     "summary": "Wrote 2 pieces for review, threw away 1 that wasn't good enough, 1 playbook change.",
     "ref": null
   },
   {
-    "id": "a-1794994676324-67",
-    "ts": "2026-11-18T09:37:56.324Z",
+    "id": "a-1795008180000-67",
+    "ts": "2026-11-18T13:23:00.000Z",
     "actor": "agent",
     "event": "agent.ok",
     "summary": "Researcher agent finished after 18 min",
+    "ref": null
+  },
+  {
+    "id": "a-1795009740000-68",
+    "ts": "2026-11-18T13:49:00.000Z",
+    "actor": "agent",
+    "event": "agent.ok",
+    "summary": "Editor agent finished after 9 min",
     "ref": null
   }
 ]

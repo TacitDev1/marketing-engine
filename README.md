@@ -7,7 +7,7 @@ person to approve it**. Blogs that a person approves are published to the compan
 schedule. LinkedIn posts are never posted by the tool.
 
 **[Live demo](https://tacitdev1.github.io/marketing-engine/)**: a static build on sample data.
-No server, no models. Code: [github.com/TacitDev1/marketing-engine](https://github.com/TacitDev1/marketing-engine).
+All fifteen screens, no server, no models. Code: [github.com/TacitDev1/marketing-engine](https://github.com/TacitDev1/marketing-engine).
 
 > **This is a sanitised template.** The real tool was built for a consultancy and runs on its
 > own data. Everything here is invented: **Larkwell Consulting**, its clients (Brackenfield
@@ -26,7 +26,9 @@ No server, no models. Code: [github.com/TacitDev1/marketing-engine](https://gith
 | **Second Brain** | A Markdown wiki the engine maintains for itself, with a link graph. |
 | **Competitors** | Profiles of rival firms and a board of gaps where the company can win. |
 | **Images** | Branded cards drawn as SVG, stock photos, and a live animated ASCII poster studio. |
-| LinkedIn Posts, Blogs, SEO, Website, Analytics, Connections, Settings, Usage, Feedback | Drafting by hand, keyword work, managing the sibling website repository, GA4 and Search Console numbers, model settings. Not in the demo. |
+| LinkedIn Posts, Blogs | Drafting by hand: pick an angle or a keyword, generate, edit, save to the Library. |
+| SEO, Website, Analytics | Keyword plan and Search Console quick wins, managing the sibling website repository with a live preview, GA4 and Search Console numbers. |
+| Feedback, Connections, Token Usage, Settings | Notes from the leadership team, which data sources are connected, the local models' token use, model settings. |
 
 ## How it grew: v1 to v2
 
@@ -143,9 +145,12 @@ The demo build swaps the API for `src/demo/mock-api.js`, which answers from
 `src/demo/snapshot.json`. That snapshot is recorded from the real server running on the sample
 data: `npm run demo:data` seeds `data/` through the server's own store functions
 (`scripts/demo-fixtures.mjs` holds the invented content), starts the server, and records the
-responses the demo screens read. Dates move forward by whole weeks so the sample always looks
-recent. Approve, send back, drop and status changes work in memory; anything that needs a model
-says so. Set `DEMO_BASE` to serve it from another path.
+responses the demo screens read. What the real tool reads from outside services (Google
+Analytics, Search Console, the Ollama model list) is invented in `scripts/demo-fixtures-screens.mjs`,
+and the Website screen's live preview shows a small stand-in page (`public/demo-site/`). Dates
+move forward by whole weeks so the sample always looks recent. Approve, send back, drop, feedback
+and status changes work in memory; "Generate" hands back one of the sample drafts and says so.
+Set `DEMO_BASE` to serve it from another path.
 
 ## Tests and checks
 
@@ -161,10 +166,12 @@ npm run leak-scan        # names, hosts, addresses and keys that must never be p
   as "planned" and never run until their commands exist.
 - Blogs publish by committing to a sibling Astro website repository and pushing it, only on a
   server, only after a person approved them, and only blog content.
-- The demo shows six of the sixteen screens; the rest need the server.
+- The demo shows every screen, but nothing in it runs: no model writes, no site is built, no
+  Google data is fetched. The numbers on Analytics and SEO are invented.
 - Built with Claude Code, directed and shipped by me.
 
 ## Licence
 
 MIT, see [LICENSE](LICENSE). The marketing skills referenced above are MIT-licensed by their
-author and are not part of this repository.
+author and are not part of this repository. The fonts (Inter Tight, JetBrains Mono) are
+self-hosted in `public/fonts/` under the SIL Open Font License; the licence texts are next to them.

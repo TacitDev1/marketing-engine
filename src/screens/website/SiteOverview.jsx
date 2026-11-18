@@ -47,7 +47,7 @@ export function SiteStatus({ overview }) {
         </div>
         <p className="mt-1 text-[12.5px] leading-relaxed text-muted">
           Migrated off Elementor to Astro. Publishing pushes content to main and
-          The site host rebuilds larkwell.example within a few minutes.
+          the site host rebuilds larkwell.example within a few minutes.
           {overview.lastBuilt && (
             <>
               {" "}

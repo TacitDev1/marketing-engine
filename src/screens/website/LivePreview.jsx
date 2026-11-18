@@ -20,12 +20,11 @@ import PageNav from "./PageNav.jsx";
 // /api/website/routes (every page in the site's sitemap).
 const QUICK_LINKS = [
   { label: "Home", path: "/" },
-  { label: "SAP", path: "/sap/technical" },
-  { label: "Products", path: "/products/plant-builder" },
+  { label: "Services", path: "/services/plant-maintenance" },
+  { label: "Industries", path: "/industries/waste-management" },
   { label: "News", path: "/news" },
-  { label: "Success stories", path: "/success-stories" },
-  { label: "About", path: "/about-us" },
-  { label: "Contact", path: "/contact-us" },
+  { label: "About", path: "/about" },
+  { label: "Contact", path: "/contact" },
 ];
 
 const DEVICES = [

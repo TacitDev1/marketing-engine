@@ -1,7 +1,7 @@
 ---
 title: "What the Larkwell team turns down and why"
 type: campaign
-updated: 2026-11-18T09:37:26.324Z
+updated: 2026-11-18T12:42:02.429Z
 summary: "2 recorded reasons for rejecting, dropping or sending back a piece; the latest: 2026-11-15, linkedin (integration), \"Is your integration landscape ready for the future?\": Editor: Rhetorical-question hook and no specific…"
 sources: ["Marketing Engine app records"]
 ---

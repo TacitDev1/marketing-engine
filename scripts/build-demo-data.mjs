@@ -13,7 +13,7 @@
 import fs from "node:fs";
 import os from "node:os";
 import path from "node:path";
-import { spawn } from "node:child_process";
+import { spawn, spawnSync } from "node:child_process";
 import { fileURLToPath, pathToFileURL } from "node:url";
 import * as FX from "./demo-fixtures.mjs";
 
@@ -166,6 +166,13 @@ for (const [key, headline, subline, style] of cards) {
 wiki.ensureSchema(at(14, 9));
 bridge.syncWiki(at(0, 16, 50));
 
+// ---------- feedback notes from the leadership team ----------
+for (const f of [...FX.FEEDBACK].reverse()) {
+  const rec = stores.addFeedback({ text: f.text, author: f.author }, at(f.daysAgo, 9, 40));
+  for (const r of f.replies) stores.addFeedbackReply(rec.id, r, at(r.daysAgo, 11, 15));
+  if (f.status !== "open") stores.updateFeedback(rec.id, { status: f.status });
+}
+
 // Activity in time order (seeding filed it out of order).
 stores.persist("activity", [...stores.load("activity")].sort((a, b) => a.ts.localeCompare(b.ts)));
 
@@ -180,9 +187,36 @@ if (WRITE_DATA) {
   console.log("wrote data/ and wiki/");
 }
 
+// ---------- what only the recording server needs ----------
+// Token usage and the last Lighthouse audit, in the files their modules read.
+fs.writeFileSync(path.join(box, "data/usage.json"), JSON.stringify(FX.usageRows(NOW)));
+fs.writeFileSync(path.join(box, "data/site-audit.json"), JSON.stringify(FX.siteAudit(at(2, 14, 10)), null, 2));
+// A small sibling website repository (an Astro site) for the Website screen,
+// with one new post that is not live yet. Its git identity is set per command.
+const site = path.join(box, "company-website");
+const dateOf = (daysAgo) => at(daysAgo, 9).slice(0, 10);
+const writeFiles = (files) => {
+  for (const [rel, text] of Object.entries(files)) {
+    fs.mkdirSync(path.dirname(path.join(site, rel)), { recursive: true });
+    fs.writeFileSync(path.join(site, rel), text);
+  }
+};
+writeFiles(FX.websiteFiles(dateOf));
+fs.mkdirSync(path.join(site, "dist"));
+fs.writeFileSync(path.join(site, "dist/index.html"), "<!doctype html><title>Larkwell</title>\n");
+const git = (...args) => {
+  const r = spawnSync("git", ["-c", "user.name=Larkwell Website", "-c", "user.email=web@larkwell.example", "-c", "core.autocrlf=false", ...args], { cwd: site, encoding: "utf8" });
+  if (r.status !== 0) throw new Error(`git ${args[0]}: ${r.stderr}`);
+};
+git("init", "-q", "-b", "main");
+git("add", "-A");
+git("commit", "-q", "-m", "Site content");
+writeFiles(FX.websitePending(dateOf));
+fs.appendFileSync(path.join(site, "src/content/news/en/three-screens-not-thirty.md"), "\nOffline mode matters more than any feature.\n");
+
 // ---------- record the API the demo screens read ----------
 const PORT = 8899;
-const server = spawn(process.execPath, ["server/index.js"], { cwd: box, env: { ...process.env, PORT: String(PORT), MKT_DEPLOYMENT: "" }, stdio: ["ignore", "pipe", "pipe"] });
+const server = spawn(process.execPath, ["server/index.js"], { cwd: box, env: { ...process.env, PORT: String(PORT), MKT_DEPLOYMENT: "", MKT_WEBSITE_REPO: site }, stdio: ["ignore", "pipe", "pipe"] });
 let log = "";
 server.stdout.on("data", (c) => (log += c));
 server.stderr.on("data", (c) => (log += c));
@@ -206,18 +240,64 @@ const PATHS = [
   "/api/drafts", "/api/agents", "/api/publishing", "/api/summary", "/api/week-ahead", "/api/approvals/inbox", "/api/approvals",
   "/api/session", "/api/playbook", "/api/fresh-start", "/api/schedule", "/api/competitors", "/api/librarian",
   "/api/wiki/all", "/api/wiki/graph", "/api/images", "/api/knowledge/status",
+  "/api/feedback", "/api/settings", "/api/models/pull", "/api/keywords", "/api/content-plan",
+  "/api/usage?days=7", "/api/usage?days=30", "/api/usage?days=all",
+  "/api/website/overview", "/api/website/pages", "/api/website/routes", "/api/website/manage", "/api/website/audit",
 ];
-const snap = { takenAt: new Date(NOW).toISOString(), get: {} };
+const snap = { takenAt: new Date(NOW).toISOString(), get: {}, post: {} };
 try {
   for (const p of PATHS) snap.get[p] = await get(p);
   for (const pg of snap.get["/api/wiki/all"].pages || []) snap.get[`/api/wiki/page/${pg.slug}`] = await get(`/api/wiki/page/${pg.slug}`);
   for (const kind of ["linkedin", "blog"]) snap.get[`/api/schedule/candidates?kind=${kind}`] = await get(`/api/schedule/candidates?kind=${kind}`);
+  for (const e of snap.get["/api/website/pages"].entries || []) {
+    const q = `/api/website/page?rel=${encodeURIComponent(e.rel)}`;
+    snap.get[q] = await get(q);
+  }
+  for (const e of snap.get["/api/website/manage"].entries || []) {
+    const q = `/api/website/entry?rel=${encodeURIComponent(e.rel)}`;
+    snap.get[q] = await get(q);
+  }
+  // The SEO screen's one knowledge search (keyword fallback: no embedding model here).
+  const res = await fetch(`${base}/api/knowledge/search`, {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({ query: "SEO audit findings recommendations issues technical fixes overall score", n: 6 }),
+  });
+  snap.post["/api/knowledge/search"] = await res.json();
 } catch (err) {
   console.error(log.slice(-3000));
   throw err;
 } finally {
   server.kill();
 }
+
+// What the real tool reads from outside services, which no recording can
+// reach here: Google Analytics, Search Console, Ollama. Invented, same shapes.
+Object.assign(snap.get, {
+  "/api/connections": FX.CONNECTIONS,
+  "/api/analytics/summary": FX.analyticsSummary(NOW),
+  "/api/seo/opportunities": FX.seoOpportunities(),
+  "/api/models": { models: FX.MODELS },
+});
+// As the screens see it on a machine where the models are installed.
+snap.get["/api/health"].brain = { ...snap.get["/api/health"].brain, host: "http://127.0.0.1:11434", available: true };
+snap.get["/api/health"].ffmpeg = { available: true, path: "/usr/bin/ffmpeg", hint: "" };
+snap.get["/api/deployment"].host = "http://127.0.0.1:11434";
+snap.get["/api/settings"].ollamaHost = "http://127.0.0.1:11434";
+
+// Sample outputs for the screens that draft on request (LinkedIn, Blogs): the
+// drafts above, in the shape /api/generate and /api/blog/generate answer with.
+const GROUNDING = ["larkwell-content-strategy-2026.md · Pillars", "product-marketing.md · Buyers", "larkwell-brand-and-voice.md · Voice"];
+snap.samples = {
+  linkedin: FX.POSTS.filter((p) => p.editor?.verdict === "pass").map((p) => ({
+    type: p.postType, postType: p.postType, service: p.serviceId, serviceId: p.serviceId, serviceLabel: label(p.serviceId),
+    hook: p.hook, body: p.body, hashtags: p.hashtags, grounding: GROUNDING,
+  })),
+  blogs: FX.BLOGS.filter((b) => b.editor?.verdict === "pass").map((b) => ({
+    keyword: b.keyword, title: b.title, metaDescription: b.metaDescription, slug: b.slug, body: b.body,
+    serviceId: b.serviceId, serviceLabel: label(b.serviceId), grounding: GROUNDING,
+  })),
+};
 
 // Pictures go into the demo bundle; the snapshot points at them by file name.
 const imgDir = path.join(root, "src/demo/images");
@@ -233,4 +313,8 @@ for (const p of [box, root, os.homedir()]) {
 }
 fs.writeFileSync(path.join(root, "src/demo/snapshot.json"), json + "\n");
 console.log(`wrote src/demo/snapshot.json (${Object.keys(snap.get).length} responses) and ${fs.readdirSync(imgDir).length} pictures`);
-fs.rmSync(box, { recursive: true, force: true });
+try {
+  fs.rmSync(box, { recursive: true, force: true, maxRetries: 5 });
+} catch (err) {
+  console.warn(`left the temp folder ${box}: ${err.code}`);
+}
