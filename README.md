@@ -7,7 +7,7 @@ person to approve it**. Blogs that a person approves are published to the compan
 schedule. LinkedIn posts are never posted by the tool.
 
 **[Live demo](https://tacitdev1.github.io/marketing-engine/)**: a static build on sample data.
-No server, no models.
+No server, no models. Code: [github.com/TacitDev1/marketing-engine](https://github.com/TacitDev1/marketing-engine).
 
 > **This is a sanitised template.** The real tool was built for a consultancy and runs on its
 > own data. Everything here is invented: **Larkwell Consulting**, its clients (Brackenfield
@@ -102,6 +102,7 @@ poster exports. The agent team needs the [Claude Code CLI](https://docs.claude.c
 signed in on the machine that runs it.
 
 ```bash
+git clone https://github.com/TacitDev1/marketing-engine.git && cd marketing-engine
 cp .env.example .env     # fill in what you have; blanks show as "not connected"
 npm ci
 npm run dev              # web on http://localhost:5180, brain API on :8787
