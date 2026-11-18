@@ -1,0 +1,5 @@
+# Checked false positives (see the leak-scan workflow):
+# empty GOOGLE_APPLICATION_CREDENTIALS placeholder in .env.example
+9339ad103f4111a4ebc669b3028ba4660e6765cb:.env.example:generic-api-key:56
+# icon import (ArrowSquareOut next to LinkedinLogo), not a LinkedIn client ID
+9339ad103f4111a4ebc669b3028ba4660e6765cb:src/screens/jarvis/Drafts.jsx:linkedin-client-id:1
