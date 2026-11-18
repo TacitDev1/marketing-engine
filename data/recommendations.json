@@ -1,0 +1,67 @@
+[
+  {
+    "id": "rec-1794837600000-45",
+    "front": "landing-pages",
+    "title": "Put both named clients on the home page",
+    "detail": "Add Brackenfield Waste and Osterby Utilities as short reference cards under the hero, each linking to its case page.",
+    "evidence": [
+      "jarvis:session"
+    ],
+    "effort": "small",
+    "status": "open",
+    "seen": 1,
+    "createdAt": "2026-11-16T14:00:00.000Z"
+  },
+  {
+    "id": "rec-1794837600000-46",
+    "front": "content-seo",
+    "title": "Write the SAP PM mobile work orders guide",
+    "detail": "A long-form guide that answers the query in the first paragraph and covers offline, rollout and measurement.",
+    "evidence": [
+      "jarvis:session"
+    ],
+    "effort": "medium",
+    "status": "open",
+    "seen": 1,
+    "createdAt": "2026-11-16T14:00:00.000Z"
+  },
+  {
+    "id": "rec-1794578400000-73",
+    "front": "analytics",
+    "title": "Link the master data blog from the S/4HANA page",
+    "detail": "Page: /services/s4hana/. Add a short 'read next' link at the end of the S/4HANA service page. Why: The blog converts; the service page gets more traffic.",
+    "evidence": [
+      "agent:measurement:2026-11-13"
+    ],
+    "effort": "small",
+    "status": "open",
+    "seen": 1,
+    "createdAt": "2026-11-13T14:00:00.000Z"
+  },
+  {
+    "id": "rec-1794924000000-76",
+    "front": "technical-seo",
+    "title": "Shorten two service page titles",
+    "detail": "Page: /services/plant-maintenance/. Plant maintenance: 'SAP plant maintenance for operators | Larkwell'. Billing: 'SAP utilities billing support | Larkwell'. Why: Both are cut off in search results.",
+    "evidence": [
+      "agent:seo:2026-11-17"
+    ],
+    "effort": "small",
+    "status": "open",
+    "seen": 1,
+    "createdAt": "2026-11-17T14:00:00.000Z"
+  },
+  {
+    "id": "rec-1794924000000-77",
+    "front": "technical-seo",
+    "title": "Add FAQ markup to three service pages",
+    "detail": "Page: /services/billing/. Mark up the existing question-and-answer sections on plant maintenance, billing and S/4HANA. Why: Eligible for richer results at no content cost.",
+    "evidence": [
+      "agent:seo:2026-11-17"
+    ],
+    "effort": "small",
+    "status": "open",
+    "seen": 1,
+    "createdAt": "2026-11-17T14:00:00.000Z"
+  }
+]

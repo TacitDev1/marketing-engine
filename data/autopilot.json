@@ -1,0 +1,20 @@
+{
+  "workerEnabled": false,
+  "cadenceMs": 600000,
+  "dailyDraftCap": 4,
+  "activeHours": {
+    "enabled": false,
+    "start": 7,
+    "end": 19,
+    "days": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "tz": "Europe/London"
+  },
+  "researcherLastSeenAt": "2026-11-18T09:22:56.324Z",
+  "updatedAt": "2026-11-18T09:22:56.324Z"
+}

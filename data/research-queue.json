@@ -1,0 +1,58 @@
+[
+  {
+    "id": "rq-1794909600000-42",
+    "topic": "How do waste operators schedule preventive maintenance for bin lorries in SAP PM?",
+    "front": "content-seo",
+    "rationale": "Plan for this week: field service theme",
+    "priority": 5,
+    "status": "queued",
+    "claimToken": null,
+    "claimedAt": null,
+    "createdBy": "strategist",
+    "createdAt": "2026-11-17T10:00:00.000Z",
+    "doneAt": null,
+    "findingIds": []
+  },
+  {
+    "id": "rq-1794909600000-43",
+    "topic": "What changes for meter-to-cash when IS-U moves to S/4HANA Utilities?",
+    "front": "messaging",
+    "rationale": "Billing pillar has one post this month",
+    "priority": 4,
+    "status": "queued",
+    "claimToken": null,
+    "claimedAt": null,
+    "createdBy": "jarvis",
+    "createdAt": "2026-11-17T10:00:00.000Z",
+    "doneAt": null,
+    "findingIds": []
+  },
+  {
+    "id": "rq-1794909600000-44",
+    "topic": "Re-profile Harlow & Penn: any new SAP PM content?",
+    "front": "competitor-gaps",
+    "rationale": "Last researched a fortnight ago",
+    "priority": 3,
+    "status": "queued",
+    "claimToken": null,
+    "claimedAt": null,
+    "createdBy": "jarvis",
+    "createdAt": "2026-11-17T10:00:00.000Z",
+    "doneAt": null,
+    "findingIds": []
+  },
+  {
+    "id": "rq-1794580200000-69",
+    "topic": "Preventive maintenance for bin lorries in SAP PM",
+    "front": "messaging",
+    "rationale": "Strategist, week of 2026-11-13: Waste operators are an open gap",
+    "priority": 5,
+    "status": "queued",
+    "claimToken": null,
+    "claimedAt": null,
+    "createdBy": "strategist",
+    "createdAt": "2026-11-13T14:30:00.000Z",
+    "doneAt": null,
+    "findingIds": []
+  }
+]

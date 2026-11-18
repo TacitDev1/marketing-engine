@@ -1,0 +1,122 @@
+[
+  {
+    "id": "f-1794301200000-36",
+    "topicId": null,
+    "front": "brand-proof",
+    "title": "Buyers want named references from their own sector",
+    "summary": "Utility and waste buyers look for a reference in their own sector before booking a call. Larkwell's two named clients should be on the home page.",
+    "url": "https://larkwell.example/",
+    "sources": [
+      "https://larkwell.example/"
+    ],
+    "kind": "web",
+    "data": null,
+    "hash": "1e9e5325f4bc367f",
+    "processed": false,
+    "processedAt": null,
+    "attempts": 0,
+    "ingestedToWiki": [],
+    "actions": [],
+    "createdAt": "2026-11-10T09:00:00.000Z"
+  },
+  {
+    "id": "f-1794474000000-37",
+    "topicId": null,
+    "front": "social",
+    "title": "Patch-day posts get read by Basis leads",
+    "summary": "Short, practical posts on the day of the SAP security notes reach Basis leads. Larkwell should post one each month, written the day before.",
+    "url": "https://support.sap.com/",
+    "sources": [
+      "https://support.sap.com/"
+    ],
+    "kind": "web",
+    "data": null,
+    "hash": "d27a3cc7204d5e43",
+    "processed": false,
+    "processedAt": null,
+    "attempts": 0,
+    "ingestedToWiki": [],
+    "actions": [],
+    "createdAt": "2026-11-12T09:00:00.000Z"
+  },
+  {
+    "id": "f-1794646800000-38",
+    "topicId": null,
+    "front": "technical-seo",
+    "title": "Service pages have no FAQ structured data",
+    "summary": "The plant maintenance and billing service pages answer common questions in prose but carry no FAQ markup. Adding it is a small change.",
+    "url": "https://larkwell.example/services/",
+    "sources": [
+      "https://larkwell.example/services/"
+    ],
+    "kind": "web",
+    "data": null,
+    "hash": "3cdde4a95c99b290",
+    "processed": false,
+    "processedAt": null,
+    "attempts": 0,
+    "ingestedToWiki": [],
+    "actions": [],
+    "createdAt": "2026-11-14T09:00:00.000Z"
+  },
+  {
+    "id": "f-1794733200000-39",
+    "topicId": null,
+    "front": "competitor-gaps",
+    "title": "No competitor writes for waste operators",
+    "summary": "Of the five firms on file, none has content for waste collection or recycling operators. Brackenfield Waste gives Larkwell a credible angle.",
+    "url": "https://quayside-systems.example/",
+    "sources": [
+      "https://quayside-systems.example/"
+    ],
+    "kind": "web",
+    "data": null,
+    "hash": "e3d9f2712697d0cc",
+    "processed": false,
+    "processedAt": null,
+    "attempts": 0,
+    "ingestedToWiki": [],
+    "actions": [],
+    "createdAt": "2026-11-15T09:00:00.000Z"
+  },
+  {
+    "id": "f-1794819600000-40",
+    "topicId": null,
+    "front": "messaging",
+    "title": "Utility buyers search for billing exceptions by symptom",
+    "summary": "Searches name the symptom (implausible reads, move-in dates), not the module. Larkwell's billing content should lead with the symptom and name the SAP fix second.",
+    "url": "https://fernhollow.example/insights/",
+    "sources": [
+      "https://fernhollow.example/insights/"
+    ],
+    "kind": "web",
+    "data": null,
+    "hash": "507e9a904b006b1b",
+    "processed": false,
+    "processedAt": null,
+    "attempts": 0,
+    "ingestedToWiki": [],
+    "actions": [],
+    "createdAt": "2026-11-16T09:00:00.000Z"
+  },
+  {
+    "id": "f-1794906000000-41",
+    "topicId": null,
+    "front": "content-seo",
+    "title": "Few pages answer 'SAP PM mobile work orders' with SAP detail",
+    "summary": "The top results are vendor product pages for generic mobile apps. None explains how work orders, notifications and readings flow back into SAP PM. Larkwell should own this with a practical guide.",
+    "url": "https://harlowpenn.example/",
+    "sources": [
+      "https://harlowpenn.example/"
+    ],
+    "kind": "web",
+    "data": null,
+    "hash": "03ef50498a5978bf",
+    "processed": false,
+    "processedAt": null,
+    "attempts": 0,
+    "ingestedToWiki": [],
+    "actions": [],
+    "createdAt": "2026-11-17T09:00:00.000Z"
+  }
+]

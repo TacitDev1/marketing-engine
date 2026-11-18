@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="627" viewBox="0 0 1200 627">
+<defs></defs>
+<rect width="1200" height="627" fill="#f6f7f2"/>
+
+<rect x="90" y="230" width="108" height="6" rx="3" fill="#14532d"/>
+<text x="90" y="289" font-family="'Inter Tight','Inter',ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif" font-size="45" font-weight="700" fill="#0b1210" letter-spacing="-0.5">Three screens, not thirty</text>
+<text x="90" y="361" font-family="'Inter Tight','Inter',ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif" font-size="18" font-weight="500" fill="#5b6478">SAP PM on the depot tablet</text>
+<image href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAzNjAgMjE5IiB3aWR0aD0iMzYwIiBoZWlnaHQ9IjIxOSI+PHRpdGxlPmxhcmt3ZWxsPC90aXRsZT48cGF0aCBkPSJNMTggMjA0Qzk2IDE5NiAxNjggMTU4IDIyNiA5MkMyNTIgNjIgMjg2IDMyIDM0MiAxOEMzMTAgNTggMjg2IDkyIDI1NiAxMjZDMjA0IDE4MCAxMjQgMjEwIDE4IDIwNFoiIGZpbGw9IiMxNDUzMkQiLz48cGF0aCBkPSJNNzAgMjEwQzE1MCAyMDYgMjI4IDE4MCAzMDQgMTE2QzI3NiAxNjggMjA0IDIxMiA3MCAyMTBaIiBmaWxsPSIjQTNFNjM1Ii8+PHBhdGggZD0iTTE1MCAxNTBDMTkwIDEyOCAyMjQgOTYgMjUwIDYyIiBmaWxsPSJub25lIiBzdHJva2U9IiNGNkY3RjIiIHN0cm9rZS13aWR0aD0iNiIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBvcGFjaXR5PSIuNTUiLz48L3N2Zz4K" x="90" y="497" width="69" height="42" preserveAspectRatio="xMinYMax meet"/><text x="168" y="537" font-family="'Inter Tight','Inter',ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif" font-size="19" font-weight="700" letter-spacing="0" fill="#0b1210">larkwell</text>
+</svg>

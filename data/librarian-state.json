@@ -1,0 +1,13 @@
+{
+  "lastRunAt": "2026-11-17T15:00:00.000Z",
+  "lastResult": {
+    "merged": 0,
+    "linked": 4,
+    "orphansLinked": 1,
+    "lintIssues": 0,
+    "errors": 0
+  },
+  "running": false,
+  "enabled": true,
+  "runCount": 9
+}

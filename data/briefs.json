@@ -1,0 +1,77 @@
+[
+  {
+    "id": "brief-2026-11-18T09:36:36.324Z",
+    "date": "2026-11-18",
+    "createdAt": "2026-11-18T09:36:36.324Z",
+    "by": "schedule",
+    "daysAgo": 0,
+    "headline": "Wrote 2 pieces for review, threw away 1 that wasn't good enough, 1 playbook change.",
+    "learned": [
+      "Raised 'Name the sector in the first line' after two approvals that did."
+    ],
+    "discarded": [
+      {
+        "kind": "linkedin",
+        "title": "Is your integration landscape ready?",
+        "reason": "Rhetorical-question hook; the critic scored it 3/10.",
+        "score": 3
+      }
+    ],
+    "picks": [
+      {
+        "kind": "linkedin",
+        "serviceId": "abap",
+        "postType": "how-to",
+        "why": "Product anchor: Larkwell Copilot has no post this month."
+      },
+      {
+        "kind": "linkedin",
+        "serviceId": "managed",
+        "postType": "founder",
+        "why": "Founder voice is under-used; the team approves these."
+      }
+    ],
+    "recommendations": [
+      {
+        "title": "Put both named clients on the home page",
+        "why": "Buyers look for a sector reference first"
+      }
+    ],
+    "research": [
+      {
+        "topic": "Preventive maintenance for bin lorries in SAP PM",
+        "why": "From this week's plan"
+      }
+    ],
+    "needs": [
+      "Review today's 2 drafts in the Library: approve, edit, or reject with a reason. Every review teaches me."
+    ],
+    "produced": [
+      {
+        "id": "d-1794993746324-11",
+        "kind": "linkedin",
+        "title": "A short dump at seven in the morning, and the developer who wrote the code left last year.",
+        "why": "Product anchor: Larkwell Copilot has no post this month.",
+        "score": 8,
+        "revisions": 1
+      },
+      {
+        "id": "d-1794993746324-12",
+        "kind": "linkedin",
+        "title": "We said no to a project last month, and it was the right call.",
+        "why": "Founder voice is under-used; the team approves these.",
+        "score": 8,
+        "revisions": 1
+      }
+    ],
+    "signals": {
+      "kept": 4,
+      "rejected": 2,
+      "edits": 1,
+      "searchConsole": false,
+      "analytics": false,
+      "findings": 6
+    },
+    "minutes": 41
+  }
+]

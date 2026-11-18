@@ -1,0 +1,132 @@
+[
+  {
+    "event": "approved",
+    "kind": "blog",
+    "postType": "",
+    "serviceId": "datamigration",
+    "origin": "jarvis",
+    "at": "2026-11-08T07:30:00.000Z",
+    "text": "Master data first: the cutover nobody plans",
+    "draftId": "d-1794057600000-0"
+  },
+  {
+    "event": "approved",
+    "kind": "linkedin",
+    "postType": "hot-take",
+    "serviceId": "billing",
+    "origin": "jarvis",
+    "at": "2026-11-10T07:30:00.000Z",
+    "text": "Billing exceptions are a process problem, not a headcount problem.",
+    "draftId": "d-1794230400000-1"
+  },
+  {
+    "event": "approved",
+    "kind": "linkedin",
+    "postType": "case-study",
+    "serviceId": "plant-maintenance",
+    "origin": "jarvis",
+    "at": "2026-11-13T07:30:00.000Z",
+    "text": "Brackenfield Waste's crews now close work orders at the bin lorry, not in the o…",
+    "draftId": "d-1794489600000-2"
+  },
+  {
+    "event": "approved",
+    "kind": "blog",
+    "postType": "",
+    "serviceId": "s4hana",
+    "origin": "jarvis",
+    "at": "2026-11-14T07:30:00.000Z",
+    "text": "Sorting custom code before a brownfield move",
+    "draftId": "d-1794576000000-3"
+  },
+  {
+    "event": "rejected",
+    "kind": "blog",
+    "postType": "",
+    "serviceId": "s4hana",
+    "origin": "jarvis",
+    "at": "2026-11-14T14:05:00.000Z",
+    "reason": "Editor: Generic: no SAP thing named and no buyer problem. Nothing a reader could act on.",
+    "text": "Why transformation matters for utilities",
+    "draftId": "d-1794662400000-4"
+  },
+  {
+    "event": "rejected",
+    "kind": "linkedin",
+    "postType": "hot-take",
+    "serviceId": "integration",
+    "origin": "jarvis",
+    "at": "2026-11-15T14:05:00.000Z",
+    "reason": "Editor: Rhetorical-question hook and no specific SAP point.",
+    "text": "Is your integration landscape ready for the future?",
+    "draftId": "d-1794748800000-6"
+  },
+  {
+    "event": "posted",
+    "kind": "linkedin",
+    "postType": "",
+    "serviceId": "",
+    "origin": "",
+    "at": "2026-11-13T09:00:00.000Z",
+    "text": "l-exceptions",
+    "draftId": "d-1794230400000-1"
+  },
+  {
+    "event": "posted",
+    "kind": "blog",
+    "postType": "",
+    "serviceId": "",
+    "origin": "",
+    "at": "2026-11-11T09:00:00.000Z",
+    "text": "b-masterdata",
+    "draftId": "d-1794057600000-0"
+  },
+  {
+    "event": "approved",
+    "kind": "linkedin",
+    "postType": "case-study",
+    "serviceId": "plant-maintenance",
+    "origin": "jarvis",
+    "at": "2026-11-12T08:00:00.000Z"
+  },
+  {
+    "event": "approved",
+    "kind": "blog",
+    "postType": "",
+    "serviceId": "s4hana",
+    "origin": "jarvis",
+    "at": "2026-11-13T08:00:00.000Z"
+  },
+  {
+    "event": "posted",
+    "kind": "linkedin",
+    "postType": "hot-take",
+    "serviceId": "billing",
+    "origin": "jarvis",
+    "at": "2026-11-09T08:00:00.000Z"
+  },
+  {
+    "event": "posted",
+    "kind": "blog",
+    "postType": "",
+    "serviceId": "datamigration",
+    "origin": "jarvis",
+    "at": "2026-11-07T08:00:00.000Z"
+  },
+  {
+    "event": "rejected",
+    "kind": "linkedin",
+    "postType": "hot-take",
+    "serviceId": "integration",
+    "origin": "jarvis",
+    "at": "2026-11-15T08:00:00.000Z"
+  },
+  {
+    "event": "rejected",
+    "kind": "blog",
+    "postType": "",
+    "serviceId": "s4hana",
+    "origin": "jarvis",
+    "at": "2026-11-14T08:00:00.000Z"
+  }
+]

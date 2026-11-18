@@ -1,0 +1,288 @@
+[
+  {
+    "id": "a-1794060300000-21",
+    "ts": "2026-11-07T14:05:00.000Z",
+    "actor": "agent",
+    "event": "editor.passed",
+    "summary": "Editor passed \"Master data first: the cutover nobody plans\" (8/10), cleared; waiting for a person to approve it",
+    "ref": {
+      "libraryId": "d-1794057600000-0"
+    }
+  },
+  {
+    "id": "a-1794123000000-22",
+    "ts": "2026-11-08T07:30:00.000Z",
+    "actor": "you",
+    "event": "approval.approved",
+    "summary": "Mara approved \"Master data first: the cutover nobody plans\" in the app; it publishes on the next publishing day",
+    "ref": {
+      "libraryId": "d-1794057600000-0"
+    }
+  },
+  {
+    "id": "a-1794233100000-23",
+    "ts": "2026-11-09T14:05:00.000Z",
+    "actor": "agent",
+    "event": "editor.passed",
+    "summary": "Editor passed \"Billing exceptions are a process problem, not a headcount problem.\" (8/10)",
+    "ref": {
+      "libraryId": "d-1794230400000-1"
+    }
+  },
+  {
+    "id": "a-1794295800000-24",
+    "ts": "2026-11-10T07:30:00.000Z",
+    "actor": "you",
+    "event": "approval.approved",
+    "summary": "Mara approved \"Billing exceptions are a process problem, not a headcount problem.\" in the app",
+    "ref": {
+      "libraryId": "d-1794230400000-1"
+    }
+  },
+  {
+    "id": "a-1794492300000-25",
+    "ts": "2026-11-12T14:05:00.000Z",
+    "actor": "agent",
+    "event": "editor.passed",
+    "summary": "Editor passed \"Brackenfield Waste's crews now close work orders at the bin lorry, not in the of\" (9/10)",
+    "ref": {
+      "libraryId": "d-1794489600000-2"
+    }
+  },
+  {
+    "id": "a-1794555000000-26",
+    "ts": "2026-11-13T07:30:00.000Z",
+    "actor": "you",
+    "event": "approval.approved",
+    "summary": "Jonas approved \"Brackenfield Waste's crews now close work orders at the bin lorry, not in the o…\" in the app",
+    "ref": {
+      "libraryId": "d-1794489600000-2"
+    }
+  },
+  {
+    "id": "a-1794575940000-56",
+    "ts": "2026-11-13T13:19:00.000Z",
+    "actor": "agent",
+    "event": "agent.ok",
+    "summary": "Measurement agent finished after 14 min",
+    "ref": null
+  },
+  {
+    "id": "a-1794576120000-57",
+    "ts": "2026-11-13T13:22:00.000Z",
+    "actor": "agent",
+    "event": "agent.ok",
+    "summary": "Strategist agent finished after 17 min",
+    "ref": null
+  },
+  {
+    "id": "a-1794576300000-58",
+    "ts": "2026-11-13T13:25:00.000Z",
+    "actor": "agent",
+    "event": "agent.ok",
+    "summary": "Researcher agent finished after 20 min",
+    "ref": null
+  },
+  {
+    "id": "a-1794577800000-59",
+    "ts": "2026-11-13T13:50:00.000Z",
+    "actor": "agent",
+    "event": "agent.ok",
+    "summary": "Editor agent finished after 10 min",
+    "ref": null
+  },
+  {
+    "id": "a-1794578400000-75",
+    "ts": "2026-11-13T14:00:00.000Z",
+    "actor": "agent",
+    "event": "agent.report",
+    "summary": "Measurement: Search clicks steady; the master data blog brought the first enquiry from a waste operator.",
+    "ref": null
+  },
+  {
+    "id": "a-1794578700000-27",
+    "ts": "2026-11-13T14:05:00.000Z",
+    "actor": "agent",
+    "event": "editor.passed",
+    "summary": "Editor passed \"Sorting custom code before a brownfield move\" (9/10), cleared; waiting for a person to approve it",
+    "ref": {
+      "libraryId": "d-1794576000000-3"
+    }
+  },
+  {
+    "id": "a-1794580200000-72",
+    "ts": "2026-11-13T14:30:00.000Z",
+    "actor": "agent",
+    "event": "agent.report",
+    "summary": "Strategist: Field service for operators: own the SAP side of crews, work orders and tablets.",
+    "ref": null
+  },
+  {
+    "id": "a-1794641400000-28",
+    "ts": "2026-11-14T07:30:00.000Z",
+    "actor": "you",
+    "event": "approval.approved",
+    "summary": "Mara approved \"Sorting custom code before a brownfield move\" in the app; it publishes on the next publishing day",
+    "ref": {
+      "libraryId": "d-1794576000000-3"
+    }
+  },
+  {
+    "id": "a-1794665100000-29",
+    "ts": "2026-11-14T14:05:00.000Z",
+    "actor": "agent",
+    "event": "editor.rejected",
+    "summary": "Editor rejected \"Why transformation matters for utilities\": Generic: no SAP thing named and no buyer problem. Nothing a reader could act on.",
+    "ref": {
+      "libraryId": "d-1794662400000-4"
+    }
+  },
+  {
+    "id": "a-1794749700000-60",
+    "ts": "2026-11-15T13:35:00.000Z",
+    "actor": "agent",
+    "event": "agent.failed",
+    "summary": "Researcher agent failed after 30 min",
+    "ref": null
+  },
+  {
+    "id": "a-1794750420000-61",
+    "ts": "2026-11-15T13:47:00.000Z",
+    "actor": "agent",
+    "event": "agent.ok",
+    "summary": "Editor agent finished after 7 min",
+    "ref": null
+  },
+  {
+    "id": "a-1794751500000-30",
+    "ts": "2026-11-15T14:05:00.000Z",
+    "actor": "agent",
+    "event": "editor.passed",
+    "summary": "Editor passed \"A patch window a small Basis team can keep\" (7/10), not cleared: score under 8",
+    "ref": {
+      "libraryId": "d-1794748800000-5"
+    }
+  },
+  {
+    "id": "a-1794751500000-31",
+    "ts": "2026-11-15T14:05:00.000Z",
+    "actor": "agent",
+    "event": "editor.rejected",
+    "summary": "Editor rejected \"Is your integration landscape ready for the future?\": Rhetorical-question hook and no specific SAP point.",
+    "ref": {
+      "libraryId": "d-1794748800000-6"
+    }
+  },
+  {
+    "id": "a-1794835200000-62",
+    "ts": "2026-11-16T13:20:00.000Z",
+    "actor": "agent",
+    "event": "agent.ok",
+    "summary": "Researcher agent finished after 15 min",
+    "ref": null
+  },
+  {
+    "id": "a-1794836880000-63",
+    "ts": "2026-11-16T13:48:00.000Z",
+    "actor": "agent",
+    "event": "agent.ok",
+    "summary": "Editor agent finished after 8 min",
+    "ref": null
+  },
+  {
+    "id": "a-1794837900000-32",
+    "ts": "2026-11-16T14:05:00.000Z",
+    "actor": "agent",
+    "event": "editor.passed",
+    "summary": "Editor passed \"Clearing SAP billing exceptions for good\" (8/10), cleared; waiting for a person to approve it",
+    "ref": {
+      "libraryId": "d-1794835200000-7"
+    }
+  },
+  {
+    "id": "a-1794837900000-33",
+    "ts": "2026-11-16T14:05:00.000Z",
+    "actor": "agent",
+    "event": "editor.passed",
+    "summary": "Editor passed \"Patch day is tomorrow. Rate the notes against your own landscape before you pani\" (9/10)",
+    "ref": {
+      "libraryId": "d-1794835200000-8"
+    }
+  },
+  {
+    "id": "a-1794922020000-64",
+    "ts": "2026-11-17T13:27:00.000Z",
+    "actor": "agent",
+    "event": "agent.ok",
+    "summary": "Researcher agent finished after 22 min",
+    "ref": null
+  },
+  {
+    "id": "a-1794922260000-66",
+    "ts": "2026-11-17T13:31:00.000Z",
+    "actor": "agent",
+    "event": "agent.ok",
+    "summary": "SEO agent finished after 26 min",
+    "ref": null
+  },
+  {
+    "id": "a-1794923460000-65",
+    "ts": "2026-11-17T13:51:00.000Z",
+    "actor": "agent",
+    "event": "agent.ok",
+    "summary": "Editor agent finished after 11 min",
+    "ref": null
+  },
+  {
+    "id": "a-1794924000000-79",
+    "ts": "2026-11-17T14:00:00.000Z",
+    "actor": "agent",
+    "event": "agent.report",
+    "summary": "SEO: Service pages are sound; two titles are cut off in search and FAQ markup is missing.",
+    "ref": null
+  },
+  {
+    "id": "a-1794924300000-34",
+    "ts": "2026-11-17T14:05:00.000Z",
+    "actor": "agent",
+    "event": "editor.passed",
+    "summary": "Editor passed \"Closing SAP PM work orders at the asset\" (9/10), cleared; waiting for a person to approve it",
+    "ref": {
+      "libraryId": "d-1794921600000-9"
+    }
+  },
+  {
+    "id": "a-1794924300000-35",
+    "ts": "2026-11-17T14:05:00.000Z",
+    "actor": "agent",
+    "event": "editor.passed",
+    "summary": "Editor passed \"Crews close work orders on paper, then someone keys them in on Friday.\" (8/10)",
+    "ref": {
+      "libraryId": "d-1794921600000-10"
+    }
+  },
+  {
+    "id": "a-1794994486324-68",
+    "ts": "2026-11-18T09:34:46.324Z",
+    "actor": "agent",
+    "event": "agent.ok",
+    "summary": "Editor agent finished after 9 min",
+    "ref": null
+  },
+  {
+    "id": "a-1794994596324-80",
+    "ts": "2026-11-18T09:36:36.324Z",
+    "actor": "jarvis",
+    "event": "session.brief",
+    "summary": "Wrote 2 pieces for review, threw away 1 that wasn't good enough, 1 playbook change.",
+    "ref": null
+  },
+  {
+    "id": "a-1794994676324-67",
+    "ts": "2026-11-18T09:37:56.324Z",
+    "actor": "agent",
+    "event": "agent.ok",
+    "summary": "Researcher agent finished after 18 min",
+    "ref": null
+  }
+]

@@ -1,0 +1,38 @@
+[
+  {
+    "id": "dir-1794405600000-47",
+    "kind": "build",
+    "text": "Write for operators with depots and crews: waste, water, grid. Name the sector in the first line.",
+    "front": "messaging",
+    "evidence": [],
+    "status": "open",
+    "createdAt": "2026-11-11T14:00:00.000Z"
+  },
+  {
+    "id": "dir-1794405600000-48",
+    "kind": "build",
+    "text": "One monthly patch-day post for Basis leads, written the day before.",
+    "front": "social",
+    "evidence": [],
+    "status": "open",
+    "createdAt": "2026-11-11T14:00:00.000Z"
+  },
+  {
+    "id": "dir-1794405600000-49",
+    "kind": "avoid",
+    "text": "No 'digital transformation' framing. Name the SAP thing instead.",
+    "front": "messaging",
+    "evidence": [],
+    "status": "open",
+    "createdAt": "2026-11-11T14:00:00.000Z"
+  },
+  {
+    "id": "dir-1794405600000-50",
+    "kind": "avoid",
+    "text": "No rhetorical-question hooks.",
+    "front": "social",
+    "evidence": [],
+    "status": "open",
+    "createdAt": "2026-11-11T14:00:00.000Z"
+  }
+]

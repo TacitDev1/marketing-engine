@@ -1,0 +1,179 @@
+[
+  {
+    "id": "comp-1794654000000-51",
+    "name": "Fernhollow Partners",
+    "domain": "fernhollow.example",
+    "positioning": "A UK SAP consultancy for water and energy utilities, selling billing and customer service expertise.",
+    "serviceOverlap": [
+      "billing",
+      "s4hana",
+      "managed"
+    ],
+    "contentThemes": [
+      "IS-U to S/4HANA Utilities",
+      "regulatory reporting",
+      "customer service portals"
+    ],
+    "keywordOverlap": [
+      "sap utilities billing consultant",
+      "sap is-u to s/4hana utilities"
+    ],
+    "gaps": [
+      "Nothing on plant maintenance or field crews",
+      "No practical content on clearing billing exceptions",
+      "No waste-sector references"
+    ],
+    "strengths": [
+      "Deep billing expertise",
+      "Long list of utility references"
+    ],
+    "sources": [
+      "https://fernhollow.example/",
+      "https://fernhollow.example/insights/"
+    ],
+    "note": "Invented competitor for the demo.",
+    "createdAt": "2026-11-14T11:00:00.000Z",
+    "updatedAt": "2026-11-14T11:00:00.000Z",
+    "timesResearched": 1
+  },
+  {
+    "id": "comp-1794654000000-52",
+    "name": "Quayside Systems",
+    "domain": "quayside-systems.example",
+    "positioning": "A mid-market S/4HANA migration boutique with fixed-price conversion packages.",
+    "serviceOverlap": [
+      "s4hana",
+      "assessment",
+      "abap",
+      "datamigration"
+    ],
+    "contentThemes": [
+      "fixed-price conversions",
+      "readiness checks",
+      "custom code"
+    ],
+    "keywordOverlap": [
+      "s/4hana readiness check",
+      "brownfield s/4hana conversion",
+      "sap custom code migration"
+    ],
+    "gaps": [
+      "Generic across industries, nothing for operators with crews and depots",
+      "No content on cutover around billing runs"
+    ],
+    "strengths": [
+      "Strong migration content",
+      "Clear pricing pages"
+    ],
+    "sources": [
+      "https://quayside-systems.example/"
+    ],
+    "note": "Invented competitor for the demo.",
+    "createdAt": "2026-11-14T11:00:00.000Z",
+    "updatedAt": "2026-11-14T11:00:00.000Z",
+    "timesResearched": 1
+  },
+  {
+    "id": "comp-1794654000000-53",
+    "name": "Harlow & Penn",
+    "domain": "harlowpenn.example",
+    "positioning": "A field-mobility specialist selling crew apps across several ERPs.",
+    "serviceOverlap": [
+      "plant-maintenance",
+      "fiori"
+    ],
+    "contentThemes": [
+      "mobile workforce",
+      "offline apps",
+      "crew productivity"
+    ],
+    "keywordOverlap": [
+      "sap field service management",
+      "sap fiori tablet offline"
+    ],
+    "gaps": [
+      "Thin on SAP PM configuration and preventive plans",
+      "No content on asset register quality"
+    ],
+    "strengths": [
+      "Polished demos",
+      "Strong offline story"
+    ],
+    "sources": [
+      "https://harlowpenn.example/"
+    ],
+    "note": "Invented competitor for the demo.",
+    "createdAt": "2026-11-14T11:00:00.000Z",
+    "updatedAt": "2026-11-14T11:00:00.000Z",
+    "timesResearched": 1
+  },
+  {
+    "id": "comp-1794654000000-54",
+    "name": "Brightmoor Digital",
+    "domain": "brightmoor.example",
+    "positioning": "An application managed services provider for SAP, sold on round-the-clock cover.",
+    "serviceOverlap": [
+      "managed",
+      "basis"
+    ],
+    "contentThemes": [
+      "24x7 support",
+      "service levels",
+      "cost predictability"
+    ],
+    "keywordOverlap": [
+      "sap basis managed service",
+      "sap application managed services uk"
+    ],
+    "gaps": [
+      "No industry focus",
+      "Little on patching routines a client could follow"
+    ],
+    "strengths": [
+      "Large support team",
+      "Clear service levels"
+    ],
+    "sources": [
+      "https://brightmoor.example/"
+    ],
+    "note": "Invented competitor for the demo.",
+    "createdAt": "2026-11-14T11:00:00.000Z",
+    "updatedAt": "2026-11-14T11:00:00.000Z",
+    "timesResearched": 1
+  },
+  {
+    "id": "comp-1794654000000-55",
+    "name": "Kestrel Grid Consulting",
+    "domain": "kestrelgrid.example",
+    "positioning": "A Dutch SAP firm for grid operators and energy networks.",
+    "serviceOverlap": [
+      "plant-maintenance",
+      "s4hana",
+      "integration"
+    ],
+    "contentThemes": [
+      "grid asset management",
+      "integration with GIS",
+      "S/4HANA for networks"
+    ],
+    "keywordOverlap": [
+      "sap plant maintenance consultant",
+      "sap integration monitoring"
+    ],
+    "gaps": [
+      "Nothing for waste operators",
+      "No English-language field service content"
+    ],
+    "strengths": [
+      "Asset management depth",
+      "Integration with GIS systems"
+    ],
+    "sources": [
+      "https://kestrelgrid.example/"
+    ],
+    "note": "Invented competitor for the demo.",
+    "createdAt": "2026-11-14T11:00:00.000Z",
+    "updatedAt": "2026-11-14T11:00:00.000Z",
+    "timesResearched": 1
+  }
+]

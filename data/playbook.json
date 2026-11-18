@@ -1,0 +1,383 @@
+{
+  "rules": [
+    {
+      "id": "pb-1793775600000-0",
+      "kind": "topic",
+      "text": "Every piece must tie to one Larkwell service and a real problem that IT and SAP leaders at mid-to-large enterprises are trying to solve. If it doesn't, don't write it.",
+      "confidence": 0.75,
+      "source": "founder",
+      "evidence": [
+        {
+          "at": "2026-11-04T07:00:00.000Z",
+          "note": "Mara's review of the Library, 2026-11-02"
+        }
+      ],
+      "pinned": false,
+      "status": "active",
+      "createdAt": "2026-11-04T07:00:00.000Z",
+      "updatedAt": "2026-11-04T07:00:00.000Z",
+      "lastSeenAt": "2026-11-04T07:00:00.000Z"
+    },
+    {
+      "id": "pb-1793775600000-1",
+      "kind": "avoid",
+      "text": "Don't write about niche regulation or compliance topics (for example EPA e-Manifest or DORA CTPP rules) unless they directly change what an SAP buyer has to do and Larkwell offers help with it.",
+      "confidence": 0.7,
+      "source": "founder",
+      "evidence": [
+        {
+          "at": "2026-11-04T07:00:00.000Z",
+          "note": "Mara's review of the Library, 2026-11-02"
+        }
+      ],
+      "pinned": false,
+      "status": "active",
+      "createdAt": "2026-11-04T07:00:00.000Z",
+      "updatedAt": "2026-11-04T07:00:00.000Z",
+      "lastSeenAt": "2026-11-04T07:00:00.000Z"
+    },
+    {
+      "id": "pb-1793775600000-2",
+      "kind": "avoid",
+      "text": "Don't repeat a theme Larkwell covered in the last two weeks (for example Clean Core or S/4HANA deadline timing). Pick a different service or a genuinely new angle.",
+      "confidence": 0.75,
+      "source": "founder",
+      "evidence": [
+        {
+          "at": "2026-11-04T07:00:00.000Z",
+          "note": "Mara's review of the Library, 2026-11-02"
+        }
+      ],
+      "pinned": false,
+      "status": "active",
+      "createdAt": "2026-11-04T07:00:00.000Z",
+      "updatedAt": "2026-11-04T07:00:00.000Z",
+      "lastSeenAt": "2026-11-04T07:00:00.000Z"
+    },
+    {
+      "id": "pb-1793775600000-3",
+      "kind": "format",
+      "text": "Never open a LinkedIn post with the \"X often fails\" / \"is often the difference\" / \"often leads to\" formula. Open with a specific fact, a clear stance or a concrete situation.",
+      "confidence": 0.75,
+      "source": "founder",
+      "evidence": [
+        {
+          "at": "2026-11-04T07:00:00.000Z",
+          "note": "Mara's review of the Library, 2026-11-02"
+        }
+      ],
+      "pinned": false,
+      "status": "active",
+      "createdAt": "2026-11-04T07:00:00.000Z",
+      "updatedAt": "2026-11-04T07:00:00.000Z",
+      "lastSeenAt": "2026-11-04T07:00:00.000Z"
+    },
+    {
+      "id": "pb-1793775600000-4",
+      "kind": "claim",
+      "text": "Every number (percentage, cost, time saved, statistic) must come from a source we can link to. No source, no number.",
+      "confidence": 0.8,
+      "source": "founder",
+      "evidence": [
+        {
+          "at": "2026-11-04T07:00:00.000Z",
+          "note": "Mara's review of the Library, 2026-11-02"
+        }
+      ],
+      "pinned": false,
+      "status": "active",
+      "createdAt": "2026-11-04T07:00:00.000Z",
+      "updatedAt": "2026-11-04T07:00:00.000Z",
+      "lastSeenAt": "2026-11-04T07:00:00.000Z"
+    },
+    {
+      "id": "pb-1793775600000-5",
+      "kind": "claim",
+      "text": "No claims about Larkwell results, clients, certifications or awards that aren't verified. Brackenfield Waste and Osterby Utilities are the only clients we may name.",
+      "confidence": 0.8,
+      "source": "founder",
+      "evidence": [
+        {
+          "at": "2026-11-04T07:00:00.000Z",
+          "note": "Mara's review of the Library, 2026-11-02"
+        }
+      ],
+      "pinned": false,
+      "status": "active",
+      "createdAt": "2026-11-04T07:00:00.000Z",
+      "updatedAt": "2026-11-04T07:00:00.000Z",
+      "lastSeenAt": "2026-11-04T07:00:00.000Z"
+    },
+    {
+      "id": "pb-1793775600000-6",
+      "kind": "voice",
+      "text": "Write in UK English: organisation, optimise, modernise, analyse, behaviour.",
+      "confidence": 0.75,
+      "source": "founder",
+      "evidence": [
+        {
+          "at": "2026-11-04T07:00:00.000Z",
+          "note": "Mara's review of the Library, 2026-11-02"
+        }
+      ],
+      "pinned": false,
+      "status": "active",
+      "createdAt": "2026-11-04T07:00:00.000Z",
+      "updatedAt": "2026-11-04T07:00:00.000Z",
+      "lastSeenAt": "2026-11-04T07:00:00.000Z"
+    },
+    {
+      "id": "pb-1793775600000-7",
+      "kind": "voice",
+      "text": "Sound like a senior SAP practitioner who did the work: plain, specific, calm and honest about trade-offs. No hype, no exclamation marks.",
+      "confidence": 0.7,
+      "source": "founder",
+      "evidence": [
+        {
+          "at": "2026-11-04T07:00:00.000Z",
+          "note": "Mara's review of the Library, 2026-11-02"
+        }
+      ],
+      "pinned": false,
+      "status": "active",
+      "createdAt": "2026-11-04T07:00:00.000Z",
+      "updatedAt": "2026-11-04T07:00:00.000Z",
+      "lastSeenAt": "2026-11-04T07:00:00.000Z"
+    },
+    {
+      "id": "pb-1793775600000-8",
+      "kind": "format",
+      "text": "Blog titles are complete phrases of 60 characters or fewer, never cut off mid-phrase.",
+      "confidence": 0.7,
+      "source": "founder",
+      "evidence": [
+        {
+          "at": "2026-11-04T07:00:00.000Z",
+          "note": "Mara's review of the Library, 2026-11-02"
+        }
+      ],
+      "pinned": false,
+      "status": "active",
+      "createdAt": "2026-11-04T07:00:00.000Z",
+      "updatedAt": "2026-11-04T07:00:00.000Z",
+      "lastSeenAt": "2026-11-04T07:00:00.000Z"
+    },
+    {
+      "id": "pb-1793775600000-9",
+      "kind": "format",
+      "text": "One clear point per LinkedIn post. Cut anything that doesn't support it.",
+      "confidence": 0.65,
+      "source": "founder",
+      "evidence": [
+        {
+          "at": "2026-11-04T07:00:00.000Z",
+          "note": "Mara's review of the Library, 2026-11-02"
+        }
+      ],
+      "pinned": false,
+      "status": "active",
+      "createdAt": "2026-11-04T07:00:00.000Z",
+      "updatedAt": "2026-11-04T07:00:00.000Z",
+      "lastSeenAt": "2026-11-04T07:00:00.000Z"
+    },
+    {
+      "id": "pb-1793775600000-10",
+      "kind": "voice",
+      "text": "Name the actual SAP thing in every claim (module, transaction, release, migration step). Cut any sentence that could appear in any vendor's post.",
+      "confidence": 0.65,
+      "source": "seed",
+      "evidence": [
+        {
+          "at": "2026-11-04T07:00:00.000Z",
+          "note": "starting rule"
+        }
+      ],
+      "pinned": false,
+      "status": "active",
+      "createdAt": "2026-11-04T07:00:00.000Z",
+      "updatedAt": "2026-11-04T07:00:00.000Z",
+      "lastSeenAt": "2026-11-04T07:00:00.000Z"
+    },
+    {
+      "id": "pb-1793775600000-11",
+      "kind": "voice",
+      "text": "Be practical about custom code: modernise what earns its keep, retire the rest, and say which is which.",
+      "confidence": 0.7,
+      "source": "seed",
+      "evidence": [
+        {
+          "at": "2026-11-04T07:00:00.000Z",
+          "note": "starting rule"
+        }
+      ],
+      "pinned": false,
+      "status": "active",
+      "createdAt": "2026-11-04T07:00:00.000Z",
+      "updatedAt": "2026-11-04T07:00:00.000Z",
+      "lastSeenAt": "2026-11-04T07:00:00.000Z"
+    },
+    {
+      "id": "pb-1793775600000-12",
+      "kind": "topic",
+      "text": "Spread across Larkwell's whole service catalogue (Basis, ABAP, plant maintenance, billing, integration, data migration, managed services, Fiori), not just S/4HANA migration.",
+      "confidence": 0.6,
+      "source": "seed",
+      "evidence": [
+        {
+          "at": "2026-11-04T07:00:00.000Z",
+          "note": "starting rule"
+        }
+      ],
+      "pinned": false,
+      "status": "active",
+      "createdAt": "2026-11-04T07:00:00.000Z",
+      "updatedAt": "2026-11-04T07:00:00.000Z",
+      "lastSeenAt": "2026-11-04T07:00:00.000Z"
+    },
+    {
+      "id": "pb-1793775600000-13",
+      "kind": "format",
+      "text": "Open with the point in the first line. No warm-up, no scene-setting, no rhetorical question.",
+      "confidence": 0.6,
+      "source": "seed",
+      "evidence": [
+        {
+          "at": "2026-11-04T07:00:00.000Z",
+          "note": "starting rule"
+        }
+      ],
+      "pinned": false,
+      "status": "active",
+      "createdAt": "2026-11-04T07:00:00.000Z",
+      "updatedAt": "2026-11-04T07:00:00.000Z",
+      "lastSeenAt": "2026-11-04T07:00:00.000Z"
+    },
+    {
+      "id": "pb-1793775600000-14",
+      "kind": "avoid",
+      "text": "No engagement bait: no questions tacked on just to farm comments, no \"Agree?\", no fake urgency.",
+      "confidence": 0.6,
+      "source": "seed",
+      "evidence": [
+        {
+          "at": "2026-11-04T07:00:00.000Z",
+          "note": "starting rule"
+        }
+      ],
+      "pinned": false,
+      "status": "active",
+      "createdAt": "2026-11-04T07:00:00.000Z",
+      "updatedAt": "2026-11-04T07:00:00.000Z",
+      "lastSeenAt": "2026-11-04T07:00:00.000Z"
+    },
+    {
+      "id": "pb-1793775600000-15",
+      "kind": "topic",
+      "text": "Prefer topics with measured search demand (Search Console queries, the keyword sheet) or a timely SAP announcement, and say which in the reason for writing it.",
+      "confidence": 0.6,
+      "source": "seed",
+      "evidence": [
+        {
+          "at": "2026-11-04T07:00:00.000Z",
+          "note": "starting rule"
+        }
+      ],
+      "pinned": false,
+      "status": "active",
+      "createdAt": "2026-11-04T07:00:00.000Z",
+      "updatedAt": "2026-11-04T07:00:00.000Z",
+      "lastSeenAt": "2026-11-04T07:00:00.000Z"
+    },
+    {
+      "id": "pb-1793775600000-16",
+      "kind": "topic",
+      "text": "Match the buyer's stage: problem posts for awareness, cost/approach/comparison pieces for evaluation, Larkwell-specific detail for buyers close to a decision.",
+      "confidence": 0.55,
+      "source": "seed",
+      "evidence": [
+        {
+          "at": "2026-11-04T07:00:00.000Z",
+          "note": "starting rule"
+        }
+      ],
+      "pinned": false,
+      "status": "active",
+      "createdAt": "2026-11-04T07:00:00.000Z",
+      "updatedAt": "2026-11-04T07:00:00.000Z",
+      "lastSeenAt": "2026-11-04T07:00:00.000Z"
+    },
+    {
+      "id": "pb-1793775600000-17",
+      "kind": "format",
+      "text": "Blogs answer the search question in the first paragraph and then cover the follow-up questions. Every section adds something new.",
+      "confidence": 0.6,
+      "source": "seed",
+      "evidence": [
+        {
+          "at": "2026-11-04T07:00:00.000Z",
+          "note": "starting rule"
+        }
+      ],
+      "pinned": false,
+      "status": "active",
+      "createdAt": "2026-11-04T07:00:00.000Z",
+      "updatedAt": "2026-11-04T07:00:00.000Z",
+      "lastSeenAt": "2026-11-04T07:00:00.000Z"
+    },
+    {
+      "id": "pb-1793775600000-18",
+      "kind": "claim",
+      "text": "Keep fact, opinion and estimate apart. Label an estimate as an estimate.",
+      "confidence": 0.6,
+      "source": "seed",
+      "evidence": [
+        {
+          "at": "2026-11-04T07:00:00.000Z",
+          "note": "starting rule"
+        }
+      ],
+      "pinned": false,
+      "status": "active",
+      "createdAt": "2026-11-04T07:00:00.000Z",
+      "updatedAt": "2026-11-04T07:00:00.000Z",
+      "lastSeenAt": "2026-11-04T07:00:00.000Z"
+    },
+    {
+      "id": "pb-1793775600000-19",
+      "kind": "format",
+      "text": "Any call to action is soft and specific to the piece (talk to Larkwell about this exact problem), never generic.",
+      "confidence": 0.55,
+      "source": "seed",
+      "evidence": [
+        {
+          "at": "2026-11-04T07:00:00.000Z",
+          "note": "starting rule"
+        }
+      ],
+      "pinned": false,
+      "status": "active",
+      "createdAt": "2026-11-04T07:00:00.000Z",
+      "updatedAt": "2026-11-04T07:00:00.000Z",
+      "lastSeenAt": "2026-11-04T07:00:00.000Z"
+    },
+    {
+      "id": "pb-1793775600000-20",
+      "kind": "timing",
+      "text": "No more than one Larkwell LinkedIn post per working day; weekday mornings UK time.",
+      "confidence": 0.5,
+      "source": "seed",
+      "evidence": [
+        {
+          "at": "2026-11-04T07:00:00.000Z",
+          "note": "starting rule"
+        }
+      ],
+      "pinned": false,
+      "status": "active",
+      "createdAt": "2026-11-04T07:00:00.000Z",
+      "updatedAt": "2026-11-04T07:00:00.000Z",
+      "lastSeenAt": "2026-11-04T07:00:00.000Z"
+    }
+  ],
+  "seededAt": "2026-11-04T07:00:00.000Z"
+}

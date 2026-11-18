@@ -1,0 +1,26 @@
+Keyword,Search Volume,Intent,Theme
+sap pm mobile work orders,320,commercial,plant-maintenance
+sap plant maintenance consultant,480,commercial,plant-maintenance
+sap field service management,590,informational,plant-maintenance
+sap pm preventive maintenance plan,260,informational,plant-maintenance
+sap asset register cleanup,90,informational,plant-maintenance
+sap is-u billing exceptions,140,informational,billing
+sap utilities billing consultant,210,commercial,billing
+meter to cash sap,170,informational,billing
+sap is-u to s/4hana utilities,230,informational,billing
+s/4hana migration utilities,190,commercial,s4hana
+brownfield s/4hana conversion,880,informational,s4hana
+s/4hana readiness check,1300,informational,assessment
+sap custom code migration,720,informational,abap
+abap code remediation,260,commercial,abap
+sap basis managed service,310,commercial,basis
+sap system copy automation,140,informational,basis
+sap integration monitoring,170,informational,integration
+sap data migration cockpit,640,informational,datamigration
+sap master data cleanup before migration,110,informational,datamigration
+sap fiori apps for field crews,70,informational,fiori
+sap fiori tablet offline,90,informational,fiori
+sap application managed services uk,140,commercial,managed
+sap support partner for utilities,50,commercial,managed
+sap waste management,260,informational,plant-maintenance
+sap for waste collection companies,40,commercial,plant-maintenance

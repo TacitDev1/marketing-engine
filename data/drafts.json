@@ -1,0 +1,456 @@
+[
+  {
+    "id": "d-1794057600000-0",
+    "kind": "blog",
+    "status": "posted",
+    "payload": {
+      "title": "Master data first: the cutover nobody plans",
+      "metaDescription": "Most failed data loads trace back to master data. Give every object an owner and clean it in the source system before the migration.",
+      "body": "Migration plans spend weeks on the load tools and days on the data. Most failed loads trace back to master data: duplicate equipment records, functional locations nobody owns, and business partners with three addresses.\n\n## One owner per object\n\nEquipment, functional locations, materials, business partners: each needs a named owner in the business, not in IT. The owner decides what is a duplicate and what is real.\n\n## Clean in the source\n\nFix the data in the current system, where people can see and check it. Cleaning in a spreadsheet between extract and load creates a third version of the truth.\n\n## Rehearse the load\n\nRun at least two full rehearsals with production data. Each one finds problems the last one hid.\n\nLarkwell plans data migration as part of every S/4HANA move, starting with master data.",
+      "keyword": "sap master data cleanup before migration",
+      "slug": "master-data-first",
+      "serviceId": "datamigration",
+      "serviceLabel": "SAP data migration",
+      "origin": "jarvis",
+      "warnings": [
+        "Meta is short (132 chars) - consider expanding to 140-160."
+      ],
+      "aiOriginal": {
+        "title": "Master data first: the cutover nobody plans",
+        "hook": "",
+        "body": "Migration plans spend weeks on the load tools and days on the data. Most failed loads trace back to master data: duplicate equipment records, functional locations nobody owns, and business partners with three addresses.\n\n## One owner per object\n\nEquipment, functional locations, materials, business partners: each needs a named owner in the business, not in IT. The owner decides what is a duplicate and what is real.\n\n## Clean in the source\n\nFix the data in the current system, where people can see and check it. Cleaning in a spreadsheet between extract and load creates a third version of the truth.\n\n## Rehearse the load\n\nRun at least two full rehearsals with production data. Each one finds problems the last one hid.\n\nLarkwell plans data migration as part of every S/4HANA move, starting with master data."
+      },
+      "editor": {
+        "verdict": "pass",
+        "score": 8,
+        "notes": "Clear and useful.",
+        "changes": "",
+        "at": "2026-11-07T14:05:00.000Z",
+        "cleared": true,
+        "issues": []
+      },
+      "approval": {
+        "decision": "approve",
+        "by": "Mara",
+        "reason": "",
+        "decidedAt": "2026-11-08T07:30:00.000Z",
+        "appliedAt": "2026-11-08T07:30:00.000Z",
+        "via": "app"
+      }
+    },
+    "savedAt": "2026-11-07T13:20:00.000Z",
+    "updatedAt": "2026-11-11T09:00:00.000Z"
+  },
+  {
+    "id": "d-1794230400000-1",
+    "kind": "linkedin",
+    "status": "posted",
+    "payload": {
+      "hook": "Billing exceptions are a process problem, not a headcount problem.",
+      "body": "Adding people to the exception queue clears the backlog for a month and hides why it grew.\n\nGroup a month of exceptions by cause. Fix the top two at the point where the bad data enters. Automate what is left.\n\nThat is the work Larkwell does with utilities before they move billing to S/4HANA.",
+      "hashtags": [
+        "SAPISU",
+        "Utilities"
+      ],
+      "serviceId": "billing",
+      "serviceLabel": "Utilities billing and customer service",
+      "postType": "hot-take",
+      "origin": "jarvis",
+      "warnings": [],
+      "aiOriginal": {
+        "title": "",
+        "hook": "Billing exceptions are a process problem, not a headcount problem.",
+        "body": "Adding people to the exception queue clears the backlog for a month and hides why it grew.\n\nGroup a month of exceptions by cause. Fix the top two at the point where the bad data enters. Automate what is left.\n\nThat is the work Larkwell does with utilities before they move billing to S/4HANA."
+      },
+      "editor": {
+        "verdict": "pass",
+        "score": 8,
+        "notes": "Clear stance.",
+        "changes": "",
+        "at": "2026-11-09T14:05:00.000Z",
+        "cleared": false,
+        "issues": []
+      },
+      "approval": {
+        "decision": "approve",
+        "by": "Mara",
+        "reason": "",
+        "decidedAt": "2026-11-10T07:30:00.000Z",
+        "appliedAt": "2026-11-10T07:30:00.000Z",
+        "via": "app"
+      }
+    },
+    "savedAt": "2026-11-09T13:20:00.000Z",
+    "updatedAt": "2026-11-13T09:00:00.000Z"
+  },
+  {
+    "id": "d-1794489600000-2",
+    "kind": "linkedin",
+    "status": "approved",
+    "payload": {
+      "hook": "Brackenfield Waste's crews now close work orders at the bin lorry, not in the office.",
+      "body": "Brackenfield Waste ran SAP PM, but work orders were closed on paper and keyed in at the end of the week. The asset register lagged behind the fleet.\n\nLarkwell built a small Fiori app for the depot tablets: today's jobs, close a job with readings and photos, raise a defect. The office kept its screens. The rollout went one depot at a time.\n\nSame process, no double keying, and the register is current again.",
+      "hashtags": [
+        "SAPFiori",
+        "WasteManagement"
+      ],
+      "serviceId": "plant-maintenance",
+      "serviceLabel": "Plant maintenance and field service",
+      "postType": "case-study",
+      "origin": "jarvis",
+      "warnings": [],
+      "aiOriginal": {
+        "title": "",
+        "hook": "Brackenfield Waste's crews now close work orders at the bin lorry, not in the office.",
+        "body": "Brackenfield Waste ran SAP PM, but work orders were closed on paper and keyed in at the end of the week. The asset register lagged behind the fleet.\n\nLarkwell built a small Fiori app for the depot tablets: today's jobs, close a job with readings and photos, raise a defect. The office kept its screens. The rollout went one depot at a time.\n\nSame process, no double keying, and the register is current again."
+      },
+      "editor": {
+        "verdict": "pass",
+        "score": 9,
+        "notes": "Named client is on the approved list. Outcome stated without figures.",
+        "changes": "",
+        "at": "2026-11-12T14:05:00.000Z",
+        "cleared": false,
+        "issues": []
+      },
+      "approval": {
+        "decision": "approve",
+        "by": "Jonas",
+        "reason": "",
+        "decidedAt": "2026-11-13T07:30:00.000Z",
+        "appliedAt": "2026-11-13T07:30:00.000Z",
+        "via": "app"
+      }
+    },
+    "savedAt": "2026-11-12T13:20:00.000Z",
+    "updatedAt": "2026-11-13T07:30:00.000Z"
+  },
+  {
+    "id": "d-1794576000000-3",
+    "kind": "blog",
+    "status": "approved",
+    "payload": {
+      "title": "Sorting custom code before a brownfield move",
+      "metaDescription": "Before a brownfield S/4HANA conversion, sort custom code into keep, fix and retire using real usage data from production.",
+      "body": "A brownfield conversion keeps your processes and your data, and it also keeps your custom code. That is the point of choosing it, and it is also where most of the surprises come from.\n\n## Start with usage, not with the code\n\nBefore anyone reads a line of ABAP, collect usage data from production for a full business cycle, including the year-end close. It tells you which custom programs, reports and enhancements anyone still runs. In older landscapes a large share of custom objects turn out to be unused.\n\n## Three piles\n\nPut every custom object into one of three piles. Retire what nobody uses: delete it before the conversion so nobody has to fix it. Fix what is used and flagged by the conversion checks. Keep and document what is used and passes.\n\n## Fix in the source system\n\nMake the fixes in the current system, transport them through the normal landscape and let them run in production before the conversion. The conversion weekend is the wrong time to find out a fix was wrong.\n\n## Write down why\n\nFor every object you keep, write one line on what it does and who asked for it. The next upgrade will be easier, and the team will stop treating custom code as something nobody dares to touch.\n\nLarkwell plans brownfield conversions for operators who cannot stop the depot or the billing run, starting with exactly this kind of inventory.",
+      "keyword": "brownfield s/4hana conversion",
+      "slug": "custom-code-before-a-brownfield-conversion",
+      "serviceId": "s4hana",
+      "serviceLabel": "S/4HANA migrations",
+      "origin": "jarvis",
+      "warnings": [
+        "Meta is short (121 chars) - consider expanding to 140-160."
+      ],
+      "aiOriginal": {
+        "title": "Sorting custom code before a brownfield move",
+        "hook": "",
+        "body": "A brownfield conversion keeps your processes and your data, and it also keeps your custom code. That is the point of choosing it, and it is also where most of the surprises come from.\n\n## Start with usage, not with the code\n\nBefore anyone reads a line of ABAP, collect usage data from production for a full business cycle, including the year-end close. It tells you which custom programs, reports and enhancements anyone still runs. In older landscapes a large share of custom objects turn out to be unused.\n\n## Three piles\n\nPut every custom object into one of three piles. Retire what nobody uses: delete it before the conversion so nobody has to fix it. Fix what is used and flagged by the conversion checks. Keep and document what is used and passes.\n\n## Fix in the source system\n\nMake the fixes in the current system, transport them through the normal landscape and let them run in production before the conversion. The conversion weekend is the wrong time to find out a fix was wrong.\n\n## Write down why\n\nFor every object you keep, write one line on what it does and who asked for it. The next upgrade will be easier, and the team will stop treating custom code as something nobody dares to touch.\n\nLarkwell plans brownfield conversions for operators who cannot stop the depot or the billing run, starting with exactly this kind of inventory."
+      },
+      "editor": {
+        "verdict": "pass",
+        "score": 9,
+        "notes": "Good structure and a clear point of view. Light copy edit only.",
+        "changes": "",
+        "at": "2026-11-13T14:05:00.000Z",
+        "cleared": true,
+        "issues": []
+      },
+      "approval": {
+        "decision": "approve",
+        "by": "Mara",
+        "reason": "",
+        "decidedAt": "2026-11-14T07:30:00.000Z",
+        "appliedAt": "2026-11-14T07:30:00.000Z",
+        "via": "app"
+      }
+    },
+    "savedAt": "2026-11-13T13:20:00.000Z",
+    "updatedAt": "2026-11-14T07:30:00.000Z"
+  },
+  {
+    "id": "d-1794662400000-4",
+    "kind": "blog",
+    "status": "archived",
+    "payload": {
+      "title": "Why transformation matters for utilities",
+      "metaDescription": "Utilities face change on every front.",
+      "body": "Utilities face change on every front, from regulation to customer expectations. Transformation is no longer optional, and every organisation needs a plan for the journey ahead. A clear strategy, strong leadership and the right partner make the difference between success and failure, and the time to start is now. Teams that embrace change will be ready for what comes next, and those that wait will fall behind their peers in a market that keeps moving.",
+      "keyword": "digital transformation utilities",
+      "slug": "digital-transformation-utilities",
+      "serviceId": "s4hana",
+      "serviceLabel": "S/4HANA migrations",
+      "origin": "jarvis",
+      "warnings": [],
+      "aiOriginal": {
+        "title": "Why transformation matters for utilities",
+        "hook": "",
+        "body": "Utilities face change on every front, from regulation to customer expectations. Transformation is no longer optional, and every organisation needs a plan for the journey ahead. A clear strategy, strong leadership and the right partner make the difference between success and failure, and the time to start is now. Teams that embrace change will be ready for what comes next, and those that wait will fall behind their peers in a market that keeps moving."
+      },
+      "editor": {
+        "verdict": "reject",
+        "score": 3,
+        "reason": "Generic: no SAP thing named and no buyer problem. Nothing a reader could act on.",
+        "at": "2026-11-14T14:05:00.000Z",
+        "cleared": false,
+        "issues": []
+      }
+    },
+    "savedAt": "2026-11-14T13:20:00.000Z",
+    "updatedAt": "2026-11-14T14:05:00.000Z",
+    "archivedFrom": "draft"
+  },
+  {
+    "id": "d-1794748800000-5",
+    "kind": "blog",
+    "status": "draft",
+    "payload": {
+      "title": "A patch window a small Basis team can keep",
+      "metaDescription": "A monthly SAP patch routine for a Basis team of one or two people: rate, patch development first, and keep a written rollback.",
+      "body": "Small Basis teams rarely skip patching on purpose. It slips because the patch window competes with everything else, and nobody owns the decision of what to patch first.\n\n## Rate notes against your own landscape\n\nRead the security notes on the day they come out and rate each one against what you actually run. A critical note for a component you do not use is not urgent for you.\n\n## Development first, always\n\nPatch development, let it run for a few days, then quality, then production. Write the rollback for each change before you start.\n\n## Put it in the calendar\n\nA fixed monthly window agreed with the business is easier to keep than an ad hoc one. If the team is one person, a managed service can cover the routine and the nights.",
+      "keyword": "sap basis managed service",
+      "slug": "a-patch-window-a-small-basis-team-can-keep",
+      "serviceId": "basis",
+      "serviceLabel": "SAP Basis and operations",
+      "origin": "jarvis",
+      "warnings": [
+        "Meta is short (126 chars) - consider expanding to 140-160."
+      ],
+      "aiOriginal": {
+        "title": "A patch window a small Basis team can keep",
+        "hook": "",
+        "body": "Small Basis teams rarely skip patching on purpose. It slips because the patch window competes with everything else, and nobody owns the decision of what to patch first.\n\n## Rate notes against your own landscape\n\nRead the security notes on the day they come out and rate each one against what you actually run. A critical note for a component you do not use is not urgent for you.\n\n## Development first, always\n\nPatch development, let it run for a few days, then quality, then production. Write the rollback for each change before you start.\n\n## Put it in the calendar\n\nA fixed monthly window agreed with the business is easier to keep than an ad hoc one. If the team is one person, a managed service can cover the routine and the nights."
+      },
+      "editor": {
+        "verdict": "pass",
+        "score": 7,
+        "notes": "Useful but thin. Needs a worked example before it can be cleared.",
+        "changes": "",
+        "at": "2026-11-15T14:05:00.000Z",
+        "cleared": false,
+        "issues": []
+      }
+    },
+    "savedAt": "2026-11-15T13:20:00.000Z",
+    "updatedAt": "2026-11-15T14:05:00.000Z"
+  },
+  {
+    "id": "d-1794748800000-6",
+    "kind": "linkedin",
+    "status": "archived",
+    "payload": {
+      "hook": "Is your integration landscape ready for the future?",
+      "body": "In today's landscape, integration is more important than ever. Organisations must embrace modern approaches to stay ahead. Are you ready?",
+      "hashtags": [
+        "SAP"
+      ],
+      "serviceId": "integration",
+      "serviceLabel": "SAP integration",
+      "postType": "hot-take",
+      "origin": "jarvis",
+      "warnings": [],
+      "aiOriginal": {
+        "title": "",
+        "hook": "Is your integration landscape ready for the future?",
+        "body": "In today's landscape, integration is more important than ever. Organisations must embrace modern approaches to stay ahead. Are you ready?"
+      },
+      "editor": {
+        "verdict": "reject",
+        "score": 2,
+        "reason": "Rhetorical-question hook and no specific SAP point.",
+        "at": "2026-11-15T14:05:00.000Z",
+        "cleared": false,
+        "issues": []
+      }
+    },
+    "savedAt": "2026-11-15T13:20:00.000Z",
+    "updatedAt": "2026-11-15T14:05:00.000Z",
+    "archivedFrom": "draft"
+  },
+  {
+    "id": "d-1794835200000-7",
+    "kind": "blog",
+    "status": "draft",
+    "payload": {
+      "title": "Clearing SAP billing exceptions for good",
+      "metaDescription": "Billing exceptions in SAP for utilities are a process symptom. Measure them by cause, fix the top two causes, then automate what is left.",
+      "body": "Every utility running SAP billing has an exception queue, and most have a team whose job is to work it. When the queue grows, the usual answer is to add people. That clears the backlog for a while and hides the reason it grew.\n\n## Exceptions have causes\n\nGroup a month of exceptions by cause before changing anything. In most landscapes a handful of causes account for nearly all of them: meter reads that fail plausibility checks, move-in and move-out dates that cross a billing period, and tariff changes that reached production before anyone tested them against real contracts.\n\n## Fix the process, not the queue\n\nTake the largest cause and trace it back to where the bad data enters. Implausible reads often come from one reading route or one device type. Move-in timing problems usually start in the customer service process, where an agent enters a date the billing run cannot handle. Fix the entry point and that whole class of exception stops arriving.\n\n## Then automate the rest\n\nOnce the big causes are fixed, what remains is a smaller, steadier queue. Some of it can be cleared by rules: re-estimate and release, or hold and notify. The rest needs a person, and now that person has time to look properly.\n\n## Test tariffs like code\n\nTariff changes deserve the same care as a code change: a test system with copies of real contracts, a set of expected bills, and a sign-off before transport. It is slower the first time and much faster after that.\n\nLarkwell works with utilities on billing processes in SAP and on the move to S/4HANA, where these fixes are worth making before the conversion rather than after.",
+      "keyword": "sap is-u billing exceptions",
+      "slug": "sap-billing-exceptions-for-good",
+      "serviceId": "billing",
+      "serviceLabel": "Utilities billing and customer service",
+      "origin": "jarvis",
+      "warnings": [
+        "Meta is short (137 chars) - consider expanding to 140-160."
+      ],
+      "aiOriginal": {
+        "title": "Clearing SAP billing exceptions for good",
+        "hook": "",
+        "body": "Every utility running SAP billing has an exception queue, and most have a team whose job is to work it. When the queue grows, the usual answer is to add people. That clears the backlog for a while and hides the reason it grew.\n\n## Exceptions have causes\n\nGroup a month of exceptions by cause before changing anything. In most landscapes a handful of causes account for nearly all of them: meter reads that fail plausibility checks, move-in and move-out dates that cross a billing period, and tariff changes that reached production before anyone tested them against real contracts.\n\n## Fix the process, not the queue\n\nTake the largest cause and trace it back to where the bad data enters. Implausible reads often come from one reading route or one device type. Move-in timing problems usually start in the customer service process, where an agent enters a date the billing run cannot handle. Fix the entry point and that whole class of exception stops arriving.\n\n## Then automate the rest\n\nOnce the big causes are fixed, what remains is a smaller, steadier queue. Some of it can be cleared by rules: re-estimate and release, or hold and notify. The rest needs a person, and now that person has time to look properly.\n\n## Test tariffs like code\n\nTariff changes deserve the same care as a code change: a test system with copies of real contracts, a set of expected bills, and a sign-off before transport. It is slower the first time and much faster after that.\n\nLarkwell works with utilities on billing processes in SAP and on the move to S/4HANA, where these fixes are worth making before the conversion rather than after."
+      },
+      "editor": {
+        "verdict": "pass",
+        "score": 8,
+        "notes": "Clear argument. Removed two hype words and a figure with no source.",
+        "changes": "Cut an unsourced statistic from the opening.",
+        "at": "2026-11-16T14:05:00.000Z",
+        "cleared": true,
+        "issues": []
+      }
+    },
+    "savedAt": "2026-11-16T13:20:00.000Z",
+    "updatedAt": "2026-11-16T14:05:00.000Z"
+  },
+  {
+    "id": "d-1794835200000-8",
+    "kind": "linkedin",
+    "status": "draft",
+    "payload": {
+      "hook": "Patch day is tomorrow. Rate the notes against your own landscape before you panic.",
+      "body": "A critical note for a component you do not run is not urgent for you. A medium note for your billing system might be.\n\nRead the notes on the day, rate them against what you run, patch development first, and write the rollback before you start.\n\nLarkwell runs monthly patch windows for SAP estates that cannot go down.",
+      "hashtags": [
+        "SAPBasis",
+        "SAP"
+      ],
+      "serviceId": "basis",
+      "serviceLabel": "SAP Basis and operations",
+      "postType": "how-to",
+      "origin": "jarvis",
+      "warnings": [],
+      "aiOriginal": {
+        "title": "",
+        "hook": "Patch day is tomorrow. Rate the notes against your own landscape before you panic.",
+        "body": "A critical note for a component you do not run is not urgent for you. A medium note for your billing system might be.\n\nRead the notes on the day, rate them against what you run, patch development first, and write the rollback before you start.\n\nLarkwell runs monthly patch windows for SAP estates that cannot go down."
+      },
+      "editor": {
+        "verdict": "pass",
+        "score": 9,
+        "notes": "Timely and specific.",
+        "changes": "",
+        "at": "2026-11-16T14:05:00.000Z",
+        "cleared": false,
+        "issues": []
+      }
+    },
+    "savedAt": "2026-11-16T13:20:00.000Z",
+    "updatedAt": "2026-11-16T14:05:00.000Z"
+  },
+  {
+    "id": "d-1794921600000-9",
+    "kind": "blog",
+    "status": "draft",
+    "payload": {
+      "title": "Closing SAP PM work orders at the asset",
+      "metaDescription": "Why field crews still close SAP PM work orders on paper, and the three-screen tablet app that changes it without retraining the office.",
+      "body": "Most operators who run SAP PM already have the data model they need. The work order, the notification and the equipment record are all there. The problem is where the work order gets closed: on a clipboard in the van, and in SAP on Friday afternoon when someone in the office keys in the week.\n\n## What paper costs you\n\nWhen a work order is closed days after the job, the details are guessed. Readings are rounded, defects that were noticed but not fixed are forgotten, and the time booked is whatever fits the timesheet. The asset register drifts away from the assets, and preventive maintenance plans start to schedule work that crews know is pointless.\n\n## Three screens, not thirty\n\nCrews do three things with SAP: see today's jobs, close a job with readings and photos, and raise a defect they found on the way. A small Fiori app on a depot tablet can do exactly those three things. It does not need the full transaction, and it should not try to.\n\nKeep the office on the screens they know. Planners and supervisors still schedule, release and settle in the back office. Only the closing moves to the field.\n\n## Roll it out depot by depot\n\nStart with the depot whose supervisor asks for it. Run paper and tablet side by side for a fortnight, then switch. Offline mode matters more than any feature: depots and rural sites often have poor signal, and a tablet that loses the job when the signal drops will be back in the drawer within a week.\n\n## What to measure\n\nMeasure the gap between finishing a job and closing it in SAP, and the number of defects raised from the field. Both tell you whether the crews trust the app. Larkwell helps operators plan and build this kind of field app on top of SAP PM.",
+      "keyword": "sap pm mobile work orders",
+      "slug": "sap-pm-work-orders-closed-at-the-asset",
+      "serviceId": "plant-maintenance",
+      "serviceLabel": "Plant maintenance and field service",
+      "origin": "jarvis",
+      "warnings": [
+        "Meta is short (135 chars) - consider expanding to 140-160."
+      ],
+      "aiOriginal": {
+        "title": "Closing SAP PM work orders at the asset",
+        "hook": "",
+        "body": "Most operators who run SAP PM already have the data model they need. The work order, the notification and the equipment record are all there. The problem is where the work order gets closed: on a clipboard in the van, and in SAP on Friday afternoon when someone in the office keys in the week.\n\n## What paper costs you\n\nWhen a work order is closed days after the job, the details are guessed. Readings are rounded, defects that were noticed but not fixed are forgotten, and the time booked is whatever fits the timesheet. The asset register drifts away from the assets, and preventive maintenance plans start to schedule work that crews know is pointless.\n\n## Three screens, not thirty\n\nCrews do three things with SAP: see today's jobs, close a job with readings and photos, and raise a defect they found on the way. A small Fiori app on a depot tablet can do exactly those three things. It does not need the full transaction, and it should not try to.\n\nKeep the office on the screens they know. Planners and supervisors still schedule, release and settle in the back office. Only the closing moves to the field.\n\n## Roll it out depot by depot\n\nStart with the depot whose supervisor asks for it. Run paper and tablet side by side for a fortnight, then switch. Offline mode matters more than any feature: depots and rural sites often have poor signal, and a tablet that loses the job when the signal drops will be back in the drawer within a week.\n\n## What to measure\n\nMeasure the gap between finishing a job and closing it in SAP, and the number of defects raised from the field. Both tell you whether the crews trust the app. Larkwell helps operators plan and build this kind of field app on top of SAP PM."
+      },
+      "editor": {
+        "verdict": "pass",
+        "score": 9,
+        "notes": "Strong, specific and practical. Tightened the opening and cut one repeated sentence.",
+        "changes": "Shortened the intro; split one long paragraph.",
+        "at": "2026-11-17T14:05:00.000Z",
+        "cleared": true,
+        "issues": []
+      }
+    },
+    "savedAt": "2026-11-17T13:20:00.000Z",
+    "updatedAt": "2026-11-17T14:05:00.000Z"
+  },
+  {
+    "id": "d-1794921600000-10",
+    "kind": "linkedin",
+    "status": "draft",
+    "payload": {
+      "hook": "Crews close work orders on paper, then someone keys them in on Friday.",
+      "body": "That gap is where the asset register goes wrong: readings get rounded, defects get forgotten, and preventive plans drift away from what crews actually see.\n\nThree things fix most of it: a tablet app with only the three screens crews need, offline mode for depots with poor signal, and a rollout one depot at a time.\n\nLarkwell builds field apps on top of SAP PM for operators who want the register to match the assets.",
+      "hashtags": [
+        "SAPPM",
+        "FieldService"
+      ],
+      "serviceId": "plant-maintenance",
+      "serviceLabel": "Plant maintenance and field service",
+      "postType": "how-to",
+      "origin": "jarvis",
+      "warnings": [],
+      "aiOriginal": {
+        "title": "",
+        "hook": "Crews close work orders on paper, then someone keys them in on Friday.",
+        "body": "That gap is where the asset register goes wrong: readings get rounded, defects get forgotten, and preventive plans drift away from what crews actually see.\n\nThree things fix most of it: a tablet app with only the three screens crews need, offline mode for depots with poor signal, and a rollout one depot at a time.\n\nLarkwell builds field apps on top of SAP PM for operators who want the register to match the assets."
+      },
+      "editor": {
+        "verdict": "pass",
+        "score": 8,
+        "notes": "Good hook. Cut the closing question.",
+        "changes": "",
+        "at": "2026-11-17T14:05:00.000Z",
+        "cleared": false,
+        "issues": []
+      }
+    },
+    "savedAt": "2026-11-17T13:20:00.000Z",
+    "updatedAt": "2026-11-17T14:05:00.000Z"
+  },
+  {
+    "id": "d-1794993746324-11",
+    "kind": "linkedin",
+    "status": "draft",
+    "payload": {
+      "hook": "A short dump at seven in the morning, and the developer who wrote the code left last year.",
+      "body": "Larkwell Copilot reads the dump, finds the custom code behind it and explains what it does in plain language. It can propose a fix in the development system, after syntax and quality checks run in code.\n\nOnly a person releases the transport, and every step is in the audit trail.",
+      "hashtags": [
+        "SAPABAP",
+        "SAPAI"
+      ],
+      "serviceId": "abap",
+      "serviceLabel": "ABAP development",
+      "postType": "how-to",
+      "productId": "copilot",
+      "origin": "jarvis",
+      "warnings": [],
+      "aiOriginal": {
+        "title": "",
+        "hook": "A short dump at seven in the morning, and the developer who wrote the code left last year.",
+        "body": "Larkwell Copilot reads the dump, finds the custom code behind it and explains what it does in plain language. It can propose a fix in the development system, after syntax and quality checks run in code.\n\nOnly a person releases the transport, and every step is in the audit trail."
+      }
+    },
+    "savedAt": "2026-11-18T09:22:26.324Z",
+    "updatedAt": "2026-11-18T09:22:26.324Z"
+  },
+  {
+    "id": "d-1794993746324-12",
+    "kind": "linkedin",
+    "status": "draft",
+    "payload": {
+      "hook": "We said no to a project last month, and it was the right call.",
+      "body": "The client wanted a big-bang cutover over a bank holiday weekend, with billing and maintenance going live together. We could not make that safe, so we said so.\n\nThey found another partner. I would rather lose the work than run a cutover I would not run on my own systems.",
+      "hashtags": [
+        "SAP",
+        "S4HANA"
+      ],
+      "serviceId": "managed",
+      "serviceLabel": "Application managed services",
+      "postType": "founder",
+      "origin": "jarvis",
+      "warnings": [],
+      "aiOriginal": {
+        "title": "",
+        "hook": "We said no to a project last month, and it was the right call.",
+        "body": "The client wanted a big-bang cutover over a bank holiday weekend, with billing and maintenance going live together. We could not make that safe, so we said so.\n\nThey found another partner. I would rather lose the work than run a cutover I would not run on my own systems."
+      }
+    },
+    "savedAt": "2026-11-18T09:22:26.324Z",
+    "updatedAt": "2026-11-18T09:22:26.324Z"
+  }
+]

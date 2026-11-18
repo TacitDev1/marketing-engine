@@ -1,0 +1,81 @@
+[
+  {
+    "id": "rep-1794924000000-78",
+    "agentId": "seo",
+    "agentName": "SEO",
+    "createdAt": "2026-11-17T14:00:00.000Z",
+    "dateKey": "2026-11-17",
+    "title": "SEO audit: service pages",
+    "headline": "Service pages are sound; two titles are cut off in search and FAQ markup is missing.",
+    "body": "## What I checked\nEight service pages and the home page: title, meta description, canonical, headings, structured data, alt text and internal links.\n\n## Findings\n- The plant maintenance and billing pages have titles longer than search shows; both are cut mid-phrase.\n- No page carries FAQ structured data, though three answer common questions.\n- The home page does not link to either case page.\n\n## Not a problem\nCanonicals, language tags and headings are correct everywhere.",
+    "actions": [
+      {
+        "title": "Shorten two service page titles",
+        "detail": "Plant maintenance: 'SAP plant maintenance for operators | Larkwell'. Billing: 'SAP utilities billing support | Larkwell'.",
+        "why": "Both are cut off in search results.",
+        "effort": "small",
+        "page": "/services/plant-maintenance/",
+        "recId": "rec-1794924000000-76"
+      },
+      {
+        "title": "Add FAQ markup to three service pages",
+        "detail": "Mark up the existing question-and-answer sections on plant maintenance, billing and S/4HANA.",
+        "why": "Eligible for richer results at no content cost.",
+        "effort": "small",
+        "page": "/services/billing/",
+        "recId": "rec-1794924000000-77"
+      }
+    ],
+    "needs": [],
+    "pages": [
+      "/",
+      "/services/plant-maintenance/",
+      "/services/billing/",
+      "/services/s4hana/",
+      "/services/basis/"
+    ],
+    "metrics": {}
+  },
+  {
+    "id": "rep-1794578400000-74",
+    "agentId": "measurement",
+    "agentName": "Measurement",
+    "createdAt": "2026-11-13T14:00:00.000Z",
+    "dateKey": "2026-11-13",
+    "title": "Results for the week",
+    "headline": "Search clicks steady; the master data blog brought the first enquiry from a waste operator.",
+    "body": "## Search\nClicks and impressions are steady week on week. The master data blog entered the results for its target query.\n\n## Site\nOne contact form enquiry, from a waste operator, after reading the master data blog.\n\n## Tracking\nThe contact form event fires on every page checked. No tag problems found.",
+    "actions": [
+      {
+        "title": "Link the master data blog from the S/4HANA page",
+        "detail": "Add a short 'read next' link at the end of the S/4HANA service page.",
+        "why": "The blog converts; the service page gets more traffic.",
+        "effort": "small",
+        "page": "/services/s4hana/",
+        "recId": "rec-1794578400000-73"
+      }
+    ],
+    "needs": [],
+    "pages": [],
+    "metrics": {
+      "clicks": 214,
+      "impressions": 9120,
+      "enquiries": 1,
+      "blogViews": 388
+    }
+  },
+  {
+    "id": "rep-1794580200000-71",
+    "agentId": "strategist",
+    "agentName": "Strategist",
+    "createdAt": "2026-11-13T14:30:00.000Z",
+    "dateKey": "2026-11-13",
+    "title": "Plan for the week of 2026-11-16",
+    "headline": "Field service for operators: own the SAP side of crews, work orders and tablets.",
+    "body": "**Focus:** Field service for operators: own the SAP side of crews, work orders and tablets.\n\n## Themes\n- **Work orders closed at the asset** (plant-maintenance): High-intent searches with weak SAP-specific answers.\n- **Billing exceptions by cause** (billing): Small but high-intent queries; no competitor answers them well.\n\n## Pieces to write\n1. Blog on \"sap pm mobile work orders\" (plant-maintenance): Closing work orders at the asset with a three-screen tablet app *Why: Closest gap to page one*\n2. Blog on \"sap is-u billing exceptions\" (billing): Measure exceptions by cause, fix the top two, then automate *Why: No competitor covers it*\n3. LinkedIn how-to (plant-maintenance): The Friday keying problem and the three-screen fix *Why: Supports the work orders blog*\n4. LinkedIn how-to (basis): Patch day: rate notes against your own landscape *Why: Monthly patch-day slot*\n5. LinkedIn hot-take (fiori): Offline mode matters more than any feature for depot tablets *Why: Differentiates from mobility vendors*\n\n## Leave alone this week\n- Clean core debates\n- Generic transformation framing\n- Another S/4HANA deadline post\n\n## Questions for the Researcher\n- Preventive maintenance for bin lorries in SAP PM (Waste operators are an open gap)\n\n## Notes\nKeep the Brackenfield case for a single post this week; it is the strongest proof we have.",
+    "actions": [],
+    "needs": [],
+    "pages": [],
+    "metrics": {}
+  }
+]

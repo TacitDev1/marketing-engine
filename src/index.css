@@ -1,0 +1,273 @@
+@import "tailwindcss";
+/* Keep Tailwind's automatic source scan OUT of runtime data. It was scanning
+   data/images/*.svg (generated cards); when the app deleted one, Vite's CSS
+   transform 500'd on the missing file and the whole dev page went blank until
+   a restart. Generated data is content, never a style source. */
+@source not "../data";
+@source not "../wiki";
+@source not "../knowledge";
+
+/* ============================================================
+   Marketing Engine — design foundation (Wave 1)
+   Premium SaaS-dashboard system, ported from the approved
+   Jarvis mockup. Inter Tight is the canonical brand face;
+   #14532d is the primary brand green in light mode.
+
+   HOW THEMING WORKS
+   -----------------
+   Every token below is declared in @theme, so Tailwind emits both
+   a utility (text-ink, bg-surface, border-line, text-good …) AND a
+   CSS custom property (--color-ink …) on :root. Because the utility
+   reads the custom property (var(--color-*)), overriding that same
+   property under a theme selector re-themes the WHOLE app with zero
+   className changes. Override order (last-wins / specificity):
+     1. @theme            → light values on :root (default)
+     2. @media dark       → dark values when the OS prefers dark
+     3. [data-theme]      → an explicit user choice, wins over the OS
+        both directions ("dark" forces dark, "light" forces light).
+   ============================================================ */
+@theme {
+  --font-sans: "Inter Tight", ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+
+  /* Brand */
+  --color-brand: #14532d;
+  --color-brand-hover: #166534;
+  --color-brand-press: #0f3d22;
+  --color-brand-deep: #0b2a18;
+  --color-brand-bright: #a3e635;
+  --color-brand-soft: #ecf5e4;
+
+  /* Text */
+  --color-ink: #0b1210;
+  --color-ink-2: #28324a;
+  --color-muted: #586585;
+  --color-faint: #8b96ad;
+
+  /* Surfaces */
+  --color-surface: #ffffff;
+  --color-surface-2: #fbfcf8;
+  --color-canvas: #f6f7f2;
+  --color-rail: #0b1210;
+  --color-rail-2: #0f1c16;
+
+  /* Lines */
+  --color-line: #e6e9df;
+  --color-line-strong: #d6dbcd;
+
+  /* Semantic (SEPARATE from brand) */
+  --color-good: #0f9d6a;
+  --color-good-soft: #e6f6ef;
+  --color-warn: #c07600;
+  --color-warn-soft: #fbf1df;
+  --color-crit: #e11d48;
+  --color-crit-soft: #fdeaef;
+  --color-violet: #6d3ff5;
+  --color-violet-soft: #efeafe;
+  --color-sky: #0284c7;
+  --color-sky-soft: #e3f3fd;
+}
+
+/* Elevation — themeable card/popover shadows (utilities below). */
+:root {
+  --shadow: 0 1px 2px rgba(11, 18, 16, 0.04), 0 8px 24px rgba(11, 18, 16, 0.05);
+  --shadow-lg: 0 12px 40px rgba(11, 18, 16, 0.1);
+}
+
+/* -------- Dark: OS preference (no explicit choice yet) -------- */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-brand: #4d9a2e;
+    --color-brand-hover: #5aab37;
+    --color-brand-press: #3f8326;
+    --color-brand-bright: #a3e635;
+    --color-brand-soft: #16260f;
+
+    --color-ink: #eaeef8;
+    --color-ink-2: #c4cde1;
+    --color-muted: #8593ad;
+    --color-faint: #5e6a82;
+
+    --color-surface: #0f1714;
+    --color-surface-2: #121c18;
+    --color-canvas: #070b09;
+    --color-rail: #0a100d;
+    --color-rail-2: #0f1714;
+
+    --color-line: #1d2822;
+    --color-line-strong: #2a3a31;
+
+    --color-good: #2dd4a0;
+    --color-good-soft: #0d2a22;
+    --color-warn: #f0b24a;
+    --color-warn-soft: #2b2012;
+    --color-crit: #fb7185;
+    --color-crit-soft: #2c1620;
+    --color-violet: #a78bfa;
+    --color-violet-soft: #1d1633;
+    --color-sky: #38bdf8;
+    --color-sky-soft: #0b2435;
+
+    --shadow: 0 1px 2px rgba(0, 0, 0, 0.4), 0 10px 30px rgba(0, 0, 0, 0.35);
+    --shadow-lg: 0 16px 50px rgba(0, 0, 0, 0.5);
+  }
+}
+
+/* -------- Dark: explicit user choice (wins over OS) -------- */
+:root[data-theme="dark"] {
+  --color-brand: #4d9a2e;
+  --color-brand-hover: #5aab37;
+  --color-brand-press: #3f8326;
+  --color-brand-bright: #a3e635;
+  --color-brand-soft: #16260f;
+
+  --color-ink: #eaeef8;
+  --color-ink-2: #c4cde1;
+  --color-muted: #8593ad;
+  --color-faint: #5e6a82;
+
+  --color-surface: #0f1714;
+  --color-surface-2: #121c18;
+  --color-canvas: #070b09;
+  --color-rail: #0a100d;
+  --color-rail-2: #0f1714;
+
+  --color-line: #1d2822;
+  --color-line-strong: #2a3a31;
+
+  --color-good: #2dd4a0;
+  --color-good-soft: #0d2a22;
+  --color-warn: #f0b24a;
+  --color-warn-soft: #2b2012;
+  --color-crit: #fb7185;
+  --color-crit-soft: #2c1620;
+  --color-violet: #a78bfa;
+  --color-violet-soft: #1d1633;
+  --color-sky: #38bdf8;
+  --color-sky-soft: #0b2435;
+
+  --shadow: 0 1px 2px rgba(0, 0, 0, 0.4), 0 10px 30px rgba(0, 0, 0, 0.35);
+  --shadow-lg: 0 16px 50px rgba(0, 0, 0, 0.5);
+}
+
+/* -------- Light: explicit user choice (wins over OS dark) -------- */
+:root[data-theme="light"] {
+  --color-brand: #14532d;
+  --color-brand-hover: #166534;
+  --color-brand-press: #0f3d22;
+  --color-brand-bright: #a3e635;
+  --color-brand-soft: #ecf5e4;
+
+  --color-ink: #0b1210;
+  --color-ink-2: #28324a;
+  --color-muted: #586585;
+  --color-faint: #8b96ad;
+
+  --color-surface: #ffffff;
+  --color-surface-2: #fbfcf8;
+  --color-canvas: #f6f7f2;
+  --color-rail: #0b1210;
+  --color-rail-2: #0f1c16;
+
+  --color-line: #e6e9df;
+  --color-line-strong: #d6dbcd;
+
+  --color-good: #0f9d6a;
+  --color-good-soft: #e6f6ef;
+  --color-warn: #c07600;
+  --color-warn-soft: #fbf1df;
+  --color-crit: #e11d48;
+  --color-crit-soft: #fdeaef;
+  --color-violet: #6d3ff5;
+  --color-violet-soft: #efeafe;
+  --color-sky: #0284c7;
+  --color-sky-soft: #e3f3fd;
+
+  --shadow: 0 1px 2px rgba(11, 18, 16, 0.04), 0 8px 24px rgba(11, 18, 16, 0.05);
+  --shadow-lg: 0 12px 40px rgba(11, 18, 16, 0.1);
+}
+
+html,
+body,
+#root {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  background: var(--color-canvas);
+  color: var(--color-ink);
+  font-family: var(--font-sans);
+  letter-spacing: -0.01em;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+/* Themeable elevation utilities — use instead of shadow-sm so cards
+   read right in both themes. */
+.shadow-card {
+  box-shadow: var(--shadow);
+}
+.shadow-card-lg {
+  box-shadow: var(--shadow-lg);
+}
+
+/* Restrained, motivated motion only — this is a working tool. */
+@media (prefers-reduced-motion: no-preference) {
+  .reveal {
+    animation: reveal 0.45s cubic-bezier(0.16, 1, 0.3, 1) both;
+  }
+}
+@keyframes reveal {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Live pulse ring — the single "alive" signal, reused by StatusDot. */
+.pulse-ring {
+  position: relative;
+}
+.pulse-ring::after {
+  content: "";
+  position: absolute;
+  inset: -4px;
+  border-radius: 999px;
+  background: currentColor;
+  opacity: 0.35;
+  animation: pulsering 2s ease-out infinite;
+}
+@keyframes pulsering {
+  0% {
+    transform: scale(0.6);
+    opacity: 0.5;
+  }
+  100% {
+    transform: scale(2.2);
+    opacity: 0;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .pulse-ring::after {
+    animation: none;
+  }
+}
+
+/* Quiet, branded scrollbars in the content column. */
+.scroll-quiet {
+  scrollbar-width: thin;
+  scrollbar-color: var(--color-line-strong) transparent;
+}
+.scroll-quiet::-webkit-scrollbar {
+  width: 10px;
+}
+.scroll-quiet::-webkit-scrollbar-thumb {
+  background: var(--color-line-strong);
+  border-radius: 999px;
+  border: 3px solid var(--color-canvas);
+}

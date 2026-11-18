@@ -1,0 +1,29 @@
+# Dependencies and build output
+node_modules
+dist
+dist-demo
+
+# Secrets: never commit. .env.example is the blank template.
+.env
+.env.local
+.secrets
+
+# Regenerable caches
+data/draft-vectors.json
+data/usage.json
+data/*.bak
+knowledge/.cache.json
+knowledge/.vectors.json
+wiki/.vectors.json
+
+# The marketing skills are installed from upstream, not vendored
+.claude/skills/
+.claude/launch.json
+.claude/settings.local.json
+
+# Scratch files the agents post to the brain (scripts/agents-window.mjs)
+.agent-out/
+
+# Noise
+*.log
+.DS_Store

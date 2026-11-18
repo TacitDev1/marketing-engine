@@ -1,0 +1,21 @@
+{
+  "enabled": true,
+  "days": [
+    1,
+    3,
+    5
+  ],
+  "afterHour": 16,
+  "log": [
+    {
+      "dateKey": "2026-11-11",
+      "at": "2026-11-11T09:00:00.000Z",
+      "draftId": "d-1794057600000-0",
+      "title": "Master data first: the cutover nobody plans",
+      "status": "published",
+      "rel": "src/content/news/en/master-data-first.md",
+      "url": "https://larkwell.example/news/master-data-first",
+      "score": 8
+    }
+  ]
+}

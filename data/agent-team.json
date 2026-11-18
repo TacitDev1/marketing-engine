@@ -1,0 +1,136 @@
+{
+  "enabled": {},
+  "runs": [
+    {
+      "agentId": "editor",
+      "dateKey": "2026-11-18",
+      "startedAt": "2026-11-18T09:25:46.324Z",
+      "finishedAt": "2026-11-18T09:34:46.324Z",
+      "status": "ok",
+      "exitCode": 0,
+      "model": "claude-sonnet-5-5",
+      "summary": "Edited 4 drafts: passed 3, rejected 1 (rhetorical hook, no SAP point)."
+    },
+    {
+      "agentId": "researcher",
+      "dateKey": "2026-11-18",
+      "startedAt": "2026-11-18T09:19:56.324Z",
+      "finishedAt": "2026-11-18T09:37:56.324Z",
+      "status": "ok",
+      "exitCode": 0,
+      "model": "claude-sonnet-5-5",
+      "summary": "Claimed 2 topics. Filed 3 findings and 12 keywords. Refreshed the Harlow & Penn profile."
+    },
+    {
+      "agentId": "seo",
+      "dateKey": "2026-11-17",
+      "startedAt": "2026-11-17T13:05:00.000Z",
+      "finishedAt": "2026-11-17T13:31:00.000Z",
+      "status": "ok",
+      "exitCode": 0,
+      "model": "claude-sonnet-5-5",
+      "summary": "Audited 8 pages. Filed 2 fixes: titles cut off in search, missing FAQ markup."
+    },
+    {
+      "agentId": "editor",
+      "dateKey": "2026-11-17",
+      "startedAt": "2026-11-17T13:40:00.000Z",
+      "finishedAt": "2026-11-17T13:51:00.000Z",
+      "status": "ok",
+      "exitCode": 0,
+      "model": "claude-sonnet-5-5",
+      "summary": "Edited 3 drafts: passed 3. Cleared 1 blog for approval (9/10)."
+    },
+    {
+      "agentId": "researcher",
+      "dateKey": "2026-11-17",
+      "startedAt": "2026-11-17T13:05:00.000Z",
+      "finishedAt": "2026-11-17T13:27:00.000Z",
+      "status": "ok",
+      "exitCode": 0,
+      "model": "claude-sonnet-5-5",
+      "summary": "Claimed 2 topics. Filed 2 findings on billing exceptions."
+    },
+    {
+      "agentId": "editor",
+      "dateKey": "2026-11-16",
+      "startedAt": "2026-11-16T13:40:00.000Z",
+      "finishedAt": "2026-11-16T13:48:00.000Z",
+      "status": "ok",
+      "exitCode": 0,
+      "model": "claude-sonnet-5-5",
+      "summary": "Edited 2 drafts: passed 2. Cleared 1 blog for approval (8/10)."
+    },
+    {
+      "agentId": "researcher",
+      "dateKey": "2026-11-16",
+      "startedAt": "2026-11-16T13:05:00.000Z",
+      "finishedAt": "2026-11-16T13:20:00.000Z",
+      "status": "ok",
+      "exitCode": 0,
+      "model": "claude-sonnet-5-5",
+      "summary": "Claimed 1 topic. Filed 1 finding; no new competitors."
+    },
+    {
+      "agentId": "editor",
+      "dateKey": "2026-11-15",
+      "startedAt": "2026-11-15T13:40:00.000Z",
+      "finishedAt": "2026-11-15T13:47:00.000Z",
+      "status": "ok",
+      "exitCode": 0,
+      "model": "claude-sonnet-5-5",
+      "summary": "Edited 2 drafts: passed 1, rejected 1 (generic, no buyer problem)."
+    },
+    {
+      "agentId": "researcher",
+      "dateKey": "2026-11-15",
+      "startedAt": "2026-11-15T13:05:00.000Z",
+      "finishedAt": "2026-11-15T13:35:00.000Z",
+      "status": "failed",
+      "exitCode": 1,
+      "model": "claude-sonnet-5-5",
+      "summary": "Stopped at the 30 minute limit while reading a slow site. The topic stays queued."
+    },
+    {
+      "agentId": "editor",
+      "dateKey": "2026-11-13",
+      "startedAt": "2026-11-13T13:40:00.000Z",
+      "finishedAt": "2026-11-13T13:50:00.000Z",
+      "status": "ok",
+      "exitCode": 0,
+      "model": "claude-sonnet-5-5",
+      "summary": "Edited 3 drafts: passed 3."
+    },
+    {
+      "agentId": "researcher",
+      "dateKey": "2026-11-13",
+      "startedAt": "2026-11-13T13:05:00.000Z",
+      "finishedAt": "2026-11-13T13:25:00.000Z",
+      "status": "ok",
+      "exitCode": 0,
+      "model": "claude-sonnet-5-5",
+      "summary": "Claimed 2 topics. Filed 2 findings."
+    },
+    {
+      "agentId": "strategist",
+      "dateKey": "2026-11-13",
+      "startedAt": "2026-11-13T13:05:00.000Z",
+      "finishedAt": "2026-11-13T13:22:00.000Z",
+      "status": "ok",
+      "exitCode": 0,
+      "model": "claude-sonnet-5-5",
+      "summary": "Filed next week's plan: field service for operators, 5 pieces."
+    },
+    {
+      "agentId": "measurement",
+      "dateKey": "2026-11-13",
+      "startedAt": "2026-11-13T13:05:00.000Z",
+      "finishedAt": "2026-11-13T13:19:00.000Z",
+      "status": "ok",
+      "exitCode": 0,
+      "model": "claude-sonnet-5-5",
+      "summary": "Week's results filed. One enquiry from a waste operator."
+    }
+  ],
+  "signOutAlertedOn": null
+}

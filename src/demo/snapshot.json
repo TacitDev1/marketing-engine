@@ -1,0 +1,4085 @@
+{
+ "takenAt": "2026-11-18T10:49:06.324Z",
+ "get": {
+  "/api/health": {
+   "ok": true,
+   "brain": {
+    "model": "qwen3.5:9b",
+    "host": "http://127.0.0.1:9",
+    "available": false,
+    "missingModels": []
+   },
+   "ffmpeg": {
+    "available": false,
+    "path": null,
+    "hint": "ffmpeg not found (checked ~\\.local\\bin\\ffmpeg, /usr/bin/ffmpeg, /usr/local/bin/ffmpeg and PATH); animated exports will fail. Install it (Ubuntu: sudo apt install ffmpeg) or set FFMPEG_PATH in .env."
+   }
+  },
+  "/api/deployment": {
+   "mode": "local",
+   "label": "Running locally on this PC",
+   "host": "127.0.0.1:9",
+   "model": "qwen3.5:9b",
+   "qualityModel": "gemma4:12b",
+   "priced": false,
+   "activeHoursEnabled": false
+  },
+  "/api/autopilot/status": {
+   "workerEnabled": false,
+   "workerRunning": false,
+   "cadenceMs": 600000,
+   "dailyDraftCap": 4,
+   "activeHours": {
+    "enabled": false,
+    "start": 7,
+    "end": 19,
+    "days": [
+     1,
+     2,
+     3,
+     4,
+     5
+    ],
+    "tz": "Europe/London"
+   },
+   "withinActiveHours": true,
+   "generationsToday": null,
+   "researcherLastSeenAt": "2026-11-18T09:22:56.324Z",
+   "lastRunAt": null,
+   "lastResult": null,
+   "draftsToday": {
+    "date": "",
+    "count": 0
+   },
+   "counts": {
+    "queued": 15,
+    "findingsUnprocessed": 6,
+    "findingsAbandoned": 0,
+    "recsOpen": 5
+   }
+  },
+  "/api/autopilot/stats": {
+   "draftsToday": 2,
+   "openFindings": 6,
+   "abandonedFindings": 0,
+   "lastTickErrors": 0,
+   "recsOpen": 5,
+   "activityTotal": 33,
+   "trends": {
+    "drafts": [
+     1,
+     1,
+     1,
+     2,
+     2,
+     2,
+     2
+    ],
+    "findings": [
+     1,
+     0,
+     1,
+     1,
+     1,
+     1,
+     0
+    ],
+    "recs": [
+     0,
+     1,
+     0,
+     0,
+     2,
+     2,
+     0
+    ],
+    "activity": [
+     1,
+     8,
+     2,
+     4,
+     4,
+     6,
+     4
+    ]
+   }
+  },
+  "/api/autopilot/activity?limit=300": {
+   "activity": [
+    {
+     "id": "a-1794998975642-11",
+     "ts": "2026-11-18T10:49:35.642Z",
+     "actor": "system",
+     "event": "topic.enqueued",
+     "summary": "planted 11 seed topics",
+     "ref": null
+    },
+    {
+     "id": "a-1794994676324-67",
+     "ts": "2026-11-18T09:37:56.324Z",
+     "actor": "agent",
+     "event": "agent.ok",
+     "summary": "Researcher agent finished after 18 min",
+     "ref": null
+    },
+    {
+     "id": "a-1794994596324-80",
+     "ts": "2026-11-18T09:36:36.324Z",
+     "actor": "jarvis",
+     "event": "session.brief",
+     "summary": "Wrote 2 pieces for review, threw away 1 that wasn't good enough, 1 playbook change.",
+     "ref": null
+    },
+    {
+     "id": "a-1794994486324-68",
+     "ts": "2026-11-18T09:34:46.324Z",
+     "actor": "agent",
+     "event": "agent.ok",
+     "summary": "Editor agent finished after 9 min",
+     "ref": null
+    },
+    {
+     "id": "a-1794924300000-35",
+     "ts": "2026-11-17T14:05:00.000Z",
+     "actor": "agent",
+     "event": "editor.passed",
+     "summary": "Editor passed \"Crews close work orders on paper, then someone keys them in on Friday.\" (8/10)",
+     "ref": {
+      "libraryId": "d-1794921600000-10"
+     }
+    },
+    {
+     "id": "a-1794924300000-34",
+     "ts": "2026-11-17T14:05:00.000Z",
+     "actor": "agent",
+     "event": "editor.passed",
+     "summary": "Editor passed \"Closing SAP PM work orders at the asset\" (9/10), cleared; waiting for a person to approve it",
+     "ref": {
+      "libraryId": "d-1794921600000-9"
+     }
+    },
+    {
+     "id": "a-1794924000000-79",
+     "ts": "2026-11-17T14:00:00.000Z",
+     "actor": "agent",
+     "event": "agent.report",
+     "summary": "SEO: Service pages are sound; two titles are cut off in search and FAQ markup is missing.",
+     "ref": null
+    },
+    {
+     "id": "a-1794923460000-65",
+     "ts": "2026-11-17T13:51:00.000Z",
+     "actor": "agent",
+     "event": "agent.ok",
+     "summary": "Editor agent finished after 11 min",
+     "ref": null
+    },
+    {
+     "id": "a-1794922260000-66",
+     "ts": "2026-11-17T13:31:00.000Z",
+     "actor": "agent",
+     "event": "agent.ok",
+     "summary": "SEO agent finished after 26 min",
+     "ref": null
+    },
+    {
+     "id": "a-1794922020000-64",
+     "ts": "2026-11-17T13:27:00.000Z",
+     "actor": "agent",
+     "event": "agent.ok",
+     "summary": "Researcher agent finished after 22 min",
+     "ref": null
+    },
+    {
+     "id": "a-1794837900000-33",
+     "ts": "2026-11-16T14:05:00.000Z",
+     "actor": "agent",
+     "event": "editor.passed",
+     "summary": "Editor passed \"Patch day is tomorrow. Rate the notes against your own landscape before you pani\" (9/10)",
+     "ref": {
+      "libraryId": "d-1794835200000-8"
+     }
+    },
+    {
+     "id": "a-1794837900000-32",
+     "ts": "2026-11-16T14:05:00.000Z",
+     "actor": "agent",
+     "event": "editor.passed",
+     "summary": "Editor passed \"Clearing SAP billing exceptions for good\" (8/10), cleared; waiting for a person to approve it",
+     "ref": {
+      "libraryId": "d-1794835200000-7"
+     }
+    },
+    {
+     "id": "a-1794836880000-63",
+     "ts": "2026-11-16T13:48:00.000Z",
+     "actor": "agent",
+     "event": "agent.ok",
+     "summary": "Editor agent finished after 8 min",
+     "ref": null
+    },
+    {
+     "id": "a-1794835200000-62",
+     "ts": "2026-11-16T13:20:00.000Z",
+     "actor": "agent",
+     "event": "agent.ok",
+     "summary": "Researcher agent finished after 15 min",
+     "ref": null
+    },
+    {
+     "id": "a-1794751500000-31",
+     "ts": "2026-11-15T14:05:00.000Z",
+     "actor": "agent",
+     "event": "editor.rejected",
+     "summary": "Editor rejected \"Is your integration landscape ready for the future?\": Rhetorical-question hook and no specific SAP point.",
+     "ref": {
+      "libraryId": "d-1794748800000-6"
+     }
+    },
+    {
+     "id": "a-1794751500000-30",
+     "ts": "2026-11-15T14:05:00.000Z",
+     "actor": "agent",
+     "event": "editor.passed",
+     "summary": "Editor passed \"A patch window a small Basis team can keep\" (7/10), not cleared: score under 8",
+     "ref": {
+      "libraryId": "d-1794748800000-5"
+     }
+    },
+    {
+     "id": "a-1794750420000-61",
+     "ts": "2026-11-15T13:47:00.000Z",
+     "actor": "agent",
+     "event": "agent.ok",
+     "summary": "Editor agent finished after 7 min",
+     "ref": null
+    },
+    {
+     "id": "a-1794749700000-60",
+     "ts": "2026-11-15T13:35:00.000Z",
+     "actor": "agent",
+     "event": "agent.failed",
+     "summary": "Researcher agent failed after 30 min",
+     "ref": null
+    },
+    {
+     "id": "a-1794665100000-29",
+     "ts": "2026-11-14T14:05:00.000Z",
+     "actor": "agent",
+     "event": "editor.rejected",
+     "summary": "Editor rejected \"Why transformation matters for utilities\": Generic: no SAP thing named and no buyer problem. Nothing a reader could act on.",
+     "ref": {
+      "libraryId": "d-1794662400000-4"
+     }
+    },
+    {
+     "id": "a-1794641400000-28",
+     "ts": "2026-11-14T07:30:00.000Z",
+     "actor": "you",
+     "event": "approval.approved",
+     "summary": "Mara approved \"Sorting custom code before a brownfield move\" in the app; it publishes on the next publishing day",
+     "ref": {
+      "libraryId": "d-1794576000000-3"
+     }
+    },
+    {
+     "id": "a-1794580200000-72",
+     "ts": "2026-11-13T14:30:00.000Z",
+     "actor": "agent",
+     "event": "agent.report",
+     "summary": "Strategist: Field service for operators: own the SAP side of crews, work orders and tablets.",
+     "ref": null
+    },
+    {
+     "id": "a-1794578700000-27",
+     "ts": "2026-11-13T14:05:00.000Z",
+     "actor": "agent",
+     "event": "editor.passed",
+     "summary": "Editor passed \"Sorting custom code before a brownfield move\" (9/10), cleared; waiting for a person to approve it",
+     "ref": {
+      "libraryId": "d-1794576000000-3"
+     }
+    },
+    {
+     "id": "a-1794578400000-75",
+     "ts": "2026-11-13T14:00:00.000Z",
+     "actor": "agent",
+     "event": "agent.report",
+     "summary": "Measurement: Search clicks steady; the master data blog brought the first enquiry from a waste operator.",
+     "ref": null
+    },
+    {
+     "id": "a-1794577800000-59",
+     "ts": "2026-11-13T13:50:00.000Z",
+     "actor": "agent",
+     "event": "agent.ok",
+     "summary": "Editor agent finished after 10 min",
+     "ref": null
+    },
+    {
+     "id": "a-1794576300000-58",
+     "ts": "2026-11-13T13:25:00.000Z",
+     "actor": "agent",
+     "event": "agent.ok",
+     "summary": "Researcher agent finished after 20 min",
+     "ref": null
+    },
+    {
+     "id": "a-1794576120000-57",
+     "ts": "2026-11-13T13:22:00.000Z",
+     "actor": "agent",
+     "event": "agent.ok",
+     "summary": "Strategist agent finished after 17 min",
+     "ref": null
+    },
+    {
+     "id": "a-1794575940000-56",
+     "ts": "2026-11-13T13:19:00.000Z",
+     "actor": "agent",
+     "event": "agent.ok",
+     "summary": "Measurement agent finished after 14 min",
+     "ref": null
+    },
+    {
+     "id": "a-1794555000000-26",
+     "ts": "2026-11-13T07:30:00.000Z",
+     "actor": "you",
+     "event": "approval.approved",
+     "summary": "Jonas approved \"Brackenfield Waste's crews now close work orders at the bin lorry, not in the o…\" in the app",
+     "ref": {
+      "libraryId": "d-1794489600000-2"
+     }
+    },
+    {
+     "id": "a-1794492300000-25",
+     "ts": "2026-11-12T14:05:00.000Z",
+     "actor": "agent",
+     "event": "editor.passed",
+     "summary": "Editor passed \"Brackenfield Waste's crews now close work orders at the bin lorry, not in the of\" (9/10)",
+     "ref": {
+      "libraryId": "d-1794489600000-2"
+     }
+    },
+    {
+     "id": "a-1794295800000-24",
+     "ts": "2026-11-10T07:30:00.000Z",
+     "actor": "you",
+     "event": "approval.approved",
+     "summary": "Mara approved \"Billing exceptions are a process problem, not a headcount problem.\" in the app",
+     "ref": {
+      "libraryId": "d-1794230400000-1"
+     }
+    },
+    {
+     "id": "a-1794233100000-23",
+     "ts": "2026-11-09T14:05:00.000Z",
+     "actor": "agent",
+     "event": "editor.passed",
+     "summary": "Editor passed \"Billing exceptions are a process problem, not a headcount problem.\" (8/10)",
+     "ref": {
+      "libraryId": "d-1794230400000-1"
+     }
+    },
+    {
+     "id": "a-1794123000000-22",
+     "ts": "2026-11-08T07:30:00.000Z",
+     "actor": "you",
+     "event": "approval.approved",
+     "summary": "Mara approved \"Master data first: the cutover nobody plans\" in the app; it publishes on the next publishing day",
+     "ref": {
+      "libraryId": "d-1794057600000-0"
+     }
+    },
+    {
+     "id": "a-1794060300000-21",
+     "ts": "2026-11-07T14:05:00.000Z",
+     "actor": "agent",
+     "event": "editor.passed",
+     "summary": "Editor passed \"Master data first: the cutover nobody plans\" (8/10), cleared; waiting for a person to approve it",
+     "ref": {
+      "libraryId": "d-1794057600000-0"
+     }
+    }
+   ]
+  },
+  "/api/autopilot/findings?limit=200": {
+   "findings": [
+    {
+     "id": "f-1794906000000-41",
+     "topicId": null,
+     "front": "content-seo",
+     "title": "Few pages answer 'SAP PM mobile work orders' with SAP detail",
+     "summary": "The top results are vendor product pages for generic mobile apps. None explains how work orders, notifications and readings flow back into SAP PM. Larkwell should own this with a practical guide.",
+     "url": "https://harlowpenn.example/",
+     "sources": [
+      "https://harlowpenn.example/"
+     ],
+     "kind": "web",
+     "data": null,
+     "hash": "03ef50498a5978bf",
+     "processed": false,
+     "processedAt": null,
+     "attempts": 0,
+     "ingestedToWiki": [],
+     "actions": [],
+     "createdAt": "2026-11-17T09:00:00.000Z"
+    },
+    {
+     "id": "f-1794819600000-40",
+     "topicId": null,
+     "front": "messaging",
+     "title": "Utility buyers search for billing exceptions by symptom",
+     "summary": "Searches name the symptom (implausible reads, move-in dates), not the module. Larkwell's billing content should lead with the symptom and name the SAP fix second.",
+     "url": "https://fernhollow.example/insights/",
+     "sources": [
+      "https://fernhollow.example/insights/"
+     ],
+     "kind": "web",
+     "data": null,
+     "hash": "507e9a904b006b1b",
+     "processed": false,
+     "processedAt": null,
+     "attempts": 0,
+     "ingestedToWiki": [],
+     "actions": [],
+     "createdAt": "2026-11-16T09:00:00.000Z"
+    },
+    {
+     "id": "f-1794733200000-39",
+     "topicId": null,
+     "front": "competitor-gaps",
+     "title": "No competitor writes for waste operators",
+     "summary": "Of the five firms on file, none has content for waste collection or recycling operators. Brackenfield Waste gives Larkwell a credible angle.",
+     "url": "https://quayside-systems.example/",
+     "sources": [
+      "https://quayside-systems.example/"
+     ],
+     "kind": "web",
+     "data": null,
+     "hash": "e3d9f2712697d0cc",
+     "processed": false,
+     "processedAt": null,
+     "attempts": 0,
+     "ingestedToWiki": [],
+     "actions": [],
+     "createdAt": "2026-11-15T09:00:00.000Z"
+    },
+    {
+     "id": "f-1794646800000-38",
+     "topicId": null,
+     "front": "technical-seo",
+     "title": "Service pages have no FAQ structured data",
+     "summary": "The plant maintenance and billing service pages answer common questions in prose but carry no FAQ markup. Adding it is a small change.",
+     "url": "https://larkwell.example/services/",
+     "sources": [
+      "https://larkwell.example/services/"
+     ],
+     "kind": "web",
+     "data": null,
+     "hash": "3cdde4a95c99b290",
+     "processed": false,
+     "processedAt": null,
+     "attempts": 0,
+     "ingestedToWiki": [],
+     "actions": [],
+     "createdAt": "2026-11-14T09:00:00.000Z"
+    },
+    {
+     "id": "f-1794474000000-37",
+     "topicId": null,
+     "front": "social",
+     "title": "Patch-day posts get read by Basis leads",
+     "summary": "Short, practical posts on the day of the SAP security notes reach Basis leads. Larkwell should post one each month, written the day before.",
+     "url": "https://support.sap.com/",
+     "sources": [
+      "https://support.sap.com/"
+     ],
+     "kind": "web",
+     "data": null,
+     "hash": "d27a3cc7204d5e43",
+     "processed": false,
+     "processedAt": null,
+     "attempts": 0,
+     "ingestedToWiki": [],
+     "actions": [],
+     "createdAt": "2026-11-12T09:00:00.000Z"
+    },
+    {
+     "id": "f-1794301200000-36",
+     "topicId": null,
+     "front": "brand-proof",
+     "title": "Buyers want named references from their own sector",
+     "summary": "Utility and waste buyers look for a reference in their own sector before booking a call. Larkwell's two named clients should be on the home page.",
+     "url": "https://larkwell.example/",
+     "sources": [
+      "https://larkwell.example/"
+     ],
+     "kind": "web",
+     "data": null,
+     "hash": "1e9e5325f4bc367f",
+     "processed": false,
+     "processedAt": null,
+     "attempts": 0,
+     "ingestedToWiki": [],
+     "actions": [],
+     "createdAt": "2026-11-10T09:00:00.000Z"
+    }
+   ]
+  },
+  "/api/autopilot/recommendations": {
+   "recommendations": [
+    {
+     "id": "rec-1794924000000-76",
+     "front": "technical-seo",
+     "title": "Shorten two service page titles",
+     "detail": "Page: /services/plant-maintenance/. Plant maintenance: 'SAP plant maintenance for operators | Larkwell'. Billing: 'SAP utilities billing support | Larkwell'. Why: Both are cut off in search results.",
+     "evidence": [
+      "agent:seo:2026-11-17"
+     ],
+     "effort": "small",
+     "status": "open",
+     "seen": 1,
+     "createdAt": "2026-11-17T14:00:00.000Z"
+    },
+    {
+     "id": "rec-1794924000000-77",
+     "front": "technical-seo",
+     "title": "Add FAQ markup to three service pages",
+     "detail": "Page: /services/billing/. Mark up the existing question-and-answer sections on plant maintenance, billing and S/4HANA. Why: Eligible for richer results at no content cost.",
+     "evidence": [
+      "agent:seo:2026-11-17"
+     ],
+     "effort": "small",
+     "status": "open",
+     "seen": 1,
+     "createdAt": "2026-11-17T14:00:00.000Z"
+    },
+    {
+     "id": "rec-1794837600000-45",
+     "front": "landing-pages",
+     "title": "Put both named clients on the home page",
+     "detail": "Add Brackenfield Waste and Osterby Utilities as short reference cards under the hero, each linking to its case page.",
+     "evidence": [
+      "jarvis:session"
+     ],
+     "effort": "small",
+     "status": "open",
+     "seen": 1,
+     "createdAt": "2026-11-16T14:00:00.000Z"
+    },
+    {
+     "id": "rec-1794837600000-46",
+     "front": "content-seo",
+     "title": "Write the SAP PM mobile work orders guide",
+     "detail": "A long-form guide that answers the query in the first paragraph and covers offline, rollout and measurement.",
+     "evidence": [
+      "jarvis:session"
+     ],
+     "effort": "medium",
+     "status": "open",
+     "seen": 1,
+     "createdAt": "2026-11-16T14:00:00.000Z"
+    },
+    {
+     "id": "rec-1794578400000-73",
+     "front": "analytics",
+     "title": "Link the master data blog from the S/4HANA page",
+     "detail": "Page: /services/s4hana/. Add a short 'read next' link at the end of the S/4HANA service page. Why: The blog converts; the service page gets more traffic.",
+     "evidence": [
+      "agent:measurement:2026-11-13"
+     ],
+     "effort": "small",
+     "status": "open",
+     "seen": 1,
+     "createdAt": "2026-11-13T14:00:00.000Z"
+    }
+   ]
+  },
+  "/api/autopilot/directives": {
+   "directives": [
+    {
+     "id": "dir-1794405600000-50",
+     "kind": "avoid",
+     "text": "No rhetorical-question hooks.",
+     "front": "social",
+     "evidence": [],
+     "status": "open",
+     "createdAt": "2026-11-11T14:00:00.000Z"
+    },
+    {
+     "id": "dir-1794405600000-49",
+     "kind": "avoid",
+     "text": "No 'digital transformation' framing. Name the SAP thing instead.",
+     "front": "messaging",
+     "evidence": [],
+     "status": "open",
+     "createdAt": "2026-11-11T14:00:00.000Z"
+    },
+    {
+     "id": "dir-1794405600000-48",
+     "kind": "build",
+     "text": "One monthly patch-day post for Basis leads, written the day before.",
+     "front": "social",
+     "evidence": [],
+     "status": "open",
+     "createdAt": "2026-11-11T14:00:00.000Z"
+    },
+    {
+     "id": "dir-1794405600000-47",
+     "kind": "build",
+     "text": "Write for operators with depots and crews: waste, water, grid. Name the sector in the first line.",
+     "front": "messaging",
+     "evidence": [],
+     "status": "open",
+     "createdAt": "2026-11-11T14:00:00.000Z"
+    }
+   ]
+  },
+  "/api/autopilot/queue": {
+   "queue": [
+    {
+     "id": "rq-1794580200000-69",
+     "topic": "Preventive maintenance for bin lorries in SAP PM",
+     "front": "messaging",
+     "rationale": "Strategist, week of 2026-11-13: Waste operators are an open gap",
+     "priority": 5,
+     "status": "queued",
+     "claimToken": null,
+     "claimedAt": null,
+     "createdBy": "strategist",
+     "createdAt": "2026-11-13T14:30:00.000Z",
+     "doneAt": null,
+     "findingIds": []
+    },
+    {
+     "id": "rq-1794909600000-42",
+     "topic": "How do waste operators schedule preventive maintenance for bin lorries in SAP PM?",
+     "front": "content-seo",
+     "rationale": "Plan for this week: field service theme",
+     "priority": 5,
+     "status": "queued",
+     "claimToken": null,
+     "claimedAt": null,
+     "createdBy": "strategist",
+     "createdAt": "2026-11-17T10:00:00.000Z",
+     "doneAt": null,
+     "findingIds": []
+    },
+    {
+     "id": "rq-1794998975642-0",
+     "topic": "How do the top SAP migration consultancies position the 2027 ECC end-of-maintenance deadline, and where can Larkwell Consulting differentiate?",
+     "front": "messaging",
+     "rationale": "seed",
+     "priority": 5,
+     "status": "queued",
+     "claimToken": null,
+     "claimedAt": null,
+     "createdBy": "seed",
+     "createdAt": "2026-11-18T10:49:35.642Z",
+     "doneAt": null,
+     "findingIds": []
+    },
+    {
+     "id": "rq-1794998975642-1",
+     "topic": "Highest-intent S/4HANA migration and SAP-on-cloud questions buyers search that larkwell.example has no dedicated page for yet.",
+     "front": "content-seo",
+     "rationale": "seed",
+     "priority": 5,
+     "status": "queued",
+     "claimToken": null,
+     "claimedAt": null,
+     "createdBy": "seed",
+     "createdAt": "2026-11-18T10:49:35.642Z",
+     "doneAt": null,
+     "findingIds": []
+    },
+    {
+     "id": "rq-1794998975642-10",
+     "topic": "Keyword and content gaps between larkwell.example and its top 3 SAP-consulting competitors (use SEMrush where available).",
+     "front": "competitor-gaps",
+     "rationale": "seed",
+     "priority": 5,
+     "status": "queued",
+     "claimToken": null,
+     "claimedAt": null,
+     "createdBy": "seed",
+     "createdAt": "2026-11-18T10:49:35.642Z",
+     "doneAt": null,
+     "findingIds": []
+    },
+    {
+     "id": "rq-1794909600000-43",
+     "topic": "What changes for meter-to-cash when IS-U moves to S/4HANA Utilities?",
+     "front": "messaging",
+     "rationale": "Billing pillar has one post this month",
+     "priority": 4,
+     "status": "queued",
+     "claimToken": null,
+     "claimedAt": null,
+     "createdBy": "jarvis",
+     "createdAt": "2026-11-17T10:00:00.000Z",
+     "doneAt": null,
+     "findingIds": []
+    },
+    {
+     "id": "rq-1794998975642-2",
+     "topic": "Best-practice structure and proof elements for a high-converting B2B SAP consulting service page in 2026.",
+     "front": "landing-pages",
+     "rationale": "seed",
+     "priority": 4,
+     "status": "queued",
+     "claimToken": null,
+     "claimedAt": null,
+     "createdBy": "seed",
+     "createdAt": "2026-11-18T10:49:35.642Z",
+     "doneAt": null,
+     "findingIds": []
+    },
+    {
+     "id": "rq-1794998975642-5",
+     "topic": "Current technical-SEO issues and quick wins for larkwell.example (crawlability, internal linking, indexation, multilingual targeting).",
+     "front": "technical-seo",
+     "rationale": "seed",
+     "priority": 4,
+     "status": "queued",
+     "claimToken": null,
+     "claimedAt": null,
+     "createdBy": "seed",
+     "createdAt": "2026-11-18T10:49:35.642Z",
+     "doneAt": null,
+     "findingIds": []
+    },
+    {
+     "id": "rq-1794909600000-44",
+     "topic": "Re-profile Harlow & Penn: any new SAP PM content?",
+     "front": "competitor-gaps",
+     "rationale": "Last researched a fortnight ago",
+     "priority": 3,
+     "status": "queued",
+     "claimToken": null,
+     "claimedAt": null,
+     "createdBy": "jarvis",
+     "createdAt": "2026-11-17T10:00:00.000Z",
+     "doneAt": null,
+     "findingIds": []
+    },
+    {
+     "id": "rq-1794998975642-3",
+     "topic": "Which SAP topics and post formats are driving the most engagement on LinkedIn for SAP consultancies right now?",
+     "front": "social",
+     "rationale": "seed",
+     "priority": 3,
+     "status": "queued",
+     "claimToken": null,
+     "claimedAt": null,
+     "createdBy": "seed",
+     "createdAt": "2026-11-18T10:49:35.642Z",
+     "doneAt": null,
+     "findingIds": []
+    },
+    {
+     "id": "rq-1794998975642-4",
+     "topic": "What proof, certifications, and trust signals do enterprise SAP buyers look for when choosing a migration partner?",
+     "front": "brand-proof",
+     "rationale": "seed",
+     "priority": 3,
+     "status": "queued",
+     "claimToken": null,
+     "claimedAt": null,
+     "createdBy": "seed",
+     "createdAt": "2026-11-18T10:49:35.642Z",
+     "doneAt": null,
+     "findingIds": []
+    },
+    {
+     "id": "rq-1794998975642-6",
+     "topic": "Which schema.org structured-data types should an SAP consulting site use (Organization, Service, FAQ, Article) and how do competitors apply them?",
+     "front": "schema",
+     "rationale": "seed",
+     "priority": 3,
+     "status": "queued",
+     "claimToken": null,
+     "claimedAt": null,
+     "createdBy": "seed",
+     "createdAt": "2026-11-18T10:49:35.642Z",
+     "doneAt": null,
+     "findingIds": []
+    },
+    {
+     "id": "rq-1794998975642-7",
+     "topic": "Core Web Vitals and page-speed benchmarks for B2B enterprise-service sites in 2026, and what 'good' looks like.",
+     "front": "performance",
+     "rationale": "seed",
+     "priority": 3,
+     "status": "queued",
+     "claimToken": null,
+     "claimedAt": null,
+     "createdBy": "seed",
+     "createdAt": "2026-11-18T10:49:35.642Z",
+     "doneAt": null,
+     "findingIds": []
+    },
+    {
+     "id": "rq-1794998975642-8",
+     "topic": "Common site-health problems that quietly suppress organic rankings for B2B service sites, and how to audit for them.",
+     "front": "site-health",
+     "rationale": "seed",
+     "priority": 3,
+     "status": "queued",
+     "claimToken": null,
+     "claimedAt": null,
+     "createdBy": "seed",
+     "createdAt": "2026-11-18T10:49:35.642Z",
+     "doneAt": null,
+     "findingIds": []
+    },
+    {
+     "id": "rq-1794998975642-9",
+     "topic": "Which marketing signals and conversion events Larkwell should track to know what content actually drives SAP leads.",
+     "front": "analytics",
+     "rationale": "seed",
+     "priority": 2,
+     "status": "queued",
+     "claimToken": null,
+     "claimedAt": null,
+     "createdBy": "seed",
+     "createdAt": "2026-11-18T10:49:35.642Z",
+     "doneAt": null,
+     "findingIds": []
+    }
+   ]
+  },
+  "/api/drafts": {
+   "drafts": [
+    {
+     "id": "d-1794993746324-11",
+     "kind": "linkedin",
+     "status": "draft",
+     "payload": {
+      "hook": "A short dump at seven in the morning, and the developer who wrote the code left last year.",
+      "body": "Larkwell Copilot reads the dump, finds the custom code behind it and explains what it does in plain language. It can propose a fix in the development system, after syntax and quality checks run in code.\n\nOnly a person releases the transport, and every step is in the audit trail.",
+      "hashtags": [
+       "SAPABAP",
+       "SAPAI"
+      ],
+      "serviceId": "abap",
+      "serviceLabel": "ABAP development",
+      "postType": "how-to",
+      "productId": "copilot",
+      "origin": "jarvis",
+      "warnings": [],
+      "aiOriginal": {
+       "title": "",
+       "hook": "A short dump at seven in the morning, and the developer who wrote the code left last year.",
+       "body": "Larkwell Copilot reads the dump, finds the custom code behind it and explains what it does in plain language. It can propose a fix in the development system, after syntax and quality checks run in code.\n\nOnly a person releases the transport, and every step is in the audit trail."
+      }
+     },
+     "savedAt": "2026-11-18T09:22:26.324Z",
+     "updatedAt": "2026-11-18T09:22:26.324Z"
+    },
+    {
+     "id": "d-1794993746324-12",
+     "kind": "linkedin",
+     "status": "draft",
+     "payload": {
+      "hook": "We said no to a project last month, and it was the right call.",
+      "body": "The client wanted a big-bang cutover over a bank holiday weekend, with billing and maintenance going live together. We could not make that safe, so we said so.\n\nThey found another partner. I would rather lose the work than run a cutover I would not run on my own systems.",
+      "hashtags": [
+       "SAP",
+       "S4HANA"
+      ],
+      "serviceId": "managed",
+      "serviceLabel": "Application managed services",
+      "postType": "founder",
+      "origin": "jarvis",
+      "warnings": [],
+      "aiOriginal": {
+       "title": "",
+       "hook": "We said no to a project last month, and it was the right call.",
+       "body": "The client wanted a big-bang cutover over a bank holiday weekend, with billing and maintenance going live together. We could not make that safe, so we said so.\n\nThey found another partner. I would rather lose the work than run a cutover I would not run on my own systems."
+      }
+     },
+     "savedAt": "2026-11-18T09:22:26.324Z",
+     "updatedAt": "2026-11-18T09:22:26.324Z"
+    },
+    {
+     "id": "d-1794921600000-9",
+     "kind": "blog",
+     "status": "draft",
+     "payload": {
+      "title": "Closing SAP PM work orders at the asset",
+      "metaDescription": "Why field crews still close SAP PM work orders on paper, and the three-screen tablet app that changes it without retraining the office.",
+      "body": "Most operators who run SAP PM already have the data model they need. The work order, the notification and the equipment record are all there. The problem is where the work order gets closed: on a clipboard in the van, and in SAP on Friday afternoon when someone in the office keys in the week.\n\n## What paper costs you\n\nWhen a work order is closed days after the job, the details are guessed. Readings are rounded, defects that were noticed but not fixed are forgotten, and the time booked is whatever fits the timesheet. The asset register drifts away from the assets, and preventive maintenance plans start to schedule work that crews know is pointless.\n\n## Three screens, not thirty\n\nCrews do three things with SAP: see today's jobs, close a job with readings and photos, and raise a defect they found on the way. A small Fiori app on a depot tablet can do exactly those three things. It does not need the full transaction, and it should not try to.\n\nKeep the office on the screens they know. Planners and supervisors still schedule, release and settle in the back office. Only the closing moves to the field.\n\n## Roll it out depot by depot\n\nStart with the depot whose supervisor asks for it. Run paper and tablet side by side for a fortnight, then switch. Offline mode matters more than any feature: depots and rural sites often have poor signal, and a tablet that loses the job when the signal drops will be back in the drawer within a week.\n\n## What to measure\n\nMeasure the gap between finishing a job and closing it in SAP, and the number of defects raised from the field. Both tell you whether the crews trust the app. Larkwell helps operators plan and build this kind of field app on top of SAP PM.",
+      "keyword": "sap pm mobile work orders",
+      "slug": "sap-pm-work-orders-closed-at-the-asset",
+      "serviceId": "plant-maintenance",
+      "serviceLabel": "Plant maintenance and field service",
+      "origin": "jarvis",
+      "warnings": [
+       "Meta is short (135 chars) - consider expanding to 140-160."
+      ],
+      "aiOriginal": {
+       "title": "Closing SAP PM work orders at the asset",
+       "hook": "",
+       "body": "Most operators who run SAP PM already have the data model they need. The work order, the notification and the equipment record are all there. The problem is where the work order gets closed: on a clipboard in the van, and in SAP on Friday afternoon when someone in the office keys in the week.\n\n## What paper costs you\n\nWhen a work order is closed days after the job, the details are guessed. Readings are rounded, defects that were noticed but not fixed are forgotten, and the time booked is whatever fits the timesheet. The asset register drifts away from the assets, and preventive maintenance plans start to schedule work that crews know is pointless.\n\n## Three screens, not thirty\n\nCrews do three things with SAP: see today's jobs, close a job with readings and photos, and raise a defect they found on the way. A small Fiori app on a depot tablet can do exactly those three things. It does not need the full transaction, and it should not try to.\n\nKeep the office on the screens they know. Planners and supervisors still schedule, release and settle in the back office. Only the closing moves to the field.\n\n## Roll it out depot by depot\n\nStart with the depot whose supervisor asks for it. Run paper and tablet side by side for a fortnight, then switch. Offline mode matters more than any feature: depots and rural sites often have poor signal, and a tablet that loses the job when the signal drops will be back in the drawer within a week.\n\n## What to measure\n\nMeasure the gap between finishing a job and closing it in SAP, and the number of defects raised from the field. Both tell you whether the crews trust the app. Larkwell helps operators plan and build this kind of field app on top of SAP PM."
+      },
+      "editor": {
+       "verdict": "pass",
+       "score": 9,
+       "notes": "Strong, specific and practical. Tightened the opening and cut one repeated sentence.",
+       "changes": "Shortened the intro; split one long paragraph.",
+       "at": "2026-11-17T14:05:00.000Z",
+       "cleared": true,
+       "issues": []
+      }
+     },
+     "savedAt": "2026-11-17T13:20:00.000Z",
+     "updatedAt": "2026-11-17T14:05:00.000Z"
+    },
+    {
+     "id": "d-1794921600000-10",
+     "kind": "linkedin",
+     "status": "draft",
+     "payload": {
+      "hook": "Crews close work orders on paper, then someone keys them in on Friday.",
+      "body": "That gap is where the asset register goes wrong: readings get rounded, defects get forgotten, and preventive plans drift away from what crews actually see.\n\nThree things fix most of it: a tablet app with only the three screens crews need, offline mode for depots with poor signal, and a rollout one depot at a time.\n\nLarkwell builds field apps on top of SAP PM for operators who want the register to match the assets.",
+      "hashtags": [
+       "SAPPM",
+       "FieldService"
+      ],
+      "serviceId": "plant-maintenance",
+      "serviceLabel": "Plant maintenance and field service",
+      "postType": "how-to",
+      "origin": "jarvis",
+      "warnings": [],
+      "aiOriginal": {
+       "title": "",
+       "hook": "Crews close work orders on paper, then someone keys them in on Friday.",
+       "body": "That gap is where the asset register goes wrong: readings get rounded, defects get forgotten, and preventive plans drift away from what crews actually see.\n\nThree things fix most of it: a tablet app with only the three screens crews need, offline mode for depots with poor signal, and a rollout one depot at a time.\n\nLarkwell builds field apps on top of SAP PM for operators who want the register to match the assets."
+      },
+      "editor": {
+       "verdict": "pass",
+       "score": 8,
+       "notes": "Good hook. Cut the closing question.",
+       "changes": "",
+       "at": "2026-11-17T14:05:00.000Z",
+       "cleared": false,
+       "issues": []
+      }
+     },
+     "savedAt": "2026-11-17T13:20:00.000Z",
+     "updatedAt": "2026-11-17T14:05:00.000Z"
+    },
+    {
+     "id": "d-1794835200000-7",
+     "kind": "blog",
+     "status": "draft",
+     "payload": {
+      "title": "Clearing SAP billing exceptions for good",
+      "metaDescription": "Billing exceptions in SAP for utilities are a process symptom. Measure them by cause, fix the top two causes, then automate what is left.",
+      "body": "Every utility running SAP billing has an exception queue, and most have a team whose job is to work it. When the queue grows, the usual answer is to add people. That clears the backlog for a while and hides the reason it grew.\n\n## Exceptions have causes\n\nGroup a month of exceptions by cause before changing anything. In most landscapes a handful of causes account for nearly all of them: meter reads that fail plausibility checks, move-in and move-out dates that cross a billing period, and tariff changes that reached production before anyone tested them against real contracts.\n\n## Fix the process, not the queue\n\nTake the largest cause and trace it back to where the bad data enters. Implausible reads often come from one reading route or one device type. Move-in timing problems usually start in the customer service process, where an agent enters a date the billing run cannot handle. Fix the entry point and that whole class of exception stops arriving.\n\n## Then automate the rest\n\nOnce the big causes are fixed, what remains is a smaller, steadier queue. Some of it can be cleared by rules: re-estimate and release, or hold and notify. The rest needs a person, and now that person has time to look properly.\n\n## Test tariffs like code\n\nTariff changes deserve the same care as a code change: a test system with copies of real contracts, a set of expected bills, and a sign-off before transport. It is slower the first time and much faster after that.\n\nLarkwell works with utilities on billing processes in SAP and on the move to S/4HANA, where these fixes are worth making before the conversion rather than after.",
+      "keyword": "sap is-u billing exceptions",
+      "slug": "sap-billing-exceptions-for-good",
+      "serviceId": "billing",
+      "serviceLabel": "Utilities billing and customer service",
+      "origin": "jarvis",
+      "warnings": [
+       "Meta is short (137 chars) - consider expanding to 140-160."
+      ],
+      "aiOriginal": {
+       "title": "Clearing SAP billing exceptions for good",
+       "hook": "",
+       "body": "Every utility running SAP billing has an exception queue, and most have a team whose job is to work it. When the queue grows, the usual answer is to add people. That clears the backlog for a while and hides the reason it grew.\n\n## Exceptions have causes\n\nGroup a month of exceptions by cause before changing anything. In most landscapes a handful of causes account for nearly all of them: meter reads that fail plausibility checks, move-in and move-out dates that cross a billing period, and tariff changes that reached production before anyone tested them against real contracts.\n\n## Fix the process, not the queue\n\nTake the largest cause and trace it back to where the bad data enters. Implausible reads often come from one reading route or one device type. Move-in timing problems usually start in the customer service process, where an agent enters a date the billing run cannot handle. Fix the entry point and that whole class of exception stops arriving.\n\n## Then automate the rest\n\nOnce the big causes are fixed, what remains is a smaller, steadier queue. Some of it can be cleared by rules: re-estimate and release, or hold and notify. The rest needs a person, and now that person has time to look properly.\n\n## Test tariffs like code\n\nTariff changes deserve the same care as a code change: a test system with copies of real contracts, a set of expected bills, and a sign-off before transport. It is slower the first time and much faster after that.\n\nLarkwell works with utilities on billing processes in SAP and on the move to S/4HANA, where these fixes are worth making before the conversion rather than after."
+      },
+      "editor": {
+       "verdict": "pass",
+       "score": 8,
+       "notes": "Clear argument. Removed two hype words and a figure with no source.",
+       "changes": "Cut an unsourced statistic from the opening.",
+       "at": "2026-11-16T14:05:00.000Z",
+       "cleared": true,
+       "issues": []
+      }
+     },
+     "savedAt": "2026-11-16T13:20:00.000Z",
+     "updatedAt": "2026-11-16T14:05:00.000Z"
+    },
+    {
+     "id": "d-1794835200000-8",
+     "kind": "linkedin",
+     "status": "draft",
+     "payload": {
+      "hook": "Patch day is tomorrow. Rate the notes against your own landscape before you panic.",
+      "body": "A critical note for a component you do not run is not urgent for you. A medium note for your billing system might be.\n\nRead the notes on the day, rate them against what you run, patch development first, and write the rollback before you start.\n\nLarkwell runs monthly patch windows for SAP estates that cannot go down.",
+      "hashtags": [
+       "SAPBasis",
+       "SAP"
+      ],
+      "serviceId": "basis",
+      "serviceLabel": "SAP Basis and operations",
+      "postType": "how-to",
+      "origin": "jarvis",
+      "warnings": [],
+      "aiOriginal": {
+       "title": "",
+       "hook": "Patch day is tomorrow. Rate the notes against your own landscape before you panic.",
+       "body": "A critical note for a component you do not run is not urgent for you. A medium note for your billing system might be.\n\nRead the notes on the day, rate them against what you run, patch development first, and write the rollback before you start.\n\nLarkwell runs monthly patch windows for SAP estates that cannot go down."
+      },
+      "editor": {
+       "verdict": "pass",
+       "score": 9,
+       "notes": "Timely and specific.",
+       "changes": "",
+       "at": "2026-11-16T14:05:00.000Z",
+       "cleared": false,
+       "issues": []
+      }
+     },
+     "savedAt": "2026-11-16T13:20:00.000Z",
+     "updatedAt": "2026-11-16T14:05:00.000Z"
+    },
+    {
+     "id": "d-1794748800000-5",
+     "kind": "blog",
+     "status": "draft",
+     "payload": {
+      "title": "A patch window a small Basis team can keep",
+      "metaDescription": "A monthly SAP patch routine for a Basis team of one or two people: rate, patch development first, and keep a written rollback.",
+      "body": "Small Basis teams rarely skip patching on purpose. It slips because the patch window competes with everything else, and nobody owns the decision of what to patch first.\n\n## Rate notes against your own landscape\n\nRead the security notes on the day they come out and rate each one against what you actually run. A critical note for a component you do not use is not urgent for you.\n\n## Development first, always\n\nPatch development, let it run for a few days, then quality, then production. Write the rollback for each change before you start.\n\n## Put it in the calendar\n\nA fixed monthly window agreed with the business is easier to keep than an ad hoc one. If the team is one person, a managed service can cover the routine and the nights.",
+      "keyword": "sap basis managed service",
+      "slug": "a-patch-window-a-small-basis-team-can-keep",
+      "serviceId": "basis",
+      "serviceLabel": "SAP Basis and operations",
+      "origin": "jarvis",
+      "warnings": [
+       "Meta is short (126 chars) - consider expanding to 140-160."
+      ],
+      "aiOriginal": {
+       "title": "A patch window a small Basis team can keep",
+       "hook": "",
+       "body": "Small Basis teams rarely skip patching on purpose. It slips because the patch window competes with everything else, and nobody owns the decision of what to patch first.\n\n## Rate notes against your own landscape\n\nRead the security notes on the day they come out and rate each one against what you actually run. A critical note for a component you do not use is not urgent for you.\n\n## Development first, always\n\nPatch development, let it run for a few days, then quality, then production. Write the rollback for each change before you start.\n\n## Put it in the calendar\n\nA fixed monthly window agreed with the business is easier to keep than an ad hoc one. If the team is one person, a managed service can cover the routine and the nights."
+      },
+      "editor": {
+       "verdict": "pass",
+       "score": 7,
+       "notes": "Useful but thin. Needs a worked example before it can be cleared.",
+       "changes": "",
+       "at": "2026-11-15T14:05:00.000Z",
+       "cleared": false,
+       "issues": []
+      }
+     },
+     "savedAt": "2026-11-15T13:20:00.000Z",
+     "updatedAt": "2026-11-15T14:05:00.000Z"
+    },
+    {
+     "id": "d-1794748800000-6",
+     "kind": "linkedin",
+     "status": "archived",
+     "payload": {
+      "hook": "Is your integration landscape ready for the future?",
+      "body": "In today's landscape, integration is more important than ever. Organisations must embrace modern approaches to stay ahead. Are you ready?",
+      "hashtags": [
+       "SAP"
+      ],
+      "serviceId": "integration",
+      "serviceLabel": "SAP integration",
+      "postType": "hot-take",
+      "origin": "jarvis",
+      "warnings": [],
+      "aiOriginal": {
+       "title": "",
+       "hook": "Is your integration landscape ready for the future?",
+       "body": "In today's landscape, integration is more important than ever. Organisations must embrace modern approaches to stay ahead. Are you ready?"
+      },
+      "editor": {
+       "verdict": "reject",
+       "score": 2,
+       "reason": "Rhetorical-question hook and no specific SAP point.",
+       "at": "2026-11-15T14:05:00.000Z",
+       "cleared": false,
+       "issues": []
+      }
+     },
+     "savedAt": "2026-11-15T13:20:00.000Z",
+     "updatedAt": "2026-11-15T14:05:00.000Z",
+     "archivedFrom": "draft"
+    },
+    {
+     "id": "d-1794662400000-4",
+     "kind": "blog",
+     "status": "archived",
+     "payload": {
+      "title": "Why transformation matters for utilities",
+      "metaDescription": "Utilities face change on every front.",
+      "body": "Utilities face change on every front, from regulation to customer expectations. Transformation is no longer optional, and every organisation needs a plan for the journey ahead. A clear strategy, strong leadership and the right partner make the difference between success and failure, and the time to start is now. Teams that embrace change will be ready for what comes next, and those that wait will fall behind their peers in a market that keeps moving.",
+      "keyword": "digital transformation utilities",
+      "slug": "digital-transformation-utilities",
+      "serviceId": "s4hana",
+      "serviceLabel": "S/4HANA migrations",
+      "origin": "jarvis",
+      "warnings": [],
+      "aiOriginal": {
+       "title": "Why transformation matters for utilities",
+       "hook": "",
+       "body": "Utilities face change on every front, from regulation to customer expectations. Transformation is no longer optional, and every organisation needs a plan for the journey ahead. A clear strategy, strong leadership and the right partner make the difference between success and failure, and the time to start is now. Teams that embrace change will be ready for what comes next, and those that wait will fall behind their peers in a market that keeps moving."
+      },
+      "editor": {
+       "verdict": "reject",
+       "score": 3,
+       "reason": "Generic: no SAP thing named and no buyer problem. Nothing a reader could act on.",
+       "at": "2026-11-14T14:05:00.000Z",
+       "cleared": false,
+       "issues": []
+      }
+     },
+     "savedAt": "2026-11-14T13:20:00.000Z",
+     "updatedAt": "2026-11-14T14:05:00.000Z",
+     "archivedFrom": "draft"
+    },
+    {
+     "id": "d-1794576000000-3",
+     "kind": "blog",
+     "status": "approved",
+     "payload": {
+      "title": "Sorting custom code before a brownfield move",
+      "metaDescription": "Before a brownfield S/4HANA conversion, sort custom code into keep, fix and retire using real usage data from production.",
+      "body": "A brownfield conversion keeps your processes and your data, and it also keeps your custom code. That is the point of choosing it, and it is also where most of the surprises come from.\n\n## Start with usage, not with the code\n\nBefore anyone reads a line of ABAP, collect usage data from production for a full business cycle, including the year-end close. It tells you which custom programs, reports and enhancements anyone still runs. In older landscapes a large share of custom objects turn out to be unused.\n\n## Three piles\n\nPut every custom object into one of three piles. Retire what nobody uses: delete it before the conversion so nobody has to fix it. Fix what is used and flagged by the conversion checks. Keep and document what is used and passes.\n\n## Fix in the source system\n\nMake the fixes in the current system, transport them through the normal landscape and let them run in production before the conversion. The conversion weekend is the wrong time to find out a fix was wrong.\n\n## Write down why\n\nFor every object you keep, write one line on what it does and who asked for it. The next upgrade will be easier, and the team will stop treating custom code as something nobody dares to touch.\n\nLarkwell plans brownfield conversions for operators who cannot stop the depot or the billing run, starting with exactly this kind of inventory.",
+      "keyword": "brownfield s/4hana conversion",
+      "slug": "custom-code-before-a-brownfield-conversion",
+      "serviceId": "s4hana",
+      "serviceLabel": "S/4HANA migrations",
+      "origin": "jarvis",
+      "warnings": [
+       "Meta is short (121 chars) - consider expanding to 140-160."
+      ],
+      "aiOriginal": {
+       "title": "Sorting custom code before a brownfield move",
+       "hook": "",
+       "body": "A brownfield conversion keeps your processes and your data, and it also keeps your custom code. That is the point of choosing it, and it is also where most of the surprises come from.\n\n## Start with usage, not with the code\n\nBefore anyone reads a line of ABAP, collect usage data from production for a full business cycle, including the year-end close. It tells you which custom programs, reports and enhancements anyone still runs. In older landscapes a large share of custom objects turn out to be unused.\n\n## Three piles\n\nPut every custom object into one of three piles. Retire what nobody uses: delete it before the conversion so nobody has to fix it. Fix what is used and flagged by the conversion checks. Keep and document what is used and passes.\n\n## Fix in the source system\n\nMake the fixes in the current system, transport them through the normal landscape and let them run in production before the conversion. The conversion weekend is the wrong time to find out a fix was wrong.\n\n## Write down why\n\nFor every object you keep, write one line on what it does and who asked for it. The next upgrade will be easier, and the team will stop treating custom code as something nobody dares to touch.\n\nLarkwell plans brownfield conversions for operators who cannot stop the depot or the billing run, starting with exactly this kind of inventory."
+      },
+      "editor": {
+       "verdict": "pass",
+       "score": 9,
+       "notes": "Good structure and a clear point of view. Light copy edit only.",
+       "changes": "",
+       "at": "2026-11-13T14:05:00.000Z",
+       "cleared": true,
+       "issues": []
+      },
+      "approval": {
+       "decision": "approve",
+       "by": "Mara",
+       "reason": "",
+       "decidedAt": "2026-11-14T07:30:00.000Z",
+       "appliedAt": "2026-11-14T07:30:00.000Z",
+       "via": "app"
+      }
+     },
+     "savedAt": "2026-11-13T13:20:00.000Z",
+     "updatedAt": "2026-11-14T07:30:00.000Z"
+    },
+    {
+     "id": "d-1794489600000-2",
+     "kind": "linkedin",
+     "status": "approved",
+     "payload": {
+      "hook": "Brackenfield Waste's crews now close work orders at the bin lorry, not in the office.",
+      "body": "Brackenfield Waste ran SAP PM, but work orders were closed on paper and keyed in at the end of the week. The asset register lagged behind the fleet.\n\nLarkwell built a small Fiori app for the depot tablets: today's jobs, close a job with readings and photos, raise a defect. The office kept its screens. The rollout went one depot at a time.\n\nSame process, no double keying, and the register is current again.",
+      "hashtags": [
+       "SAPFiori",
+       "WasteManagement"
+      ],
+      "serviceId": "plant-maintenance",
+      "serviceLabel": "Plant maintenance and field service",
+      "postType": "case-study",
+      "origin": "jarvis",
+      "warnings": [],
+      "aiOriginal": {
+       "title": "",
+       "hook": "Brackenfield Waste's crews now close work orders at the bin lorry, not in the office.",
+       "body": "Brackenfield Waste ran SAP PM, but work orders were closed on paper and keyed in at the end of the week. The asset register lagged behind the fleet.\n\nLarkwell built a small Fiori app for the depot tablets: today's jobs, close a job with readings and photos, raise a defect. The office kept its screens. The rollout went one depot at a time.\n\nSame process, no double keying, and the register is current again."
+      },
+      "editor": {
+       "verdict": "pass",
+       "score": 9,
+       "notes": "Named client is on the approved list. Outcome stated without figures.",
+       "changes": "",
+       "at": "2026-11-12T14:05:00.000Z",
+       "cleared": false,
+       "issues": []
+      },
+      "approval": {
+       "decision": "approve",
+       "by": "Jonas",
+       "reason": "",
+       "decidedAt": "2026-11-13T07:30:00.000Z",
+       "appliedAt": "2026-11-13T07:30:00.000Z",
+       "via": "app"
+      }
+     },
+     "savedAt": "2026-11-12T13:20:00.000Z",
+     "updatedAt": "2026-11-13T07:30:00.000Z"
+    },
+    {
+     "id": "d-1794230400000-1",
+     "kind": "linkedin",
+     "status": "posted",
+     "payload": {
+      "hook": "Billing exceptions are a process problem, not a headcount problem.",
+      "body": "Adding people to the exception queue clears the backlog for a month and hides why it grew.\n\nGroup a month of exceptions by cause. Fix the top two at the point where the bad data enters. Automate what is left.\n\nThat is the work Larkwell does with utilities before they move billing to S/4HANA.",
+      "hashtags": [
+       "SAPISU",
+       "Utilities"
+      ],
+      "serviceId": "billing",
+      "serviceLabel": "Utilities billing and customer service",
+      "postType": "hot-take",
+      "origin": "jarvis",
+      "warnings": [],
+      "aiOriginal": {
+       "title": "",
+       "hook": "Billing exceptions are a process problem, not a headcount problem.",
+       "body": "Adding people to the exception queue clears the backlog for a month and hides why it grew.\n\nGroup a month of exceptions by cause. Fix the top two at the point where the bad data enters. Automate what is left.\n\nThat is the work Larkwell does with utilities before they move billing to S/4HANA."
+      },
+      "editor": {
+       "verdict": "pass",
+       "score": 8,
+       "notes": "Clear stance.",
+       "changes": "",
+       "at": "2026-11-09T14:05:00.000Z",
+       "cleared": false,
+       "issues": []
+      },
+      "approval": {
+       "decision": "approve",
+       "by": "Mara",
+       "reason": "",
+       "decidedAt": "2026-11-10T07:30:00.000Z",
+       "appliedAt": "2026-11-10T07:30:00.000Z",
+       "via": "app"
+      }
+     },
+     "savedAt": "2026-11-09T13:20:00.000Z",
+     "updatedAt": "2026-11-13T09:00:00.000Z"
+    },
+    {
+     "id": "d-1794057600000-0",
+     "kind": "blog",
+     "status": "posted",
+     "payload": {
+      "title": "Master data first: the cutover nobody plans",
+      "metaDescription": "Most failed data loads trace back to master data. Give every object an owner and clean it in the source system before the migration.",
+      "body": "Migration plans spend weeks on the load tools and days on the data. Most failed loads trace back to master data: duplicate equipment records, functional locations nobody owns, and business partners with three addresses.\n\n## One owner per object\n\nEquipment, functional locations, materials, business partners: each needs a named owner in the business, not in IT. The owner decides what is a duplicate and what is real.\n\n## Clean in the source\n\nFix the data in the current system, where people can see and check it. Cleaning in a spreadsheet between extract and load creates a third version of the truth.\n\n## Rehearse the load\n\nRun at least two full rehearsals with production data. Each one finds problems the last one hid.\n\nLarkwell plans data migration as part of every S/4HANA move, starting with master data.",
+      "keyword": "sap master data cleanup before migration",
+      "slug": "master-data-first",
+      "serviceId": "datamigration",
+      "serviceLabel": "SAP data migration",
+      "origin": "jarvis",
+      "warnings": [
+       "Meta is short (132 chars) - consider expanding to 140-160."
+      ],
+      "aiOriginal": {
+       "title": "Master data first: the cutover nobody plans",
+       "hook": "",
+       "body": "Migration plans spend weeks on the load tools and days on the data. Most failed loads trace back to master data: duplicate equipment records, functional locations nobody owns, and business partners with three addresses.\n\n## One owner per object\n\nEquipment, functional locations, materials, business partners: each needs a named owner in the business, not in IT. The owner decides what is a duplicate and what is real.\n\n## Clean in the source\n\nFix the data in the current system, where people can see and check it. Cleaning in a spreadsheet between extract and load creates a third version of the truth.\n\n## Rehearse the load\n\nRun at least two full rehearsals with production data. Each one finds problems the last one hid.\n\nLarkwell plans data migration as part of every S/4HANA move, starting with master data."
+      },
+      "editor": {
+       "verdict": "pass",
+       "score": 8,
+       "notes": "Clear and useful.",
+       "changes": "",
+       "at": "2026-11-07T14:05:00.000Z",
+       "cleared": true,
+       "issues": []
+      },
+      "approval": {
+       "decision": "approve",
+       "by": "Mara",
+       "reason": "",
+       "decidedAt": "2026-11-08T07:30:00.000Z",
+       "appliedAt": "2026-11-08T07:30:00.000Z",
+       "via": "app"
+      }
+     },
+     "savedAt": "2026-11-07T13:20:00.000Z",
+     "updatedAt": "2026-11-11T09:00:00.000Z"
+    }
+   ],
+   "summary": {
+    "total": 13,
+    "byStatus": {
+     "draft": 7,
+     "approved": 2,
+     "posted": 2,
+     "archived": 2
+    }
+   },
+   "scheduled": {
+    "d-1794576000000-3": {
+     "key": "2026-11-18:blog",
+     "date": "2026-11-18",
+     "kind": "blog"
+    },
+    "d-1794489600000-2": {
+     "key": "2026-11-19:linkedin",
+     "date": "2026-11-19",
+     "kind": "linkedin"
+    }
+   }
+  },
+  "/api/agents": {
+   "agents": [
+    {
+     "id": "researcher",
+     "name": "Researcher",
+     "job": "Researches the questions Jarvis queues and files findings, keywords and competitor profiles.",
+     "skills": [],
+     "status": "live",
+     "enabled": true,
+     "repeat": "loop",
+     "days": [
+      1,
+      2,
+      3,
+      4,
+      5
+     ],
+     "model": "claude-sonnet-5-5",
+     "lastRun": {
+      "agentId": "researcher",
+      "dateKey": "2026-11-18",
+      "startedAt": "2026-11-18T09:19:56.324Z",
+      "finishedAt": "2026-11-18T09:37:56.324Z",
+      "status": "ok",
+      "exitCode": 0,
+      "model": "claude-sonnet-5-5",
+      "summary": "Claimed 2 topics. Filed 3 findings and 12 keywords. Refreshed the Harlow & Penn profile."
+     },
+     "runCount": 5
+    },
+    {
+     "id": "editor",
+     "name": "Editor",
+     "job": "Rewrites or rejects drafts before they reach the Library, and clears blogs for publishing.",
+     "skills": [
+      "copywriting",
+      "copy-editing",
+      "social",
+      "marketing-psychology",
+      "image"
+     ],
+     "status": "live",
+     "enabled": true,
+     "repeat": "loop",
+     "days": [
+      1,
+      2,
+      3,
+      4,
+      5
+     ],
+     "model": "claude-sonnet-5-5",
+     "lastRun": {
+      "agentId": "editor",
+      "dateKey": "2026-11-18",
+      "startedAt": "2026-11-18T09:25:46.324Z",
+      "finishedAt": "2026-11-18T09:34:46.324Z",
+      "status": "ok",
+      "exitCode": 0,
+      "model": "claude-sonnet-5-5",
+      "summary": "Edited 4 drafts: passed 3, rejected 1 (rhetorical hook, no SAP point)."
+     },
+     "runCount": 5
+    },
+    {
+     "id": "strategist",
+     "name": "Strategist",
+     "job": "Writes next week's plan: the focus, and the blogs and posts Jarvis should write, each with its reason.",
+     "skills": [
+      "marketing-plan",
+      "content-strategy",
+      "customer-research",
+      "marketing-ideas",
+      "marketing-council"
+     ],
+     "status": "live",
+     "enabled": true,
+     "repeat": "daily",
+     "days": [
+      5
+     ],
+     "model": "claude-sonnet-5-5",
+     "lastRun": {
+      "agentId": "strategist",
+      "dateKey": "2026-11-13",
+      "startedAt": "2026-11-13T13:05:00.000Z",
+      "finishedAt": "2026-11-13T13:22:00.000Z",
+      "status": "ok",
+      "exitCode": 0,
+      "model": "claude-sonnet-5-5",
+      "summary": "Filed next week's plan: field service for operators, 5 pieces."
+     },
+     "runCount": 1
+    },
+    {
+     "id": "seo",
+     "name": "SEO",
+     "job": "Audits part of larkwell.example each week and proposes exact fixes for a person to apply.",
+     "skills": [
+      "seo-audit",
+      "ai-seo",
+      "schema",
+      "site-architecture",
+      "link-building",
+      "competitors"
+     ],
+     "status": "live",
+     "enabled": true,
+     "repeat": "daily",
+     "days": [
+      2
+     ],
+     "model": "claude-sonnet-5-5",
+     "lastRun": {
+      "agentId": "seo",
+      "dateKey": "2026-11-17",
+      "startedAt": "2026-11-17T13:05:00.000Z",
+      "finishedAt": "2026-11-17T13:31:00.000Z",
+      "status": "ok",
+      "exitCode": 0,
+      "model": "claude-sonnet-5-5",
+      "summary": "Audited 8 pages. Filed 2 fixes: titles cut off in search, missing FAQ markup."
+     },
+     "runCount": 1
+    },
+    {
+     "id": "conversion",
+     "name": "Conversion",
+     "job": "Reviews the key pages and proposes concrete changes that turn visitors into enquiries.",
+     "skills": [
+      "cro",
+      "lead-magnets",
+      "offers",
+      "free-tools",
+      "popups"
+     ],
+     "status": "planned",
+     "enabled": false,
+     "repeat": "daily",
+     "days": [
+      3
+     ],
+     "model": "claude-sonnet-5-5",
+     "lastRun": null,
+     "runCount": 0
+    },
+    {
+     "id": "sales",
+     "name": "Sales and competitors",
+     "job": "Keeps competitor dossiers current and drafts one-pagers, outreach and LinkedIn ads research. Publishes nothing.",
+     "skills": [
+      "competitor-profiling",
+      "reverse-engineer-marketing",
+      "sales-enablement",
+      "prospecting",
+      "cold-email",
+      "launch",
+      "public-relations",
+      "ads",
+      "ad-creative"
+     ],
+     "status": "planned",
+     "enabled": false,
+     "repeat": "daily",
+     "days": [
+      4
+     ],
+     "model": "claude-sonnet-5-5",
+     "lastRun": null,
+     "runCount": 0
+    },
+    {
+     "id": "measurement",
+     "name": "Measurement",
+     "job": "Reports the week's results from GA4 and Search Console and checks that the tracking still works.",
+     "skills": [
+      "analytics",
+      "conversion-tracking",
+      "attribution",
+      "ab-testing"
+     ],
+     "status": "live",
+     "enabled": true,
+     "repeat": "daily",
+     "days": [
+      5
+     ],
+     "model": "claude-sonnet-5-5",
+     "lastRun": {
+      "agentId": "measurement",
+      "dateKey": "2026-11-13",
+      "startedAt": "2026-11-13T13:05:00.000Z",
+      "finishedAt": "2026-11-13T13:19:00.000Z",
+      "status": "ok",
+      "exitCode": 0,
+      "model": "claude-sonnet-5-5",
+      "summary": "Week's results filed. One enquiry from a waste operator."
+     },
+     "runCount": 1
+    }
+   ],
+   "runs": [
+    {
+     "agentId": "editor",
+     "dateKey": "2026-11-18",
+     "startedAt": "2026-11-18T09:25:46.324Z",
+     "finishedAt": "2026-11-18T09:34:46.324Z",
+     "status": "ok",
+     "exitCode": 0,
+     "model": "claude-sonnet-5-5",
+     "summary": "Edited 4 drafts: passed 3, rejected 1 (rhetorical hook, no SAP point)."
+    },
+    {
+     "agentId": "researcher",
+     "dateKey": "2026-11-18",
+     "startedAt": "2026-11-18T09:19:56.324Z",
+     "finishedAt": "2026-11-18T09:37:56.324Z",
+     "status": "ok",
+     "exitCode": 0,
+     "model": "claude-sonnet-5-5",
+     "summary": "Claimed 2 topics. Filed 3 findings and 12 keywords. Refreshed the Harlow & Penn profile."
+    },
+    {
+     "agentId": "seo",
+     "dateKey": "2026-11-17",
+     "startedAt": "2026-11-17T13:05:00.000Z",
+     "finishedAt": "2026-11-17T13:31:00.000Z",
+     "status": "ok",
+     "exitCode": 0,
+     "model": "claude-sonnet-5-5",
+     "summary": "Audited 8 pages. Filed 2 fixes: titles cut off in search, missing FAQ markup."
+    },
+    {
+     "agentId": "editor",
+     "dateKey": "2026-11-17",
+     "startedAt": "2026-11-17T13:40:00.000Z",
+     "finishedAt": "2026-11-17T13:51:00.000Z",
+     "status": "ok",
+     "exitCode": 0,
+     "model": "claude-sonnet-5-5",
+     "summary": "Edited 3 drafts: passed 3. Cleared 1 blog for approval (9/10)."
+    },
+    {
+     "agentId": "researcher",
+     "dateKey": "2026-11-17",
+     "startedAt": "2026-11-17T13:05:00.000Z",
+     "finishedAt": "2026-11-17T13:27:00.000Z",
+     "status": "ok",
+     "exitCode": 0,
+     "model": "claude-sonnet-5-5",
+     "summary": "Claimed 2 topics. Filed 2 findings on billing exceptions."
+    },
+    {
+     "agentId": "editor",
+     "dateKey": "2026-11-16",
+     "startedAt": "2026-11-16T13:40:00.000Z",
+     "finishedAt": "2026-11-16T13:48:00.000Z",
+     "status": "ok",
+     "exitCode": 0,
+     "model": "claude-sonnet-5-5",
+     "summary": "Edited 2 drafts: passed 2. Cleared 1 blog for approval (8/10)."
+    },
+    {
+     "agentId": "researcher",
+     "dateKey": "2026-11-16",
+     "startedAt": "2026-11-16T13:05:00.000Z",
+     "finishedAt": "2026-11-16T13:20:00.000Z",
+     "status": "ok",
+     "exitCode": 0,
+     "model": "claude-sonnet-5-5",
+     "summary": "Claimed 1 topic. Filed 1 finding; no new competitors."
+    },
+    {
+     "agentId": "editor",
+     "dateKey": "2026-11-15",
+     "startedAt": "2026-11-15T13:40:00.000Z",
+     "finishedAt": "2026-11-15T13:47:00.000Z",
+     "status": "ok",
+     "exitCode": 0,
+     "model": "claude-sonnet-5-5",
+     "summary": "Edited 2 drafts: passed 1, rejected 1 (generic, no buyer problem)."
+    },
+    {
+     "agentId": "researcher",
+     "dateKey": "2026-11-15",
+     "startedAt": "2026-11-15T13:05:00.000Z",
+     "finishedAt": "2026-11-15T13:35:00.000Z",
+     "status": "failed",
+     "exitCode": 1,
+     "model": "claude-sonnet-5-5",
+     "summary": "Stopped at the 30 minute limit while reading a slow site. The topic stays queued."
+    },
+    {
+     "agentId": "editor",
+     "dateKey": "2026-11-13",
+     "startedAt": "2026-11-13T13:40:00.000Z",
+     "finishedAt": "2026-11-13T13:50:00.000Z",
+     "status": "ok",
+     "exitCode": 0,
+     "model": "claude-sonnet-5-5",
+     "summary": "Edited 3 drafts: passed 3."
+    },
+    {
+     "agentId": "researcher",
+     "dateKey": "2026-11-13",
+     "startedAt": "2026-11-13T13:05:00.000Z",
+     "finishedAt": "2026-11-13T13:25:00.000Z",
+     "status": "ok",
+     "exitCode": 0,
+     "model": "claude-sonnet-5-5",
+     "summary": "Claimed 2 topics. Filed 2 findings."
+    },
+    {
+     "agentId": "strategist",
+     "dateKey": "2026-11-13",
+     "startedAt": "2026-11-13T13:05:00.000Z",
+     "finishedAt": "2026-11-13T13:22:00.000Z",
+     "status": "ok",
+     "exitCode": 0,
+     "model": "claude-sonnet-5-5",
+     "summary": "Filed next week's plan: field service for operators, 5 pieces."
+    },
+    {
+     "agentId": "measurement",
+     "dateKey": "2026-11-13",
+     "startedAt": "2026-11-13T13:05:00.000Z",
+     "finishedAt": "2026-11-13T13:19:00.000Z",
+     "status": "ok",
+     "exitCode": 0,
+     "model": "claude-sonnet-5-5",
+     "summary": "Week's results filed. One enquiry from a waste operator."
+    }
+   ],
+   "reports": {
+    "seo": {
+     "id": "rep-1794924000000-78",
+     "agentId": "seo",
+     "agentName": "SEO",
+     "createdAt": "2026-11-17T14:00:00.000Z",
+     "dateKey": "2026-11-17",
+     "title": "SEO audit: service pages",
+     "headline": "Service pages are sound; two titles are cut off in search and FAQ markup is missing.",
+     "body": "## What I checked\nEight service pages and the home page: title, meta description, canonical, headings, structured data, alt text and internal links.\n\n## Findings\n- The plant maintenance and billing pages have titles longer than search shows; both are cut mid-phrase.\n- No page carries FAQ structured data, though three answer common questions.\n- The home page does not link to either case page.\n\n## Not a problem\nCanonicals, language tags and headings are correct everywhere.",
+     "actions": [
+      {
+       "title": "Shorten two service page titles",
+       "detail": "Plant maintenance: 'SAP plant maintenance for operators | Larkwell'. Billing: 'SAP utilities billing support | Larkwell'.",
+       "why": "Both are cut off in search results.",
+       "effort": "small",
+       "page": "/services/plant-maintenance/",
+       "recId": "rec-1794924000000-76"
+      },
+      {
+       "title": "Add FAQ markup to three service pages",
+       "detail": "Mark up the existing question-and-answer sections on plant maintenance, billing and S/4HANA.",
+       "why": "Eligible for richer results at no content cost.",
+       "effort": "small",
+       "page": "/services/billing/",
+       "recId": "rec-1794924000000-77"
+      }
+     ],
+     "needs": [],
+     "pages": [
+      "/",
+      "/services/plant-maintenance/",
+      "/services/billing/",
+      "/services/s4hana/",
+      "/services/basis/"
+     ],
+     "metrics": {}
+    },
+    "measurement": {
+     "id": "rep-1794578400000-74",
+     "agentId": "measurement",
+     "agentName": "Measurement",
+     "createdAt": "2026-11-13T14:00:00.000Z",
+     "dateKey": "2026-11-13",
+     "title": "Results for the week",
+     "headline": "Search clicks steady; the master data blog brought the first enquiry from a waste operator.",
+     "body": "## Search\nClicks and impressions are steady week on week. The master data blog entered the results for its target query.\n\n## Site\nOne contact form enquiry, from a waste operator, after reading the master data blog.\n\n## Tracking\nThe contact form event fires on every page checked. No tag problems found.",
+     "actions": [
+      {
+       "title": "Link the master data blog from the S/4HANA page",
+       "detail": "Add a short 'read next' link at the end of the S/4HANA service page.",
+       "why": "The blog converts; the service page gets more traffic.",
+       "effort": "small",
+       "page": "/services/s4hana/",
+       "recId": "rec-1794578400000-73"
+      }
+     ],
+     "needs": [],
+     "pages": [],
+     "metrics": {
+      "clicks": 214,
+      "impressions": 9120,
+      "enquiries": 1,
+      "blogViews": 388
+     }
+    },
+    "strategist": {
+     "id": "rep-1794580200000-71",
+     "agentId": "strategist",
+     "agentName": "Strategist",
+     "createdAt": "2026-11-13T14:30:00.000Z",
+     "dateKey": "2026-11-13",
+     "title": "Plan for the week of 2026-11-16",
+     "headline": "Field service for operators: own the SAP side of crews, work orders and tablets.",
+     "body": "**Focus:** Field service for operators: own the SAP side of crews, work orders and tablets.\n\n## Themes\n- **Work orders closed at the asset** (plant-maintenance): High-intent searches with weak SAP-specific answers.\n- **Billing exceptions by cause** (billing): Small but high-intent queries; no competitor answers them well.\n\n## Pieces to write\n1. Blog on \"sap pm mobile work orders\" (plant-maintenance): Closing work orders at the asset with a three-screen tablet app *Why: Closest gap to page one*\n2. Blog on \"sap is-u billing exceptions\" (billing): Measure exceptions by cause, fix the top two, then automate *Why: No competitor covers it*\n3. LinkedIn how-to (plant-maintenance): The Friday keying problem and the three-screen fix *Why: Supports the work orders blog*\n4. LinkedIn how-to (basis): Patch day: rate notes against your own landscape *Why: Monthly patch-day slot*\n5. LinkedIn hot-take (fiori): Offline mode matters more than any feature for depot tablets *Why: Differentiates from mobility vendors*\n\n## Leave alone this week\n- Clean core debates\n- Generic transformation framing\n- Another S/4HANA deadline post\n\n## Questions for the Researcher\n- Preventive maintenance for bin lorries in SAP PM (Waste operators are an open gap)\n\n## Notes\nKeep the Brackenfield case for a single post this week; it is the strongest proof we have.",
+     "actions": [],
+     "needs": [],
+     "pages": [],
+     "metrics": {}
+    }
+   },
+   "plan": {
+    "id": "plan-1794580200000-70",
+    "createdAt": "2026-11-13T14:30:00.000Z",
+    "weekOf": "2026-11-16",
+    "focus": "Field service for operators: own the SAP side of crews, work orders and tablets.",
+    "themes": [
+     {
+      "theme": "Work orders closed at the asset",
+      "serviceId": "plant-maintenance",
+      "why": "High-intent searches with weak SAP-specific answers."
+     },
+     {
+      "theme": "Billing exceptions by cause",
+      "serviceId": "billing",
+      "why": "Small but high-intent queries; no competitor answers them well."
+     }
+    ],
+    "pieces": [
+     {
+      "id": "pp-1-1794580200000",
+      "kind": "blog",
+      "keyword": "sap pm mobile work orders",
+      "serviceId": "plant-maintenance",
+      "angle": "Closing work orders at the asset with a three-screen tablet app",
+      "why": "Closest gap to page one",
+      "draftId": "d-1794921600000-9",
+      "usedAt": "2026-11-16T13:30:00.000Z",
+      "attempts": 0
+     },
+     {
+      "id": "pp-2-1794580200000",
+      "kind": "blog",
+      "keyword": "sap is-u billing exceptions",
+      "serviceId": "billing",
+      "angle": "Measure exceptions by cause, fix the top two, then automate",
+      "why": "No competitor covers it",
+      "draftId": "d-1794835200000-7",
+      "usedAt": "2026-11-16T13:30:00.000Z",
+      "attempts": 0
+     },
+     {
+      "id": "pp-3-1794580200000",
+      "kind": "linkedin",
+      "keyword": "",
+      "serviceId": "plant-maintenance",
+      "postType": "how-to",
+      "angle": "The Friday keying problem and the three-screen fix",
+      "why": "Supports the work orders blog",
+      "draftId": "d-1794921600000-10",
+      "usedAt": "2026-11-16T13:30:00.000Z",
+      "attempts": 0
+     },
+     {
+      "id": "pp-4-1794580200000",
+      "kind": "linkedin",
+      "keyword": "",
+      "serviceId": "basis",
+      "postType": "how-to",
+      "angle": "Patch day: rate notes against your own landscape",
+      "why": "Monthly patch-day slot",
+      "draftId": "d-1794835200000-8",
+      "usedAt": "2026-11-16T13:30:00.000Z",
+      "attempts": 0
+     },
+     {
+      "id": "pp-5-1794580200000",
+      "kind": "linkedin",
+      "keyword": "",
+      "serviceId": "fiori",
+      "postType": "hot-take",
+      "angle": "Offline mode matters more than any feature for depot tablets",
+      "why": "Differentiates from mobility vendors",
+      "draftId": null,
+      "usedAt": null,
+      "attempts": 0
+     }
+    ],
+    "avoid": [
+     "Clean core debates",
+     "Generic transformation framing",
+     "Another S/4HANA deadline post"
+    ],
+    "research": [
+     {
+      "topic": "Preventive maintenance for bin lorries in SAP PM",
+      "why": "Waste operators are an open gap"
+     }
+    ],
+    "notes": "Keep the Brackenfield case for a single post this week; it is the strongest proof we have."
+   }
+  },
+  "/api/publishing": {
+   "enabled": true,
+   "days": [
+    1,
+    3,
+    5
+   ],
+   "afterHour": 16,
+   "canPublish": false,
+   "waiting": 1,
+   "awaitingApproval": [
+    {
+     "id": "d-1794921600000-9",
+     "title": "Closing SAP PM work orders at the asset",
+     "score": 9
+    },
+    {
+     "id": "d-1794835200000-7",
+     "title": "Clearing SAP billing exceptions for good",
+     "score": 8
+    }
+   ],
+   "next": {
+    "id": "d-1794576000000-3",
+    "title": "Sorting custom code before a brownfield move",
+    "score": 9
+   },
+   "recent": [
+    {
+     "dateKey": "2026-11-11",
+     "at": "2026-11-11T09:00:00.000Z",
+     "draftId": "d-1794057600000-0",
+     "title": "Master data first: the cutover nobody plans",
+     "status": "published",
+     "rel": "src/content/news/en/master-data-first.md",
+     "url": "https://larkwell.example/news/master-data-first",
+     "score": 8
+    }
+   ]
+  },
+  "/api/summary": {
+   "summaries": [],
+   "teamsConfigured": false
+  },
+  "/api/week-ahead": {
+   "sent": [],
+   "preview": {
+    "id": "wa-1794998976140-12",
+    "createdAt": "2026-11-18T10:49:36.140Z",
+    "weekOf": "2026-11-18",
+    "focus": "Field service for operators: own the SAP side of crews, work orders and tablets.",
+    "approvals": [
+     {
+      "id": "d-1794921600000-9",
+      "title": "Closing SAP PM work orders at the asset",
+      "score": 9,
+      "changes": "Shortened the intro; split one long paragraph.",
+      "url": "http://localhost:5180/?screen=library&draft=d-1794921600000-9"
+     },
+     {
+      "id": "d-1794835200000-7",
+      "title": "Clearing SAP billing exceptions for good",
+      "score": 8,
+      "changes": "Cut an unsourced statistic from the opening.",
+      "url": "http://localhost:5180/?screen=library&draft=d-1794835200000-7"
+     }
+    ],
+    "days": [
+     {
+      "dateKey": "2026-11-18",
+      "weekday": 3,
+      "name": "Wednesday",
+      "lines": [
+       "Jarvis writes a LinkedIn hot-take post (Offline mode matters more than any feature for depot tablets).",
+       "Blog goes live from 16:00: \"Sorting custom code before a brownfield move\" (approved)."
+      ]
+     },
+     {
+      "dateKey": "2026-11-19",
+      "weekday": 4,
+      "name": "Thursday",
+      "lines": [
+       "Jarvis writes 1 blog and 2 LinkedIn posts, chosen from that day's search data.",
+       "LinkedIn post for a person to post: \"Brackenfield Waste's crews now close work orders at the bin lorry, not in the office.\"."
+      ]
+     },
+     {
+      "dateKey": "2026-11-20",
+      "weekday": 5,
+      "name": "Friday",
+      "lines": [
+       "Jarvis writes 1 blog and 2 LinkedIn posts, chosen from that day's search data.",
+       "Strategist agent: writes next week's plan: the focus, and the blogs and posts Jarvis should write, each with its reason.",
+       "Measurement agent: reports the week's results from GA4 and Search Console and checks that the tracking still works.",
+       "Blog publishing day (from 16:00): \"Closing SAP PM work orders at the asset\" goes live only if someone approves it first."
+      ]
+     }
+    ],
+    "questions": [],
+    "serverHours": "15:00 to 17:00 on weekdays"
+   },
+   "teamsConfigured": false
+  },
+  "/api/approvals/inbox": {
+   "teams": {
+    "request": false,
+    "fetch": false
+   },
+   "waiting": [
+    {
+     "id": "d-1794921600000-9",
+     "kind": "blog",
+     "title": "Closing SAP PM work orders at the asset",
+     "score": 9,
+     "editorReason": "Strong, specific and practical. Tightened the opening and cut one repeated sentence.",
+     "revised": false,
+     "revisionNote": "",
+     "savedAt": "2026-11-17T13:20:00.000Z",
+     "approval": null
+    },
+    {
+     "id": "d-1794835200000-8",
+     "kind": "linkedin",
+     "title": "Patch day is tomorrow. Rate the notes against your own landscape before you panic.",
+     "score": 9,
+     "editorReason": "Timely and specific.",
+     "revised": false,
+     "revisionNote": "",
+     "savedAt": "2026-11-16T13:20:00.000Z",
+     "approval": null
+    },
+    {
+     "id": "d-1794921600000-10",
+     "kind": "linkedin",
+     "title": "Crews close work orders on paper, then someone keys them in on Friday.",
+     "score": 8,
+     "editorReason": "Good hook. Cut the closing question.",
+     "revised": false,
+     "revisionNote": "",
+     "savedAt": "2026-11-17T13:20:00.000Z",
+     "approval": null
+    },
+    {
+     "id": "d-1794835200000-7",
+     "kind": "blog",
+     "title": "Clearing SAP billing exceptions for good",
+     "score": 8,
+     "editorReason": "Clear argument. Removed two hype words and a figure with no source.",
+     "revised": false,
+     "revisionNote": "",
+     "savedAt": "2026-11-16T13:20:00.000Z",
+     "approval": null
+    }
+   ],
+   "approved": [
+    {
+     "id": "d-1794576000000-3",
+     "kind": "blog",
+     "title": "Sorting custom code before a brownfield move",
+     "score": 9,
+     "editorReason": "Good structure and a clear point of view. Light copy edit only.",
+     "revised": false,
+     "revisionNote": "",
+     "savedAt": "2026-11-13T13:20:00.000Z",
+     "approval": {
+      "decision": "approve",
+      "by": "Mara",
+      "reason": "",
+      "decidedAt": "2026-11-14T07:30:00.000Z",
+      "appliedAt": "2026-11-14T07:30:00.000Z",
+      "via": "app"
+     }
+    },
+    {
+     "id": "d-1794489600000-2",
+     "kind": "linkedin",
+     "title": "Brackenfield Waste's crews now close work orders at the bin lorry, not in the office.",
+     "score": 9,
+     "editorReason": "Named client is on the approved list. Outcome stated without figures.",
+     "revised": false,
+     "revisionNote": "",
+     "savedAt": "2026-11-12T13:20:00.000Z",
+     "approval": {
+      "decision": "approve",
+      "by": "Jonas",
+      "reason": "",
+      "decidedAt": "2026-11-13T07:30:00.000Z",
+      "appliedAt": "2026-11-13T07:30:00.000Z",
+      "via": "app"
+     }
+    }
+   ]
+  },
+  "/api/approvals": {
+   "configured": {
+    "request": false,
+    "fetch": false
+   },
+   "lastCollect": null,
+   "waiting": [],
+   "failed": []
+  },
+  "/api/session": {
+   "session": {
+    "date": "2026-11-18",
+    "phase": "done",
+    "running": false,
+    "startedAt": "2026-11-18T09:19:46.324Z",
+    "finishedAt": "2026-11-18T09:36:36.324Z",
+    "lastCompletedAt": "2026-11-18T09:36:36.324Z",
+    "picks": [],
+    "produced": [
+     {
+      "id": "d-1794993746324-11",
+      "kind": "linkedin",
+      "title": "A short dump at seven in the morning, and the developer who wrote the code left last year.",
+      "why": "Product anchor: Larkwell Copilot has no post this month.",
+      "score": 8,
+      "revisions": 1
+     },
+     {
+      "id": "d-1794993746324-12",
+      "kind": "linkedin",
+      "title": "We said no to a project last month, and it was the right call.",
+      "why": "Founder voice is under-used; the team approves these.",
+      "score": 8,
+      "revisions": 1
+     }
+    ],
+    "discarded": [
+     {
+      "kind": "linkedin",
+      "title": "Is your integration landscape ready?",
+      "reason": "Rhetorical-question hook; the critic scored it 3/10.",
+      "score": 3
+     }
+    ],
+    "learned": [
+     "Raised 'Name the sector in the first line' after two approvals that did."
+    ],
+    "recommendations": [],
+    "log": [],
+    "completedDate": "2026-11-18",
+    "window": {
+     "auto": false,
+     "start": 15,
+     "end": 17,
+     "tz": "Europe/London",
+     "days": [
+      1,
+      2,
+      3,
+      4,
+      5
+     ],
+     "blogs": 1,
+     "posts": 2
+    },
+    "inWindow": false
+   },
+   "briefs": [
+    {
+     "id": "brief-2026-11-18T09:36:36.324Z",
+     "date": "2026-11-18",
+     "createdAt": "2026-11-18T09:36:36.324Z",
+     "by": "schedule",
+     "daysAgo": 0,
+     "headline": "Wrote 2 pieces for review, threw away 1 that wasn't good enough, 1 playbook change.",
+     "learned": [
+      "Raised 'Name the sector in the first line' after two approvals that did."
+     ],
+     "discarded": [
+      {
+       "kind": "linkedin",
+       "title": "Is your integration landscape ready?",
+       "reason": "Rhetorical-question hook; the critic scored it 3/10.",
+       "score": 3
+      }
+     ],
+     "picks": [
+      {
+       "kind": "linkedin",
+       "serviceId": "abap",
+       "postType": "how-to",
+       "why": "Product anchor: Larkwell Copilot has no post this month."
+      },
+      {
+       "kind": "linkedin",
+       "serviceId": "managed",
+       "postType": "founder",
+       "why": "Founder voice is under-used; the team approves these."
+      }
+     ],
+     "recommendations": [
+      {
+       "title": "Put both named clients on the home page",
+       "why": "Buyers look for a sector reference first"
+      }
+     ],
+     "research": [
+      {
+       "topic": "Preventive maintenance for bin lorries in SAP PM",
+       "why": "From this week's plan"
+      }
+     ],
+     "needs": [
+      "Review today's 2 drafts in the Library: approve, edit, or reject with a reason. Every review teaches me."
+     ],
+     "produced": [
+      {
+       "id": "d-1794993746324-11",
+       "kind": "linkedin",
+       "title": "A short dump at seven in the morning, and the developer who wrote the code left last year.",
+       "why": "Product anchor: Larkwell Copilot has no post this month.",
+       "score": 8,
+       "revisions": 1
+      },
+      {
+       "id": "d-1794993746324-12",
+       "kind": "linkedin",
+       "title": "We said no to a project last month, and it was the right call.",
+       "why": "Founder voice is under-used; the team approves these.",
+       "score": 8,
+       "revisions": 1
+      }
+     ],
+     "signals": {
+      "kept": 4,
+      "rejected": 2,
+      "edits": 1,
+      "searchConsole": false,
+      "analytics": false,
+      "findings": 6
+     },
+     "minutes": 41
+    }
+   ]
+  },
+  "/api/playbook": {
+   "rules": [
+    {
+     "id": "pb-1793775600000-4",
+     "kind": "claim",
+     "text": "Every number (percentage, cost, time saved, statistic) must come from a source we can link to. No source, no number.",
+     "confidence": 0.8,
+     "source": "founder",
+     "evidence": [
+      {
+       "at": "2026-11-04T07:00:00.000Z",
+       "note": "Mara's review of the Library, 2026-11-02"
+      }
+     ],
+     "pinned": false,
+     "status": "active",
+     "createdAt": "2026-11-04T07:00:00.000Z",
+     "updatedAt": "2026-11-04T07:00:00.000Z",
+     "lastSeenAt": "2026-11-04T07:00:00.000Z"
+    },
+    {
+     "id": "pb-1793775600000-5",
+     "kind": "claim",
+     "text": "No claims about Larkwell results, clients, certifications or awards that aren't verified. Brackenfield Waste and Osterby Utilities are the only clients we may name.",
+     "confidence": 0.8,
+     "source": "founder",
+     "evidence": [
+      {
+       "at": "2026-11-04T07:00:00.000Z",
+       "note": "Mara's review of the Library, 2026-11-02"
+      }
+     ],
+     "pinned": false,
+     "status": "active",
+     "createdAt": "2026-11-04T07:00:00.000Z",
+     "updatedAt": "2026-11-04T07:00:00.000Z",
+     "lastSeenAt": "2026-11-04T07:00:00.000Z"
+    },
+    {
+     "id": "pb-1793775600000-0",
+     "kind": "topic",
+     "text": "Every piece must tie to one Larkwell service and a real problem that IT and SAP leaders at mid-to-large enterprises are trying to solve. If it doesn't, don't write it.",
+     "confidence": 0.75,
+     "source": "founder",
+     "evidence": [
+      {
+       "at": "2026-11-04T07:00:00.000Z",
+       "note": "Mara's review of the Library, 2026-11-02"
+      }
+     ],
+     "pinned": false,
+     "status": "active",
+     "createdAt": "2026-11-04T07:00:00.000Z",
+     "updatedAt": "2026-11-04T07:00:00.000Z",
+     "lastSeenAt": "2026-11-04T07:00:00.000Z"
+    },
+    {
+     "id": "pb-1793775600000-2",
+     "kind": "avoid",
+     "text": "Don't repeat a theme Larkwell covered in the last two weeks (for example Clean Core or S/4HANA deadline timing). Pick a different service or a genuinely new angle.",
+     "confidence": 0.75,
+     "source": "founder",
+     "evidence": [
+      {
+       "at": "2026-11-04T07:00:00.000Z",
+       "note": "Mara's review of the Library, 2026-11-02"
+      }
+     ],
+     "pinned": false,
+     "status": "active",
+     "createdAt": "2026-11-04T07:00:00.000Z",
+     "updatedAt": "2026-11-04T07:00:00.000Z",
+     "lastSeenAt": "2026-11-04T07:00:00.000Z"
+    },
+    {
+     "id": "pb-1793775600000-3",
+     "kind": "format",
+     "text": "Never open a LinkedIn post with the \"X often fails\" / \"is often the difference\" / \"often leads to\" formula. Open with a specific fact, a clear stance or a concrete situation.",
+     "confidence": 0.75,
+     "source": "founder",
+     "evidence": [
+      {
+       "at": "2026-11-04T07:00:00.000Z",
+       "note": "Mara's review of the Library, 2026-11-02"
+      }
+     ],
+     "pinned": false,
+     "status": "active",
+     "createdAt": "2026-11-04T07:00:00.000Z",
+     "updatedAt": "2026-11-04T07:00:00.000Z",
+     "lastSeenAt": "2026-11-04T07:00:00.000Z"
+    },
+    {
+     "id": "pb-1793775600000-6",
+     "kind": "voice",
+     "text": "Write in UK English: organisation, optimise, modernise, analyse, behaviour.",
+     "confidence": 0.75,
+     "source": "founder",
+     "evidence": [
+      {
+       "at": "2026-11-04T07:00:00.000Z",
+       "note": "Mara's review of the Library, 2026-11-02"
+      }
+     ],
+     "pinned": false,
+     "status": "active",
+     "createdAt": "2026-11-04T07:00:00.000Z",
+     "updatedAt": "2026-11-04T07:00:00.000Z",
+     "lastSeenAt": "2026-11-04T07:00:00.000Z"
+    },
+    {
+     "id": "pb-1793775600000-1",
+     "kind": "avoid",
+     "text": "Don't write about niche regulation or compliance topics (for example EPA e-Manifest or DORA CTPP rules) unless they directly change what an SAP buyer has to do and Larkwell offers help with it.",
+     "confidence": 0.7,
+     "source": "founder",
+     "evidence": [
+      {
+       "at": "2026-11-04T07:00:00.000Z",
+       "note": "Mara's review of the Library, 2026-11-02"
+      }
+     ],
+     "pinned": false,
+     "status": "active",
+     "createdAt": "2026-11-04T07:00:00.000Z",
+     "updatedAt": "2026-11-04T07:00:00.000Z",
+     "lastSeenAt": "2026-11-04T07:00:00.000Z"
+    },
+    {
+     "id": "pb-1793775600000-7",
+     "kind": "voice",
+     "text": "Sound like a senior SAP practitioner who did the work: plain, specific, calm and honest about trade-offs. No hype, no exclamation marks.",
+     "confidence": 0.7,
+     "source": "founder",
+     "evidence": [
+      {
+       "at": "2026-11-04T07:00:00.000Z",
+       "note": "Mara's review of the Library, 2026-11-02"
+      }
+     ],
+     "pinned": false,
+     "status": "active",
+     "createdAt": "2026-11-04T07:00:00.000Z",
+     "updatedAt": "2026-11-04T07:00:00.000Z",
+     "lastSeenAt": "2026-11-04T07:00:00.000Z"
+    },
+    {
+     "id": "pb-1793775600000-8",
+     "kind": "format",
+     "text": "Blog titles are complete phrases of 60 characters or fewer, never cut off mid-phrase.",
+     "confidence": 0.7,
+     "source": "founder",
+     "evidence": [
+      {
+       "at": "2026-11-04T07:00:00.000Z",
+       "note": "Mara's review of the Library, 2026-11-02"
+      }
+     ],
+     "pinned": false,
+     "status": "active",
+     "createdAt": "2026-11-04T07:00:00.000Z",
+     "updatedAt": "2026-11-04T07:00:00.000Z",
+     "lastSeenAt": "2026-11-04T07:00:00.000Z"
+    },
+    {
+     "id": "pb-1793775600000-11",
+     "kind": "voice",
+     "text": "Be practical about custom code: modernise what earns its keep, retire the rest, and say which is which.",
+     "confidence": 0.7,
+     "source": "seed",
+     "evidence": [
+      {
+       "at": "2026-11-04T07:00:00.000Z",
+       "note": "starting rule"
+      }
+     ],
+     "pinned": false,
+     "status": "active",
+     "createdAt": "2026-11-04T07:00:00.000Z",
+     "updatedAt": "2026-11-04T07:00:00.000Z",
+     "lastSeenAt": "2026-11-04T07:00:00.000Z"
+    },
+    {
+     "id": "pb-1793775600000-9",
+     "kind": "format",
+     "text": "One clear point per LinkedIn post. Cut anything that doesn't support it.",
+     "confidence": 0.65,
+     "source": "founder",
+     "evidence": [
+      {
+       "at": "2026-11-04T07:00:00.000Z",
+       "note": "Mara's review of the Library, 2026-11-02"
+      }
+     ],
+     "pinned": false,
+     "status": "active",
+     "createdAt": "2026-11-04T07:00:00.000Z",
+     "updatedAt": "2026-11-04T07:00:00.000Z",
+     "lastSeenAt": "2026-11-04T07:00:00.000Z"
+    },
+    {
+     "id": "pb-1793775600000-10",
+     "kind": "voice",
+     "text": "Name the actual SAP thing in every claim (module, transaction, release, migration step). Cut any sentence that could appear in any vendor's post.",
+     "confidence": 0.65,
+     "source": "seed",
+     "evidence": [
+      {
+       "at": "2026-11-04T07:00:00.000Z",
+       "note": "starting rule"
+      }
+     ],
+     "pinned": false,
+     "status": "active",
+     "createdAt": "2026-11-04T07:00:00.000Z",
+     "updatedAt": "2026-11-04T07:00:00.000Z",
+     "lastSeenAt": "2026-11-04T07:00:00.000Z"
+    },
+    {
+     "id": "pb-1793775600000-12",
+     "kind": "topic",
+     "text": "Spread across Larkwell's whole service catalogue (Basis, ABAP, plant maintenance, billing, integration, data migration, managed services, Fiori), not just S/4HANA migration.",
+     "confidence": 0.6,
+     "source": "seed",
+     "evidence": [
+      {
+       "at": "2026-11-04T07:00:00.000Z",
+       "note": "starting rule"
+      }
+     ],
+     "pinned": false,
+     "status": "active",
+     "createdAt": "2026-11-04T07:00:00.000Z",
+     "updatedAt": "2026-11-04T07:00:00.000Z",
+     "lastSeenAt": "2026-11-04T07:00:00.000Z"
+    },
+    {
+     "id": "pb-1793775600000-13",
+     "kind": "format",
+     "text": "Open with the point in the first line. No warm-up, no scene-setting, no rhetorical question.",
+     "confidence": 0.6,
+     "source": "seed",
+     "evidence": [
+      {
+       "at": "2026-11-04T07:00:00.000Z",
+       "note": "starting rule"
+      }
+     ],
+     "pinned": false,
+     "status": "active",
+     "createdAt": "2026-11-04T07:00:00.000Z",
+     "updatedAt": "2026-11-04T07:00:00.000Z",
+     "lastSeenAt": "2026-11-04T07:00:00.000Z"
+    },
+    {
+     "id": "pb-1793775600000-14",
+     "kind": "avoid",
+     "text": "No engagement bait: no questions tacked on just to farm comments, no \"Agree?\", no fake urgency.",
+     "confidence": 0.6,
+     "source": "seed",
+     "evidence": [
+      {
+       "at": "2026-11-04T07:00:00.000Z",
+       "note": "starting rule"
+      }
+     ],
+     "pinned": false,
+     "status": "active",
+     "createdAt": "2026-11-04T07:00:00.000Z",
+     "updatedAt": "2026-11-04T07:00:00.000Z",
+     "lastSeenAt": "2026-11-04T07:00:00.000Z"
+    },
+    {
+     "id": "pb-1793775600000-15",
+     "kind": "topic",
+     "text": "Prefer topics with measured search demand (Search Console queries, the keyword sheet) or a timely SAP announcement, and say which in the reason for writing it.",
+     "confidence": 0.6,
+     "source": "seed",
+     "evidence": [
+      {
+       "at": "2026-11-04T07:00:00.000Z",
+       "note": "starting rule"
+      }
+     ],
+     "pinned": false,
+     "status": "active",
+     "createdAt": "2026-11-04T07:00:00.000Z",
+     "updatedAt": "2026-11-04T07:00:00.000Z",
+     "lastSeenAt": "2026-11-04T07:00:00.000Z"
+    },
+    {
+     "id": "pb-1793775600000-17",
+     "kind": "format",
+     "text": "Blogs answer the search question in the first paragraph and then cover the follow-up questions. Every section adds something new.",
+     "confidence": 0.6,
+     "source": "seed",
+     "evidence": [
+      {
+       "at": "2026-11-04T07:00:00.000Z",
+       "note": "starting rule"
+      }
+     ],
+     "pinned": false,
+     "status": "active",
+     "createdAt": "2026-11-04T07:00:00.000Z",
+     "updatedAt": "2026-11-04T07:00:00.000Z",
+     "lastSeenAt": "2026-11-04T07:00:00.000Z"
+    },
+    {
+     "id": "pb-1793775600000-18",
+     "kind": "claim",
+     "text": "Keep fact, opinion and estimate apart. Label an estimate as an estimate.",
+     "confidence": 0.6,
+     "source": "seed",
+     "evidence": [
+      {
+       "at": "2026-11-04T07:00:00.000Z",
+       "note": "starting rule"
+      }
+     ],
+     "pinned": false,
+     "status": "active",
+     "createdAt": "2026-11-04T07:00:00.000Z",
+     "updatedAt": "2026-11-04T07:00:00.000Z",
+     "lastSeenAt": "2026-11-04T07:00:00.000Z"
+    },
+    {
+     "id": "pb-1793775600000-16",
+     "kind": "topic",
+     "text": "Match the buyer's stage: problem posts for awareness, cost/approach/comparison pieces for evaluation, Larkwell-specific detail for buyers close to a decision.",
+     "confidence": 0.55,
+     "source": "seed",
+     "evidence": [
+      {
+       "at": "2026-11-04T07:00:00.000Z",
+       "note": "starting rule"
+      }
+     ],
+     "pinned": false,
+     "status": "active",
+     "createdAt": "2026-11-04T07:00:00.000Z",
+     "updatedAt": "2026-11-04T07:00:00.000Z",
+     "lastSeenAt": "2026-11-04T07:00:00.000Z"
+    },
+    {
+     "id": "pb-1793775600000-19",
+     "kind": "format",
+     "text": "Any call to action is soft and specific to the piece (talk to Larkwell about this exact problem), never generic.",
+     "confidence": 0.55,
+     "source": "seed",
+     "evidence": [
+      {
+       "at": "2026-11-04T07:00:00.000Z",
+       "note": "starting rule"
+      }
+     ],
+     "pinned": false,
+     "status": "active",
+     "createdAt": "2026-11-04T07:00:00.000Z",
+     "updatedAt": "2026-11-04T07:00:00.000Z",
+     "lastSeenAt": "2026-11-04T07:00:00.000Z"
+    },
+    {
+     "id": "pb-1793775600000-20",
+     "kind": "timing",
+     "text": "No more than one Larkwell LinkedIn post per working day; weekday mornings UK time.",
+     "confidence": 0.5,
+     "source": "seed",
+     "evidence": [
+      {
+       "at": "2026-11-04T07:00:00.000Z",
+       "note": "starting rule"
+      }
+     ],
+     "pinned": false,
+     "status": "active",
+     "createdAt": "2026-11-04T07:00:00.000Z",
+     "updatedAt": "2026-11-04T07:00:00.000Z",
+     "lastSeenAt": "2026-11-04T07:00:00.000Z"
+    }
+   ],
+   "kinds": [
+    "topic",
+    "voice",
+    "claim",
+    "format",
+    "timing",
+    "avoid"
+   ]
+  },
+  "/api/fresh-start": {
+   "counts": {
+    "findings": 6,
+    "recommendations": 5,
+    "directives": 4,
+    "queue": 15,
+    "activity": 33,
+    "taste": 14,
+    "draftsToArchive": 7,
+    "draftsKept": 4,
+    "openRecommendations": 5,
+    "openDirectives": 4,
+    "wikiKept": true
+   },
+   "snapshots": []
+  },
+  "/api/schedule": {
+   "settings": {
+    "linkedinEveryDays": 2,
+    "workWeekOnly": true,
+    "blogWeekday": 3,
+    "reminderHour": 8,
+    "anchorDate": "2026-10-26"
+   },
+   "tz": "Europe/London",
+   "today": "2026-11-18",
+   "slots": [
+    {
+     "key": "2026-11-11:linkedin",
+     "date": "2026-11-11",
+     "kind": "linkedin",
+     "status": "planned",
+     "draftId": null,
+     "draft": null,
+     "today": false,
+     "past": true
+    },
+    {
+     "key": "2026-11-11:blog",
+     "date": "2026-11-11",
+     "kind": "blog",
+     "status": "published",
+     "draftId": "d-1794057600000-0",
+     "pickedBy": "jarvis",
+     "reminder": null,
+     "remindedAt": null,
+     "updatedAt": "2026-11-18T10:49:07.263Z",
+     "publishedAt": "2026-11-11T09:00:00.000Z",
+     "passed": [],
+     "exhausted": false,
+     "draft": {
+      "id": "d-1794057600000-0",
+      "kind": "blog",
+      "status": "posted",
+      "title": "Master data first: the cutover nobody plans",
+      "hook": "",
+      "serviceLabel": "SAP data migration",
+      "serviceId": "datamigration",
+      "postType": "",
+      "origin": "jarvis",
+      "warnings": [
+       "Meta is short (132 chars) - consider expanding to 140-160."
+      ],
+      "problems": [
+       {
+        "id": "thin",
+        "label": "only 136 words",
+        "severity": "warn"
+       }
+      ],
+      "savedAt": "2026-11-07T13:20:00.000Z"
+     },
+     "today": false,
+     "past": true
+    },
+    {
+     "key": "2026-11-13:linkedin",
+     "date": "2026-11-13",
+     "kind": "linkedin",
+     "status": "published",
+     "draftId": "d-1794230400000-1",
+     "pickedBy": "jarvis",
+     "reminder": null,
+     "remindedAt": null,
+     "updatedAt": "2026-11-18T10:49:07.203Z",
+     "publishedAt": "2026-11-13T09:00:00.000Z",
+     "passed": [],
+     "exhausted": false,
+     "draft": {
+      "id": "d-1794230400000-1",
+      "kind": "linkedin",
+      "status": "posted",
+      "title": "",
+      "hook": "Billing exceptions are a process problem, not a headcount problem.",
+      "serviceLabel": "Utilities billing and customer service",
+      "serviceId": "billing",
+      "postType": "hot-take",
+      "origin": "jarvis",
+      "warnings": [],
+      "problems": [],
+      "savedAt": "2026-11-09T13:20:00.000Z"
+     },
+     "today": false,
+     "past": true
+    },
+    {
+     "key": "2026-11-17:linkedin",
+     "date": "2026-11-17",
+     "kind": "linkedin",
+     "status": "planned",
+     "draftId": null,
+     "draft": null,
+     "today": false,
+     "past": true
+    },
+    {
+     "key": "2026-11-18:blog",
+     "date": "2026-11-18",
+     "kind": "blog",
+     "status": "ready",
+     "draftId": "d-1794576000000-3",
+     "pickedBy": "jarvis",
+     "reminder": null,
+     "remindedAt": null,
+     "updatedAt": "2026-11-18T10:49:07.337Z",
+     "draft": {
+      "id": "d-1794576000000-3",
+      "kind": "blog",
+      "status": "approved",
+      "title": "Sorting custom code before a brownfield move",
+      "hook": "",
+      "serviceLabel": "S/4HANA migrations",
+      "serviceId": "s4hana",
+      "postType": "",
+      "origin": "jarvis",
+      "warnings": [
+       "Meta is short (121 chars) - consider expanding to 140-160."
+      ],
+      "problems": [
+       {
+        "id": "thin",
+        "label": "only 239 words",
+        "severity": "warn"
+       }
+      ],
+      "savedAt": "2026-11-13T13:20:00.000Z"
+     },
+     "today": true,
+     "past": false
+    },
+    {
+     "key": "2026-11-19:linkedin",
+     "date": "2026-11-19",
+     "kind": "linkedin",
+     "status": "ready",
+     "draftId": "d-1794489600000-2",
+     "pickedBy": "jarvis",
+     "reminder": null,
+     "remindedAt": null,
+     "updatedAt": "2026-11-18T10:49:07.312Z",
+     "draft": {
+      "id": "d-1794489600000-2",
+      "kind": "linkedin",
+      "status": "approved",
+      "title": "",
+      "hook": "Brackenfield Waste's crews now close work orders at the bin lorry, not in the office.",
+      "serviceLabel": "Plant maintenance and field service",
+      "serviceId": "plant-maintenance",
+      "postType": "case-study",
+      "origin": "jarvis",
+      "warnings": [],
+      "problems": [],
+      "savedAt": "2026-11-12T13:20:00.000Z"
+     },
+     "today": false,
+     "past": false
+    },
+    {
+     "key": "2026-11-23:linkedin",
+     "date": "2026-11-23",
+     "kind": "linkedin",
+     "status": "planned",
+     "draftId": null,
+     "draft": null,
+     "today": false,
+     "past": false
+    },
+    {
+     "key": "2026-11-25:linkedin",
+     "date": "2026-11-25",
+     "kind": "linkedin",
+     "status": "planned",
+     "draftId": null,
+     "draft": null,
+     "today": false,
+     "past": false
+    },
+    {
+     "key": "2026-11-25:blog",
+     "date": "2026-11-25",
+     "kind": "blog",
+     "status": "planned",
+     "draftId": null,
+     "draft": null,
+     "today": false,
+     "past": false
+    },
+    {
+     "key": "2026-11-27:linkedin",
+     "date": "2026-11-27",
+     "kind": "linkedin",
+     "status": "planned",
+     "draftId": null,
+     "draft": null,
+     "today": false,
+     "past": false
+    },
+    {
+     "key": "2026-12-01:linkedin",
+     "date": "2026-12-01",
+     "kind": "linkedin",
+     "status": "planned",
+     "draftId": null,
+     "draft": null,
+     "today": false,
+     "past": false
+    },
+    {
+     "key": "2026-12-02:blog",
+     "date": "2026-12-02",
+     "kind": "blog",
+     "status": "planned",
+     "draftId": null,
+     "draft": null,
+     "today": false,
+     "past": false
+    }
+   ],
+   "dueToday": [
+    {
+     "key": "2026-11-18:blog",
+     "date": "2026-11-18",
+     "kind": "blog",
+     "status": "ready",
+     "draftId": "d-1794576000000-3",
+     "pickedBy": "jarvis",
+     "reminder": null,
+     "remindedAt": null,
+     "updatedAt": "2026-11-18T10:49:07.337Z",
+     "draft": {
+      "id": "d-1794576000000-3",
+      "kind": "blog",
+      "status": "approved",
+      "title": "Sorting custom code before a brownfield move",
+      "hook": "",
+      "serviceLabel": "S/4HANA migrations",
+      "serviceId": "s4hana",
+      "postType": "",
+      "origin": "jarvis",
+      "warnings": [
+       "Meta is short (121 chars) - consider expanding to 140-160."
+      ],
+      "problems": [
+       {
+        "id": "thin",
+        "label": "only 239 words",
+        "severity": "warn"
+       }
+      ],
+      "savedAt": "2026-11-13T13:20:00.000Z"
+     },
+     "today": true,
+     "past": false
+    }
+   ],
+   "labels": {
+    "weekdays": [
+     "Sunday",
+     "Monday",
+     "Tuesday",
+     "Wednesday",
+     "Thursday",
+     "Friday",
+     "Saturday"
+    ],
+    "services": {
+     "s4hana": "S/4HANA migrations",
+     "assessment": "Migration readiness assessment",
+     "plant-maintenance": "Plant maintenance and field service",
+     "billing": "Utilities billing and customer service",
+     "basis": "SAP Basis and operations",
+     "abap": "ABAP development",
+     "integration": "SAP integration",
+     "fiori": "SAP Fiori and UX",
+     "datamigration": "SAP data migration",
+     "managed": "Application managed services"
+    },
+    "products": {
+     "copilot": "Larkwell Copilot",
+     "plant-builder": "Plant Builder"
+    }
+   }
+  },
+  "/api/competitors": {
+   "competitors": [
+    {
+     "id": "comp-1794654000000-51",
+     "name": "Fernhollow Partners",
+     "domain": "fernhollow.example",
+     "positioning": "A UK SAP consultancy for water and energy utilities, selling billing and customer service expertise.",
+     "serviceOverlap": [
+      "billing",
+      "s4hana",
+      "managed"
+     ],
+     "contentThemes": [
+      "IS-U to S/4HANA Utilities",
+      "regulatory reporting",
+      "customer service portals"
+     ],
+     "keywordOverlap": [
+      "sap utilities billing consultant",
+      "sap is-u to s/4hana utilities"
+     ],
+     "gaps": [
+      "Nothing on plant maintenance or field crews",
+      "No practical content on clearing billing exceptions",
+      "No waste-sector references"
+     ],
+     "strengths": [
+      "Deep billing expertise",
+      "Long list of utility references"
+     ],
+     "sources": [
+      "https://fernhollow.example/",
+      "https://fernhollow.example/insights/"
+     ],
+     "note": "Invented competitor for the demo.",
+     "createdAt": "2026-11-14T11:00:00.000Z",
+     "updatedAt": "2026-11-14T11:00:00.000Z",
+     "timesResearched": 1
+    },
+    {
+     "id": "comp-1794654000000-52",
+     "name": "Quayside Systems",
+     "domain": "quayside-systems.example",
+     "positioning": "A mid-market S/4HANA migration boutique with fixed-price conversion packages.",
+     "serviceOverlap": [
+      "s4hana",
+      "assessment",
+      "abap",
+      "datamigration"
+     ],
+     "contentThemes": [
+      "fixed-price conversions",
+      "readiness checks",
+      "custom code"
+     ],
+     "keywordOverlap": [
+      "s/4hana readiness check",
+      "brownfield s/4hana conversion",
+      "sap custom code migration"
+     ],
+     "gaps": [
+      "Generic across industries, nothing for operators with crews and depots",
+      "No content on cutover around billing runs"
+     ],
+     "strengths": [
+      "Strong migration content",
+      "Clear pricing pages"
+     ],
+     "sources": [
+      "https://quayside-systems.example/"
+     ],
+     "note": "Invented competitor for the demo.",
+     "createdAt": "2026-11-14T11:00:00.000Z",
+     "updatedAt": "2026-11-14T11:00:00.000Z",
+     "timesResearched": 1
+    },
+    {
+     "id": "comp-1794654000000-53",
+     "name": "Harlow & Penn",
+     "domain": "harlowpenn.example",
+     "positioning": "A field-mobility specialist selling crew apps across several ERPs.",
+     "serviceOverlap": [
+      "plant-maintenance",
+      "fiori"
+     ],
+     "contentThemes": [
+      "mobile workforce",
+      "offline apps",
+      "crew productivity"
+     ],
+     "keywordOverlap": [
+      "sap field service management",
+      "sap fiori tablet offline"
+     ],
+     "gaps": [
+      "Thin on SAP PM configuration and preventive plans",
+      "No content on asset register quality"
+     ],
+     "strengths": [
+      "Polished demos",
+      "Strong offline story"
+     ],
+     "sources": [
+      "https://harlowpenn.example/"
+     ],
+     "note": "Invented competitor for the demo.",
+     "createdAt": "2026-11-14T11:00:00.000Z",
+     "updatedAt": "2026-11-14T11:00:00.000Z",
+     "timesResearched": 1
+    },
+    {
+     "id": "comp-1794654000000-54",
+     "name": "Brightmoor Digital",
+     "domain": "brightmoor.example",
+     "positioning": "An application managed services provider for SAP, sold on round-the-clock cover.",
+     "serviceOverlap": [
+      "managed",
+      "basis"
+     ],
+     "contentThemes": [
+      "24x7 support",
+      "service levels",
+      "cost predictability"
+     ],
+     "keywordOverlap": [
+      "sap basis managed service",
+      "sap application managed services uk"
+     ],
+     "gaps": [
+      "No industry focus",
+      "Little on patching routines a client could follow"
+     ],
+     "strengths": [
+      "Large support team",
+      "Clear service levels"
+     ],
+     "sources": [
+      "https://brightmoor.example/"
+     ],
+     "note": "Invented competitor for the demo.",
+     "createdAt": "2026-11-14T11:00:00.000Z",
+     "updatedAt": "2026-11-14T11:00:00.000Z",
+     "timesResearched": 1
+    },
+    {
+     "id": "comp-1794654000000-55",
+     "name": "Kestrel Grid Consulting",
+     "domain": "kestrelgrid.example",
+     "positioning": "A Dutch SAP firm for grid operators and energy networks.",
+     "serviceOverlap": [
+      "plant-maintenance",
+      "s4hana",
+      "integration"
+     ],
+     "contentThemes": [
+      "grid asset management",
+      "integration with GIS",
+      "S/4HANA for networks"
+     ],
+     "keywordOverlap": [
+      "sap plant maintenance consultant",
+      "sap integration monitoring"
+     ],
+     "gaps": [
+      "Nothing for waste operators",
+      "No English-language field service content"
+     ],
+     "strengths": [
+      "Asset management depth",
+      "Integration with GIS systems"
+     ],
+     "sources": [
+      "https://kestrelgrid.example/"
+     ],
+     "note": "Invented competitor for the demo.",
+     "createdAt": "2026-11-14T11:00:00.000Z",
+     "updatedAt": "2026-11-14T11:00:00.000Z",
+     "timesResearched": 1
+    }
+   ]
+  },
+  "/api/librarian": {
+   "lastRunAt": "2026-11-17T15:00:00.000Z",
+   "lastResult": {
+    "merged": 0,
+    "linked": 4,
+    "orphansLinked": 1,
+    "lintIssues": 0,
+    "errors": 0
+   },
+   "running": false,
+   "enabled": true,
+   "runCount": 9
+  },
+  "/api/wiki/all": {
+   "pages": [
+    {
+     "slug": "case-brackenfield-waste-work-orders",
+     "title": "Case: Brackenfield Waste work orders",
+     "type": "campaign",
+     "updated": "2026-11-10T09:00:00.000Z",
+     "sources": [],
+     "summary": "How Brackenfield Waste moved its crews from paper work orders to tablets.",
+     "links": [
+      "fiori-for-field-crews",
+      "sap-plant-maintenance-and-field-service"
+     ],
+     "body": "Brackenfield Waste (an invented client) ran SAP PM but crews closed work orders on paper. Larkwell built a [[Fiori for field crews]] app linked to SAP PM, rolled it out depot by depot, and kept the office screens unchanged.\n\nOutcome stated qualitatively only: work orders are closed at the asset and the register is current. Do not quote a percentage without the client's sign-off.\n\nRelated: [[SAP plant maintenance and field service]]."
+    },
+    {
+     "slug": "competitor-harlow-penn",
+     "title": "Competitor: Harlow & Penn",
+     "type": "competitor",
+     "updated": "2026-11-10T09:00:00.000Z",
+     "sources": [
+      "https://harlowpenn.example/"
+     ],
+     "summary": "An invented field-mobility specialist; strong on apps, thin on SAP back end.",
+     "links": [
+      "sap-plant-maintenance-and-field-service",
+      "keyword-themes-2026"
+     ],
+     "body": "Harlow & Penn (invented) sells mobile apps for field crews across several ERPs. Strong demos, little content on SAP PM configuration or preventive plans.\n\nGap Larkwell can own: the SAP side of field service. See [[SAP plant maintenance and field service]] and [[Keyword themes 2026]]."
+    },
+    {
+     "slug": "custom-code-before-a-brownfield-conversion",
+     "title": "Custom code before a brownfield conversion",
+     "type": "concept",
+     "updated": "2026-11-10T09:00:00.000Z",
+     "sources": [],
+     "summary": "Sort custom code into keep, fix and retire before converting.",
+     "links": [
+      "s-4hana-migration-for-operators"
+     ],
+     "body": "Usage data from production tells you which custom programs anyone still runs. Retire the unused ones first; fix what the conversion checks flag; keep and document the rest.\n\nPart of [[S/4HANA migration for operators]]."
+    },
+    {
+     "slug": "data-migration-master-data-first",
+     "title": "Data migration: master data first",
+     "type": "concept",
+     "updated": "2026-11-10T09:00:00.000Z",
+     "sources": [],
+     "summary": "Clean equipment, functional locations and business partners before the load.",
+     "links": [
+      "s-4hana-migration-for-operators"
+     ],
+     "body": "Most failed loads trace back to master data: duplicate equipment, functional locations nobody owns, business partners with three addresses. Assign an owner per object and clean in the source system.\n\nRelated: [[S/4HANA migration for operators]]."
+    },
+    {
+     "slug": "fiori-for-field-crews",
+     "title": "Fiori for field crews",
+     "type": "topic",
+     "updated": "2026-11-10T09:00:00.000Z",
+     "sources": [],
+     "summary": "Small Fiori apps on tablets that crews actually use.",
+     "links": [
+      "case-brackenfield-waste-work-orders",
+      "sap-plant-maintenance-and-field-service"
+     ],
+     "body": "Three screens beat thirty: my jobs today, close a job with photos and readings, raise a defect. Offline matters at depots with poor signal. Keep the office on the classic screens until the crews are happy.\n\nUsed in [[Case: Brackenfield Waste work orders]]. Part of [[SAP plant maintenance and field service]]."
+    },
+    {
+     "slug": "keyword-themes-2026",
+     "title": "Keyword themes 2026",
+     "type": "topic",
+     "updated": "2026-11-10T09:00:00.000Z",
+     "sources": [
+      "knowledge/Larkwell keyword research 2026.csv"
+     ],
+     "summary": "The search themes Larkwell targets, from the keyword sheet.",
+     "links": [
+      "sap-plant-maintenance-and-field-service",
+      "competitor-harlow-penn"
+     ],
+     "body": "Biggest themes by volume: S/4HANA readiness and brownfield conversion, then field service and plant maintenance, then data migration. Billing terms are small but high intent.\n\nGap: few pages answer \"SAP PM mobile work orders\" well. See [[SAP plant maintenance and field service]] and [[Competitor: Harlow & Penn]]."
+    },
+    {
+     "slug": "larkwell-consulting",
+     "title": "Larkwell Consulting",
+     "type": "concept",
+     "updated": "2026-11-10T09:00:00.000Z",
+     "sources": [
+      "knowledge/larkwell-content-strategy-2026.md"
+     ],
+     "summary": "Who Larkwell is, what it sells and to whom.",
+     "links": [
+      "s-4hana-migration-for-operators",
+      "sap-plant-maintenance-and-field-service",
+      "utilities-billing-exceptions",
+      "sap-basis-managed-service",
+      "sap-leads-at-mid-sized-utilities",
+      "case-brackenfield-waste-work-orders",
+      "larkwell-copilot"
+     ],
+     "body": "Larkwell Consulting is a small SAP consultancy for utilities, waste and field-service operators. It sells [[S/4HANA migration for operators]], [[SAP plant maintenance and field service]], [[Utilities billing exceptions]], and run services such as [[SAP Basis managed service]].\n\nIts buyers are described in [[SAP leads at mid-sized utilities]]. The two clients it may name are Brackenfield Waste and Osterby Utilities; see [[Case: Brackenfield Waste work orders]].\n\nProducts: Larkwell Copilot and Plant Builder (see [[Larkwell Copilot]])."
+    },
+    {
+     "slug": "larkwell-copilot",
+     "title": "Larkwell Copilot",
+     "type": "concept",
+     "updated": "2026-11-10T09:00:00.000Z",
+     "sources": [],
+     "summary": "Larkwell's governed AI assistant for SAP teams (invented product).",
+     "links": [
+      "larkwell-consulting"
+     ],
+     "body": "Explains code, diagnoses short dumps and failed interfaces, and writes only in development systems after checks run in code. Only a person releases a transport. Every action is in an audit trail.\n\nDo not claim it converts legacy code into finished apps. Part of [[Larkwell Consulting]]."
+    },
+    {
+     "slug": "larkwell-marketing-plan-by-week",
+     "title": "Larkwell marketing plan by week",
+     "type": "campaign",
+     "updated": "2026-11-18T09:37:26.324Z",
+     "sources": [
+      "Marketing Engine app records"
+     ],
+     "summary": "The Strategist's plan for the week of 2026-11-16: Field service for operators: own the SAP side of crews, work orders and tablets.",
+     "links": [
+      "larkwell-published-content",
+      "what-the-larkwell-team-turns-down-and-why"
+     ],
+     "body": "*This page is kept up to date automatically from the agents' records. Edits made here are overwritten.*\n\n## Week of 2026-11-16\n**Focus:** Field service for operators: own the SAP side of crews, work orders and tablets.\n\n- **Work orders closed at the asset**: High-intent searches with weak SAP-specific answers.\n- **Billing exceptions by cause**: Small but high-intent queries; no competitor answers them well.\n\n### Pieces planned\n- Blog on \"sap pm mobile work orders\" (written): Closing work orders at the asset with a three-screen tablet app Why: Closest gap to page one\n- Blog on \"sap is-u billing exceptions\" (written): Measure exceptions by cause, fix the top two, then automate Why: No competitor covers it\n- LinkedIn how-to (written): The Friday keying problem and the three-screen fix Why: Supports the work orders blog\n- LinkedIn how-to (written): Patch day: rate notes against your own landscape Why: Monthly patch-day slot\n- LinkedIn hot-take: Offline mode matters more than any feature for depot tablets Why: Differentiates from mobility vendors\n\n### Left alone this week\n- Clean core debates\n- Generic transformation framing\n- Another S/4HANA deadline post\n\nRelated: [[Larkwell published content]], [[What the Larkwell team turns down and why]]."
+    },
+    {
+     "slug": "larkwell-marketing-results-by-week",
+     "title": "Larkwell marketing results by week",
+     "type": "campaign",
+     "updated": "2026-11-18T09:37:26.324Z",
+     "sources": [
+      "Marketing Engine app records"
+     ],
+     "summary": "Results for the week ending 2026-11-13: Search clicks steady; the master data blog brought the first enquiry from a waste operator.",
+     "links": [],
+     "body": "*This page is kept up to date automatically from the agents' records. Edits made here are overwritten.*\n\n## Week ending 2026-11-13\nSearch clicks steady; the master data blog brought the first enquiry from a waste operator.\n\n## Search\nClicks and impressions are steady week on week. The master data blog entered the results for its target query.\n\n## Site\nOne contact form enquiry, from a waste operator, after reading the master data blog.\n\n## Tracking\nThe contact form event fires on every page checked. No tag problems found.\n\n## Week by week\n| Week ending | Sessions (7d) | Visitors (7d) | Search clicks (7d) | Search impressions (7d) | Sessions (28d) | Search clicks (28d) |\n| --- | --- | --- | --- | --- | --- | --- |\n| 2026-11-13 | not measured | not measured | not measured | not measured | not measured | not measured |"
+    },
+    {
+     "slug": "larkwell-published-content",
+     "title": "Larkwell published content",
+     "type": "campaign",
+     "updated": "2026-11-18T09:37:26.324Z",
+     "sources": [
+      "Marketing Engine app records"
+     ],
+     "summary": "1 blog published on larkwell.example through the app; the newest is \\\"Master data first: the cutover nobody plans\\\" (2026-11-11).",
+     "links": [
+      "larkwell-marketing-plan-by-week"
+     ],
+     "body": "*This page is kept up to date automatically from the agents' records. Edits made here are overwritten.*\n\nWhat Larkwell has published on larkwell.example through the app, newest first. A new piece should not repeat one of these; it can link to it.\n\n- 2026-11-11: [Master data first: the cutover nobody plans](https://larkwell.example/news/master-data-first), keyword \"sap master data cleanup before migration\", service datamigration. Most failed data loads trace back to master data. Give every object an owner and clean it in the source system before the migration.\n\nRelated: [[Larkwell marketing plan by week]]."
+    },
+    {
+     "slug": "larkwell-example-seo-audit-findings",
+     "title": "larkwell.example SEO audit findings",
+     "type": "campaign",
+     "updated": "2026-11-18T09:37:26.324Z",
+     "sources": [
+      "Marketing Engine app records"
+     ],
+     "summary": "SEO audit of 2026-11-17: Service pages are sound; two titles are cut off in search and FAQ markup is missing.",
+     "links": [],
+     "body": "*This page is kept up to date automatically from the agents' records. Edits made here are overwritten.*\n\n## Audit of 2026-11-17\nService pages are sound; two titles are cut off in search and FAQ markup is missing.\n\n## What I checked\nEight service pages and the home page: title, meta description, canonical, headings, structured data, alt text and internal links.\n\n## Findings\n- The plant maintenance and billing pages have titles longer than search shows; both are cut mid-phrase.\n- No page carries FAQ structured data, though three answer common questions.\n- The home page does not link to either case page.\n\n## Not a problem\nCanonicals, language tags and headings are correct everywhere.\n\n### Fixes proposed\n- **Shorten two service page titles** (/services/plant-maintenance/), open: Plant maintenance: 'SAP plant maintenance for operators | Larkwell'. Billing: 'SAP utilities billing support | Larkwell'.\n- **Add FAQ markup to three service pages** (/services/billing/), open: Mark up the existing question-and-answer sections on plant maintenance, billing and S/4HANA."
+    },
+    {
+     "slug": "s-4hana-migration-for-operators",
+     "title": "S/4HANA migration for operators",
+     "type": "service",
+     "updated": "2026-11-10T09:00:00.000Z",
+     "sources": [
+      "https://www.sap.com/"
+     ],
+     "summary": "Planning an S/4HANA move for a business with depots, crews and meters that cannot stop.",
+     "links": [
+      "custom-code-before-a-brownfield-conversion",
+      "utilities-billing-exceptions",
+      "data-migration-master-data-first",
+      "larkwell-consulting"
+     ],
+     "body": "Operators cannot freeze maintenance or billing for a long cutover. What works:\n\n- A readiness check first: custom code, data quality, interfaces. See [[Custom code before a brownfield conversion]].\n- Brownfield conversion when the processes are sound; selective when one area (often billing) needs a redesign.\n- Cutover planned around the billing run and the maintenance calendar, not the other way round.\n\nRelated: [[Utilities billing exceptions]], [[Data migration: master data first]], [[Larkwell Consulting]]."
+    },
+    {
+     "slug": "sap-basis-managed-service",
+     "title": "SAP Basis managed service",
+     "type": "service",
+     "updated": "2026-11-10T09:00:00.000Z",
+     "sources": [],
+     "summary": "Monitoring, patching and system copies run as a service.",
+     "links": [
+      "larkwell-consulting",
+      "security-patch-day-for-operators"
+     ],
+     "body": "Operators often have one Basis person. A managed service is about cover and routine: a patch window every month with a tested rollback, system copies on a calendar, and alerts that reach someone at night.\n\nRelated: [[Larkwell Consulting]], [[Security patch day for operators]]."
+    },
+    {
+     "slug": "sap-leads-at-mid-sized-utilities",
+     "title": "SAP leads at mid-sized utilities",
+     "type": "audience",
+     "updated": "2026-11-10T09:00:00.000Z",
+     "sources": [],
+     "summary": "The buyer: practical, short of SAP people, wary of big promises.",
+     "links": [
+      "keyword-themes-2026",
+      "utilities-billing-exceptions"
+     ],
+     "body": "They search for a specific problem, read the first paragraph, and leave if it is generic. They trust a named SAP thing (a transaction, a release) more than any adjective.\n\nWhat they want from content: one useful step they can take this week. See [[Keyword themes 2026]] and [[Utilities billing exceptions]]."
+    },
+    {
+     "slug": "sap-plant-maintenance-and-field-service",
+     "title": "SAP plant maintenance and field service",
+     "type": "service",
+     "updated": "2026-11-10T09:00:00.000Z",
+     "sources": [
+      "https://help.sap.com/"
+     ],
+     "summary": "Work orders, notifications and preventive plans for crews in the field.",
+     "links": [
+      "fiori-for-field-crews",
+      "case-brackenfield-waste-work-orders",
+      "keyword-themes-2026"
+     ],
+     "body": "The common failure is not configuration but adoption: crews close work orders on paper and someone keys them in days later. The asset register drifts and preventive plans stop matching reality.\n\nWhat helps: a small tablet app for the three things crews do (see [[Fiori for field crews]]), notifications raised at the asset, and a monthly review of plans that were skipped.\n\nProof: [[Case: Brackenfield Waste work orders]]. Search demand: see [[Keyword themes 2026]]."
+    },
+    {
+     "slug": "security-patch-day-for-operators",
+     "title": "Security patch day for operators",
+     "type": "topic",
+     "updated": "2026-11-10T09:00:00.000Z",
+     "sources": [
+      "https://support.sap.com/"
+     ],
+     "summary": "A monthly patch window that a small team can keep.",
+     "links": [
+      "sap-basis-managed-service"
+     ],
+     "body": "Read the notes on the day, rate them against your own landscape, patch development first, and keep a written rollback for each change. See [[SAP Basis managed service]]."
+    },
+    {
+     "slug": "utilities-billing-exceptions",
+     "title": "Utilities billing exceptions",
+     "type": "service",
+     "updated": "2026-11-10T09:00:00.000Z",
+     "sources": [
+      "https://help.sap.com/"
+     ],
+     "summary": "Why billing exceptions pile up in SAP for utilities and how to clear them for good.",
+     "links": [
+      "s-4hana-migration-for-operators",
+      "sap-leads-at-mid-sized-utilities"
+     ],
+     "body": "Exceptions are a symptom. The usual causes are meter reads that fail validation, move-in and move-out timing, and tariff changes tested too late.\n\nA practical order: measure exceptions by cause for four weeks, fix the top two causes in the process, then automate the rest. Adding people to the exception queue only hides the problem.\n\nRelated: [[S/4HANA migration for operators]], [[SAP leads at mid-sized utilities]]."
+    },
+    {
+     "slug": "what-the-larkwell-team-turns-down-and-why",
+     "title": "What the Larkwell team turns down and why",
+     "type": "campaign",
+     "updated": "2026-11-18T09:37:26.324Z",
+     "sources": [
+      "Marketing Engine app records"
+     ],
+     "summary": "2 recorded reasons for rejecting, dropping or sending back a piece; the latest: 2026-11-15, linkedin (integration), \\\"Is your integration landscape ready for the future?\\\": Editor: Rhetorical-question hook and no specific…",
+     "links": [
+      "larkwell-marketing-plan-by-week"
+     ],
+     "body": "*This page is kept up to date automatically from the agents' records. Edits made here are overwritten.*\n\nWhy pieces were rejected, dropped or sent back, newest first. \"Editor:\" marks the Editor agent's reason; the others are a person's. Anyone planning or writing for Larkwell should read these before repeating a topic or an approach.\n\n- 2026-11-15, linkedin (integration), \"Is your integration landscape ready for the future?\": Editor: Rhetorical-question hook and no specific SAP point.\n- 2026-11-14, blog (s4hana), \"Why transformation matters for utilities\": Editor: Generic: no SAP thing named and no buyer problem. Nothing a reader could act on.\n\nRelated: [[Larkwell marketing plan by week]]."
+    }
+   ]
+  },
+  "/api/wiki/graph": {
+   "nodes": [
+    {
+     "id": "case-brackenfield-waste-work-orders",
+     "label": "Case: Brackenfield Waste work orders",
+     "type": "campaign",
+     "deg": 3
+    },
+    {
+     "id": "competitor-harlow-penn",
+     "label": "Competitor: Harlow & Penn",
+     "type": "competitor",
+     "deg": 2
+    },
+    {
+     "id": "custom-code-before-a-brownfield-conversion",
+     "label": "Custom code before a brownfield conversion",
+     "type": "concept",
+     "deg": 1
+    },
+    {
+     "id": "data-migration-master-data-first",
+     "label": "Data migration: master data first",
+     "type": "concept",
+     "deg": 1
+    },
+    {
+     "id": "fiori-for-field-crews",
+     "label": "Fiori for field crews",
+     "type": "topic",
+     "deg": 2
+    },
+    {
+     "id": "keyword-themes-2026",
+     "label": "Keyword themes 2026",
+     "type": "topic",
+     "deg": 3
+    },
+    {
+     "id": "larkwell-consulting",
+     "label": "Larkwell Consulting",
+     "type": "concept",
+     "deg": 7
+    },
+    {
+     "id": "larkwell-copilot",
+     "label": "Larkwell Copilot",
+     "type": "concept",
+     "deg": 1
+    },
+    {
+     "id": "larkwell-marketing-plan-by-week",
+     "label": "Larkwell marketing plan by week",
+     "type": "campaign",
+     "deg": 2
+    },
+    {
+     "id": "larkwell-marketing-results-by-week",
+     "label": "Larkwell marketing results by week",
+     "type": "campaign",
+     "deg": 0
+    },
+    {
+     "id": "larkwell-published-content",
+     "label": "Larkwell published content",
+     "type": "campaign",
+     "deg": 1
+    },
+    {
+     "id": "larkwell-example-seo-audit-findings",
+     "label": "larkwell.example SEO audit findings",
+     "type": "campaign",
+     "deg": 0
+    },
+    {
+     "id": "s-4hana-migration-for-operators",
+     "label": "S/4HANA migration for operators",
+     "type": "service",
+     "deg": 4
+    },
+    {
+     "id": "sap-basis-managed-service",
+     "label": "SAP Basis managed service",
+     "type": "service",
+     "deg": 2
+    },
+    {
+     "id": "sap-leads-at-mid-sized-utilities",
+     "label": "SAP leads at mid-sized utilities",
+     "type": "audience",
+     "deg": 3
+    },
+    {
+     "id": "sap-plant-maintenance-and-field-service",
+     "label": "SAP plant maintenance and field service",
+     "type": "service",
+     "deg": 5
+    },
+    {
+     "id": "security-patch-day-for-operators",
+     "label": "Security patch day for operators",
+     "type": "topic",
+     "deg": 1
+    },
+    {
+     "id": "utilities-billing-exceptions",
+     "label": "Utilities billing exceptions",
+     "type": "service",
+     "deg": 3
+    },
+    {
+     "id": "what-the-larkwell-team-turns-down-and-why",
+     "label": "What the Larkwell team turns down and why",
+     "type": "campaign",
+     "deg": 1
+    }
+   ],
+   "links": [
+    {
+     "source": "case-brackenfield-waste-work-orders",
+     "target": "fiori-for-field-crews",
+     "kind": "link"
+    },
+    {
+     "source": "case-brackenfield-waste-work-orders",
+     "target": "sap-plant-maintenance-and-field-service",
+     "kind": "link"
+    },
+    {
+     "source": "competitor-harlow-penn",
+     "target": "sap-plant-maintenance-and-field-service",
+     "kind": "link"
+    },
+    {
+     "source": "competitor-harlow-penn",
+     "target": "keyword-themes-2026",
+     "kind": "link"
+    },
+    {
+     "source": "custom-code-before-a-brownfield-conversion",
+     "target": "s-4hana-migration-for-operators",
+     "kind": "link"
+    },
+    {
+     "source": "data-migration-master-data-first",
+     "target": "s-4hana-migration-for-operators",
+     "kind": "link"
+    },
+    {
+     "source": "fiori-for-field-crews",
+     "target": "sap-plant-maintenance-and-field-service",
+     "kind": "link"
+    },
+    {
+     "source": "keyword-themes-2026",
+     "target": "sap-plant-maintenance-and-field-service",
+     "kind": "link"
+    },
+    {
+     "source": "larkwell-consulting",
+     "target": "s-4hana-migration-for-operators",
+     "kind": "link"
+    },
+    {
+     "source": "larkwell-consulting",
+     "target": "sap-plant-maintenance-and-field-service",
+     "kind": "link"
+    },
+    {
+     "source": "larkwell-consulting",
+     "target": "utilities-billing-exceptions",
+     "kind": "link"
+    },
+    {
+     "source": "larkwell-consulting",
+     "target": "sap-basis-managed-service",
+     "kind": "link"
+    },
+    {
+     "source": "larkwell-consulting",
+     "target": "sap-leads-at-mid-sized-utilities",
+     "kind": "link"
+    },
+    {
+     "source": "larkwell-consulting",
+     "target": "case-brackenfield-waste-work-orders",
+     "kind": "link"
+    },
+    {
+     "source": "larkwell-consulting",
+     "target": "larkwell-copilot",
+     "kind": "link"
+    },
+    {
+     "source": "larkwell-marketing-plan-by-week",
+     "target": "larkwell-published-content",
+     "kind": "link"
+    },
+    {
+     "source": "larkwell-marketing-plan-by-week",
+     "target": "what-the-larkwell-team-turns-down-and-why",
+     "kind": "link"
+    },
+    {
+     "source": "s-4hana-migration-for-operators",
+     "target": "utilities-billing-exceptions",
+     "kind": "link"
+    },
+    {
+     "source": "sap-basis-managed-service",
+     "target": "security-patch-day-for-operators",
+     "kind": "link"
+    },
+    {
+     "source": "sap-leads-at-mid-sized-utilities",
+     "target": "keyword-themes-2026",
+     "kind": "link"
+    },
+    {
+     "source": "sap-leads-at-mid-sized-utilities",
+     "target": "utilities-billing-exceptions",
+     "kind": "link"
+    }
+   ]
+  },
+  "/api/images": {
+   "images": [
+    {
+     "id": "img-1794924000000-0",
+     "provider": "cards",
+     "kind": "card",
+     "local": true,
+     "file": "img-1794924000000-0.svg",
+     "url": "/api/images/file/img-1794924000000-0.svg",
+     "mime": "image/svg+xml",
+     "size": "linkedin",
+     "style": "brand",
+     "headline": "Work orders closed at the asset",
+     "subline": "Brackenfield Waste, depot by depot",
+     "prompt": null,
+     "sourceUrl": null,
+     "credit": null,
+     "unsplashId": null,
+     "draftId": "d-1794489600000-2",
+     "createdAt": "2026-11-17T14:00:00.000Z"
+    },
+    {
+     "id": "img-1794924000000-1",
+     "provider": "cards",
+     "kind": "card",
+     "local": true,
+     "file": "img-1794924000000-1.svg",
+     "url": "/api/images/file/img-1794924000000-1.svg",
+     "mime": "image/svg+xml",
+     "size": "linkedin",
+     "style": "tech",
+     "headline": "Patch day: rate the notes first",
+     "subline": "A routine a small Basis team can keep",
+     "prompt": null,
+     "sourceUrl": null,
+     "credit": null,
+     "unsplashId": null,
+     "draftId": "d-1794835200000-8",
+     "createdAt": "2026-11-17T14:00:00.000Z"
+    },
+    {
+     "id": "img-1794924000000-2",
+     "provider": "cards",
+     "kind": "card",
+     "local": true,
+     "file": "img-1794924000000-2.svg",
+     "url": "/api/images/file/img-1794924000000-2.svg",
+     "mime": "image/svg+xml",
+     "size": "linkedin",
+     "style": "light",
+     "headline": "Three screens, not thirty",
+     "subline": "SAP PM on the depot tablet",
+     "prompt": null,
+     "sourceUrl": null,
+     "credit": null,
+     "unsplashId": null,
+     "draftId": "d-1794921600000-10",
+     "createdAt": "2026-11-17T14:00:00.000Z"
+    },
+    {
+     "id": "img-1794924000000-3",
+     "provider": "cards",
+     "kind": "card",
+     "local": true,
+     "file": "img-1794924000000-3.svg",
+     "url": "/api/images/file/img-1794924000000-3.svg",
+     "mime": "image/svg+xml",
+     "size": "linkedin",
+     "style": "deep",
+     "headline": "Billing exceptions have causes",
+     "subline": "Fix the top two, then automate",
+     "prompt": null,
+     "sourceUrl": null,
+     "credit": null,
+     "unsplashId": null,
+     "draftId": "d-1794835200000-7",
+     "createdAt": "2026-11-17T14:00:00.000Z"
+    }
+   ],
+   "providers": [
+    {
+     "id": "cards",
+     "label": "Branded card",
+     "local": true,
+     "kind": "card",
+     "note": "Larkwell-branded graphic, rendered by the app itself. No third-party service involved.",
+     "available": true
+    },
+    {
+     "id": "unsplash",
+     "label": "Real photo (Unsplash)",
+     "local": false,
+     "kind": "photo",
+     "note": "Professional stock photography, searched to match your post. Free: create an app at unsplash.com/developers, copy the Access Key into UNSPLASH_ACCESS_KEY in .env, restart.",
+     "available": false
+    }
+   ],
+   "sizes": {
+    "linkedin": {
+     "w": 1200,
+     "h": 627,
+     "label": "LinkedIn link (1200×627)"
+    },
+    "square": {
+     "w": 1080,
+     "h": 1080,
+     "label": "Square (1080×1080)"
+    },
+    "portrait": {
+     "w": 1080,
+     "h": 1350,
+     "label": "Portrait (1080×1350)"
+    },
+    "story": {
+     "w": 1080,
+     "h": 1920,
+     "label": "Story (1080×1920)"
+    }
+   },
+   "cardStyles": {
+    "brand": "Brand green",
+    "deep": "Deep gradient",
+    "light": "Light minimal",
+    "tech": "Tech terminal"
+   }
+  },
+  "/api/knowledge/status": {
+   "files": 3,
+   "chunks": 8,
+   "bySource": {
+    "Larkwell keyword research 2026.csv": 2,
+    "larkwell-brand-and-voice.md": 2,
+    "larkwell-content-strategy-2026.md": 4
+   },
+   "retrieval": "keyword"
+  },
+  "/api/wiki/page/case-brackenfield-waste-work-orders": {
+   "slug": "case-brackenfield-waste-work-orders",
+   "title": "Case: Brackenfield Waste work orders",
+   "type": "campaign",
+   "updated": "2026-11-10T09:00:00.000Z",
+   "sources": [],
+   "summary": "How Brackenfield Waste moved its crews from paper work orders to tablets.",
+   "links": [
+    "fiori-for-field-crews",
+    "sap-plant-maintenance-and-field-service"
+   ],
+   "body": "Brackenfield Waste (an invented client) ran SAP PM but crews closed work orders on paper. Larkwell built a [[Fiori for field crews]] app linked to SAP PM, rolled it out depot by depot, and kept the office screens unchanged.\n\nOutcome stated qualitatively only: work orders are closed at the asset and the register is current. Do not quote a percentage without the client's sign-off.\n\nRelated: [[SAP plant maintenance and field service]]."
+  },
+  "/api/wiki/page/competitor-harlow-penn": {
+   "slug": "competitor-harlow-penn",
+   "title": "Competitor: Harlow & Penn",
+   "type": "competitor",
+   "updated": "2026-11-10T09:00:00.000Z",
+   "sources": [
+    "https://harlowpenn.example/"
+   ],
+   "summary": "An invented field-mobility specialist; strong on apps, thin on SAP back end.",
+   "links": [
+    "sap-plant-maintenance-and-field-service",
+    "keyword-themes-2026"
+   ],
+   "body": "Harlow & Penn (invented) sells mobile apps for field crews across several ERPs. Strong demos, little content on SAP PM configuration or preventive plans.\n\nGap Larkwell can own: the SAP side of field service. See [[SAP plant maintenance and field service]] and [[Keyword themes 2026]]."
+  },
+  "/api/wiki/page/custom-code-before-a-brownfield-conversion": {
+   "slug": "custom-code-before-a-brownfield-conversion",
+   "title": "Custom code before a brownfield conversion",
+   "type": "concept",
+   "updated": "2026-11-10T09:00:00.000Z",
+   "sources": [],
+   "summary": "Sort custom code into keep, fix and retire before converting.",
+   "links": [
+    "s-4hana-migration-for-operators"
+   ],
+   "body": "Usage data from production tells you which custom programs anyone still runs. Retire the unused ones first; fix what the conversion checks flag; keep and document the rest.\n\nPart of [[S/4HANA migration for operators]]."
+  },
+  "/api/wiki/page/data-migration-master-data-first": {
+   "slug": "data-migration-master-data-first",
+   "title": "Data migration: master data first",
+   "type": "concept",
+   "updated": "2026-11-10T09:00:00.000Z",
+   "sources": [],
+   "summary": "Clean equipment, functional locations and business partners before the load.",
+   "links": [
+    "s-4hana-migration-for-operators"
+   ],
+   "body": "Most failed loads trace back to master data: duplicate equipment, functional locations nobody owns, business partners with three addresses. Assign an owner per object and clean in the source system.\n\nRelated: [[S/4HANA migration for operators]]."
+  },
+  "/api/wiki/page/fiori-for-field-crews": {
+   "slug": "fiori-for-field-crews",
+   "title": "Fiori for field crews",
+   "type": "topic",
+   "updated": "2026-11-10T09:00:00.000Z",
+   "sources": [],
+   "summary": "Small Fiori apps on tablets that crews actually use.",
+   "links": [
+    "case-brackenfield-waste-work-orders",
+    "sap-plant-maintenance-and-field-service"
+   ],
+   "body": "Three screens beat thirty: my jobs today, close a job with photos and readings, raise a defect. Offline matters at depots with poor signal. Keep the office on the classic screens until the crews are happy.\n\nUsed in [[Case: Brackenfield Waste work orders]]. Part of [[SAP plant maintenance and field service]]."
+  },
+  "/api/wiki/page/keyword-themes-2026": {
+   "slug": "keyword-themes-2026",
+   "title": "Keyword themes 2026",
+   "type": "topic",
+   "updated": "2026-11-10T09:00:00.000Z",
+   "sources": [
+    "knowledge/Larkwell keyword research 2026.csv"
+   ],
+   "summary": "The search themes Larkwell targets, from the keyword sheet.",
+   "links": [
+    "sap-plant-maintenance-and-field-service",
+    "competitor-harlow-penn"
+   ],
+   "body": "Biggest themes by volume: S/4HANA readiness and brownfield conversion, then field service and plant maintenance, then data migration. Billing terms are small but high intent.\n\nGap: few pages answer \"SAP PM mobile work orders\" well. See [[SAP plant maintenance and field service]] and [[Competitor: Harlow & Penn]]."
+  },
+  "/api/wiki/page/larkwell-consulting": {
+   "slug": "larkwell-consulting",
+   "title": "Larkwell Consulting",
+   "type": "concept",
+   "updated": "2026-11-10T09:00:00.000Z",
+   "sources": [
+    "knowledge/larkwell-content-strategy-2026.md"
+   ],
+   "summary": "Who Larkwell is, what it sells and to whom.",
+   "links": [
+    "s-4hana-migration-for-operators",
+    "sap-plant-maintenance-and-field-service",
+    "utilities-billing-exceptions",
+    "sap-basis-managed-service",
+    "sap-leads-at-mid-sized-utilities",
+    "case-brackenfield-waste-work-orders",
+    "larkwell-copilot"
+   ],
+   "body": "Larkwell Consulting is a small SAP consultancy for utilities, waste and field-service operators. It sells [[S/4HANA migration for operators]], [[SAP plant maintenance and field service]], [[Utilities billing exceptions]], and run services such as [[SAP Basis managed service]].\n\nIts buyers are described in [[SAP leads at mid-sized utilities]]. The two clients it may name are Brackenfield Waste and Osterby Utilities; see [[Case: Brackenfield Waste work orders]].\n\nProducts: Larkwell Copilot and Plant Builder (see [[Larkwell Copilot]])."
+  },
+  "/api/wiki/page/larkwell-copilot": {
+   "slug": "larkwell-copilot",
+   "title": "Larkwell Copilot",
+   "type": "concept",
+   "updated": "2026-11-10T09:00:00.000Z",
+   "sources": [],
+   "summary": "Larkwell's governed AI assistant for SAP teams (invented product).",
+   "links": [
+    "larkwell-consulting"
+   ],
+   "body": "Explains code, diagnoses short dumps and failed interfaces, and writes only in development systems after checks run in code. Only a person releases a transport. Every action is in an audit trail.\n\nDo not claim it converts legacy code into finished apps. Part of [[Larkwell Consulting]]."
+  },
+  "/api/wiki/page/larkwell-marketing-plan-by-week": {
+   "slug": "larkwell-marketing-plan-by-week",
+   "title": "Larkwell marketing plan by week",
+   "type": "campaign",
+   "updated": "2026-11-18T09:37:26.324Z",
+   "sources": [
+    "Marketing Engine app records"
+   ],
+   "summary": "The Strategist's plan for the week of 2026-11-16: Field service for operators: own the SAP side of crews, work orders and tablets.",
+   "links": [
+    "larkwell-published-content",
+    "what-the-larkwell-team-turns-down-and-why"
+   ],
+   "body": "*This page is kept up to date automatically from the agents' records. Edits made here are overwritten.*\n\n## Week of 2026-11-16\n**Focus:** Field service for operators: own the SAP side of crews, work orders and tablets.\n\n- **Work orders closed at the asset**: High-intent searches with weak SAP-specific answers.\n- **Billing exceptions by cause**: Small but high-intent queries; no competitor answers them well.\n\n### Pieces planned\n- Blog on \"sap pm mobile work orders\" (written): Closing work orders at the asset with a three-screen tablet app Why: Closest gap to page one\n- Blog on \"sap is-u billing exceptions\" (written): Measure exceptions by cause, fix the top two, then automate Why: No competitor covers it\n- LinkedIn how-to (written): The Friday keying problem and the three-screen fix Why: Supports the work orders blog\n- LinkedIn how-to (written): Patch day: rate notes against your own landscape Why: Monthly patch-day slot\n- LinkedIn hot-take: Offline mode matters more than any feature for depot tablets Why: Differentiates from mobility vendors\n\n### Left alone this week\n- Clean core debates\n- Generic transformation framing\n- Another S/4HANA deadline post\n\nRelated: [[Larkwell published content]], [[What the Larkwell team turns down and why]]."
+  },
+  "/api/wiki/page/larkwell-marketing-results-by-week": {
+   "slug": "larkwell-marketing-results-by-week",
+   "title": "Larkwell marketing results by week",
+   "type": "campaign",
+   "updated": "2026-11-18T09:37:26.324Z",
+   "sources": [
+    "Marketing Engine app records"
+   ],
+   "summary": "Results for the week ending 2026-11-13: Search clicks steady; the master data blog brought the first enquiry from a waste operator.",
+   "links": [],
+   "body": "*This page is kept up to date automatically from the agents' records. Edits made here are overwritten.*\n\n## Week ending 2026-11-13\nSearch clicks steady; the master data blog brought the first enquiry from a waste operator.\n\n## Search\nClicks and impressions are steady week on week. The master data blog entered the results for its target query.\n\n## Site\nOne contact form enquiry, from a waste operator, after reading the master data blog.\n\n## Tracking\nThe contact form event fires on every page checked. No tag problems found.\n\n## Week by week\n| Week ending | Sessions (7d) | Visitors (7d) | Search clicks (7d) | Search impressions (7d) | Sessions (28d) | Search clicks (28d) |\n| --- | --- | --- | --- | --- | --- | --- |\n| 2026-11-13 | not measured | not measured | not measured | not measured | not measured | not measured |"
+  },
+  "/api/wiki/page/larkwell-published-content": {
+   "slug": "larkwell-published-content",
+   "title": "Larkwell published content",
+   "type": "campaign",
+   "updated": "2026-11-18T09:37:26.324Z",
+   "sources": [
+    "Marketing Engine app records"
+   ],
+   "summary": "1 blog published on larkwell.example through the app; the newest is \\\"Master data first: the cutover nobody plans\\\" (2026-11-11).",
+   "links": [
+    "larkwell-marketing-plan-by-week"
+   ],
+   "body": "*This page is kept up to date automatically from the agents' records. Edits made here are overwritten.*\n\nWhat Larkwell has published on larkwell.example through the app, newest first. A new piece should not repeat one of these; it can link to it.\n\n- 2026-11-11: [Master data first: the cutover nobody plans](https://larkwell.example/news/master-data-first), keyword \"sap master data cleanup before migration\", service datamigration. Most failed data loads trace back to master data. Give every object an owner and clean it in the source system before the migration.\n\nRelated: [[Larkwell marketing plan by week]]."
+  },
+  "/api/wiki/page/larkwell-example-seo-audit-findings": {
+   "slug": "larkwell-example-seo-audit-findings",
+   "title": "larkwell.example SEO audit findings",
+   "type": "campaign",
+   "updated": "2026-11-18T09:37:26.324Z",
+   "sources": [
+    "Marketing Engine app records"
+   ],
+   "summary": "SEO audit of 2026-11-17: Service pages are sound; two titles are cut off in search and FAQ markup is missing.",
+   "links": [],
+   "body": "*This page is kept up to date automatically from the agents' records. Edits made here are overwritten.*\n\n## Audit of 2026-11-17\nService pages are sound; two titles are cut off in search and FAQ markup is missing.\n\n## What I checked\nEight service pages and the home page: title, meta description, canonical, headings, structured data, alt text and internal links.\n\n## Findings\n- The plant maintenance and billing pages have titles longer than search shows; both are cut mid-phrase.\n- No page carries FAQ structured data, though three answer common questions.\n- The home page does not link to either case page.\n\n## Not a problem\nCanonicals, language tags and headings are correct everywhere.\n\n### Fixes proposed\n- **Shorten two service page titles** (/services/plant-maintenance/), open: Plant maintenance: 'SAP plant maintenance for operators | Larkwell'. Billing: 'SAP utilities billing support | Larkwell'.\n- **Add FAQ markup to three service pages** (/services/billing/), open: Mark up the existing question-and-answer sections on plant maintenance, billing and S/4HANA."
+  },
+  "/api/wiki/page/s-4hana-migration-for-operators": {
+   "slug": "s-4hana-migration-for-operators",
+   "title": "S/4HANA migration for operators",
+   "type": "service",
+   "updated": "2026-11-10T09:00:00.000Z",
+   "sources": [
+    "https://www.sap.com/"
+   ],
+   "summary": "Planning an S/4HANA move for a business with depots, crews and meters that cannot stop.",
+   "links": [
+    "custom-code-before-a-brownfield-conversion",
+    "utilities-billing-exceptions",
+    "data-migration-master-data-first",
+    "larkwell-consulting"
+   ],
+   "body": "Operators cannot freeze maintenance or billing for a long cutover. What works:\n\n- A readiness check first: custom code, data quality, interfaces. See [[Custom code before a brownfield conversion]].\n- Brownfield conversion when the processes are sound; selective when one area (often billing) needs a redesign.\n- Cutover planned around the billing run and the maintenance calendar, not the other way round.\n\nRelated: [[Utilities billing exceptions]], [[Data migration: master data first]], [[Larkwell Consulting]]."
+  },
+  "/api/wiki/page/sap-basis-managed-service": {
+   "slug": "sap-basis-managed-service",
+   "title": "SAP Basis managed service",
+   "type": "service",
+   "updated": "2026-11-10T09:00:00.000Z",
+   "sources": [],
+   "summary": "Monitoring, patching and system copies run as a service.",
+   "links": [
+    "larkwell-consulting",
+    "security-patch-day-for-operators"
+   ],
+   "body": "Operators often have one Basis person. A managed service is about cover and routine: a patch window every month with a tested rollback, system copies on a calendar, and alerts that reach someone at night.\n\nRelated: [[Larkwell Consulting]], [[Security patch day for operators]]."
+  },
+  "/api/wiki/page/sap-leads-at-mid-sized-utilities": {
+   "slug": "sap-leads-at-mid-sized-utilities",
+   "title": "SAP leads at mid-sized utilities",
+   "type": "audience",
+   "updated": "2026-11-10T09:00:00.000Z",
+   "sources": [],
+   "summary": "The buyer: practical, short of SAP people, wary of big promises.",
+   "links": [
+    "keyword-themes-2026",
+    "utilities-billing-exceptions"
+   ],
+   "body": "They search for a specific problem, read the first paragraph, and leave if it is generic. They trust a named SAP thing (a transaction, a release) more than any adjective.\n\nWhat they want from content: one useful step they can take this week. See [[Keyword themes 2026]] and [[Utilities billing exceptions]]."
+  },
+  "/api/wiki/page/sap-plant-maintenance-and-field-service": {
+   "slug": "sap-plant-maintenance-and-field-service",
+   "title": "SAP plant maintenance and field service",
+   "type": "service",
+   "updated": "2026-11-10T09:00:00.000Z",
+   "sources": [
+    "https://help.sap.com/"
+   ],
+   "summary": "Work orders, notifications and preventive plans for crews in the field.",
+   "links": [
+    "fiori-for-field-crews",
+    "case-brackenfield-waste-work-orders",
+    "keyword-themes-2026"
+   ],
+   "body": "The common failure is not configuration but adoption: crews close work orders on paper and someone keys them in days later. The asset register drifts and preventive plans stop matching reality.\n\nWhat helps: a small tablet app for the three things crews do (see [[Fiori for field crews]]), notifications raised at the asset, and a monthly review of plans that were skipped.\n\nProof: [[Case: Brackenfield Waste work orders]]. Search demand: see [[Keyword themes 2026]]."
+  },
+  "/api/wiki/page/security-patch-day-for-operators": {
+   "slug": "security-patch-day-for-operators",
+   "title": "Security patch day for operators",
+   "type": "topic",
+   "updated": "2026-11-10T09:00:00.000Z",
+   "sources": [
+    "https://support.sap.com/"
+   ],
+   "summary": "A monthly patch window that a small team can keep.",
+   "links": [
+    "sap-basis-managed-service"
+   ],
+   "body": "Read the notes on the day, rate them against your own landscape, patch development first, and keep a written rollback for each change. See [[SAP Basis managed service]]."
+  },
+  "/api/wiki/page/utilities-billing-exceptions": {
+   "slug": "utilities-billing-exceptions",
+   "title": "Utilities billing exceptions",
+   "type": "service",
+   "updated": "2026-11-10T09:00:00.000Z",
+   "sources": [
+    "https://help.sap.com/"
+   ],
+   "summary": "Why billing exceptions pile up in SAP for utilities and how to clear them for good.",
+   "links": [
+    "s-4hana-migration-for-operators",
+    "sap-leads-at-mid-sized-utilities"
+   ],
+   "body": "Exceptions are a symptom. The usual causes are meter reads that fail validation, move-in and move-out timing, and tariff changes tested too late.\n\nA practical order: measure exceptions by cause for four weeks, fix the top two causes in the process, then automate the rest. Adding people to the exception queue only hides the problem.\n\nRelated: [[S/4HANA migration for operators]], [[SAP leads at mid-sized utilities]]."
+  },
+  "/api/wiki/page/what-the-larkwell-team-turns-down-and-why": {
+   "slug": "what-the-larkwell-team-turns-down-and-why",
+   "title": "What the Larkwell team turns down and why",
+   "type": "campaign",
+   "updated": "2026-11-18T09:37:26.324Z",
+   "sources": [
+    "Marketing Engine app records"
+   ],
+   "summary": "2 recorded reasons for rejecting, dropping or sending back a piece; the latest: 2026-11-15, linkedin (integration), \\\"Is your integration landscape ready for the future?\\\": Editor: Rhetorical-question hook and no specific…",
+   "links": [
+    "larkwell-marketing-plan-by-week"
+   ],
+   "body": "*This page is kept up to date automatically from the agents' records. Edits made here are overwritten.*\n\nWhy pieces were rejected, dropped or sent back, newest first. \"Editor:\" marks the Editor agent's reason; the others are a person's. Anyone planning or writing for Larkwell should read these before repeating a topic or an approach.\n\n- 2026-11-15, linkedin (integration), \"Is your integration landscape ready for the future?\": Editor: Rhetorical-question hook and no specific SAP point.\n- 2026-11-14, blog (s4hana), \"Why transformation matters for utilities\": Editor: Generic: no SAP thing named and no buyer problem. Nothing a reader could act on.\n\nRelated: [[Larkwell marketing plan by week]]."
+  },
+  "/api/schedule/candidates?kind=linkedin": {
+   "candidates": [
+    {
+     "id": "d-1794993746324-11",
+     "kind": "linkedin",
+     "status": "draft",
+     "title": "",
+     "hook": "A short dump at seven in the morning, and the developer who wrote the code left last year.",
+     "serviceLabel": "ABAP development",
+     "serviceId": "abap",
+     "postType": "how-to",
+     "origin": "jarvis",
+     "warnings": [],
+     "problems": [],
+     "savedAt": "2026-11-18T09:22:26.324Z"
+    },
+    {
+     "id": "d-1794993746324-12",
+     "kind": "linkedin",
+     "status": "draft",
+     "title": "",
+     "hook": "We said no to a project last month, and it was the right call.",
+     "serviceLabel": "Application managed services",
+     "serviceId": "managed",
+     "postType": "founder",
+     "origin": "jarvis",
+     "warnings": [],
+     "problems": [],
+     "savedAt": "2026-11-18T09:22:26.324Z"
+    },
+    {
+     "id": "d-1794921600000-10",
+     "kind": "linkedin",
+     "status": "draft",
+     "title": "",
+     "hook": "Crews close work orders on paper, then someone keys them in on Friday.",
+     "serviceLabel": "Plant maintenance and field service",
+     "serviceId": "plant-maintenance",
+     "postType": "how-to",
+     "origin": "jarvis",
+     "warnings": [],
+     "problems": [],
+     "savedAt": "2026-11-17T13:20:00.000Z"
+    },
+    {
+     "id": "d-1794835200000-8",
+     "kind": "linkedin",
+     "status": "draft",
+     "title": "",
+     "hook": "Patch day is tomorrow. Rate the notes against your own landscape before you panic.",
+     "serviceLabel": "SAP Basis and operations",
+     "serviceId": "basis",
+     "postType": "how-to",
+     "origin": "jarvis",
+     "warnings": [],
+     "problems": [],
+     "savedAt": "2026-11-16T13:20:00.000Z"
+    }
+   ]
+  },
+  "/api/schedule/candidates?kind=blog": {
+   "candidates": [
+    {
+     "id": "d-1794921600000-9",
+     "kind": "blog",
+     "status": "draft",
+     "title": "Closing SAP PM work orders at the asset",
+     "hook": "",
+     "serviceLabel": "Plant maintenance and field service",
+     "serviceId": "plant-maintenance",
+     "postType": "",
+     "origin": "jarvis",
+     "warnings": [
+      "Meta is short (135 chars) - consider expanding to 140-160."
+     ],
+     "problems": [],
+     "savedAt": "2026-11-17T13:20:00.000Z"
+    },
+    {
+     "id": "d-1794835200000-7",
+     "kind": "blog",
+     "status": "draft",
+     "title": "Clearing SAP billing exceptions for good",
+     "hook": "",
+     "serviceLabel": "Utilities billing and customer service",
+     "serviceId": "billing",
+     "postType": "",
+     "origin": "jarvis",
+     "warnings": [
+      "Meta is short (137 chars) - consider expanding to 140-160."
+     ],
+     "problems": [
+      {
+       "id": "thin",
+       "label": "only 283 words",
+       "severity": "warn"
+      }
+     ],
+     "savedAt": "2026-11-16T13:20:00.000Z"
+    },
+    {
+     "id": "d-1794748800000-5",
+     "kind": "blog",
+     "status": "draft",
+     "title": "A patch window a small Basis team can keep",
+     "hook": "",
+     "serviceLabel": "SAP Basis and operations",
+     "serviceId": "basis",
+     "postType": "",
+     "origin": "jarvis",
+     "warnings": [
+      "Meta is short (126 chars) - consider expanding to 140-160."
+     ],
+     "problems": [
+      {
+       "id": "thin",
+       "label": "only 134 words",
+       "severity": "warn"
+      }
+     ],
+     "savedAt": "2026-11-15T13:20:00.000Z"
+    }
+   ]
+  }
+ }
+}
